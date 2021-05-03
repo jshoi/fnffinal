@@ -1,0 +1,352 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "POSA_HERO_ONL",
+    "description" : "POSA_HERO_ONL service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/ASCustMember" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-ASCustMember",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/ASSleepMemberInfo" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-ASSleepMemberInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OffFCOSMSCustMemberEdit" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-OffFCOSMSCustMemberEdit",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OffFCOSMSSleepMember" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-OffFCOSMSSleepMember",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OffFCOSMSSleepMemberCount" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-OffFCOSMSSleepMemberCount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OffFCOSMSCustMemberDetail" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-OffFCOSMSCustMemberDetail",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/AsFnCOMilEventAdd" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-AsFnCOMilEventAdd",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OffFCOSMSCustMemberCount" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-OffFCOSMSCustMemberCount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OffFCOSMSCustMemberOptEdit" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-OffFCOSMSCustMemberOptEdit",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/ASCouponRecycle" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-ASCouponRecycle",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/ASCouponIssuedInfo" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-ASCouponIssuedInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OffFCOSMSCustMember" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-OffFCOSMSCustMember",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/AsSaleitemNew" : {
+      "post" : {
+        "summary" : "postPOSA_HERO_ONL",
+        "description" : "postPOSA_HERO_ONL",
+        "operationId" : "post-AsSaleitemNew",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

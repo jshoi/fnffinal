@@ -1,0 +1,222 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "OBO_HERO_ONL_2",
+    "description" : "OBO_HERO_ONL_2 service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/OnFFEmployeeMember" : {
+      "post" : {
+        "summary" : "postOBO_HERO_ONL_2",
+        "description" : "postOBO_HERO_ONL_2",
+        "operationId" : "post-OnFFEmployeeMember",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OnFFMemberCard" : {
+      "post" : {
+        "summary" : "postOBO_HERO_ONL_2",
+        "description" : "postOBO_HERO_ONL_2",
+        "operationId" : "post-OnFFMemberCard",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OnFFCouponUseCheck" : {
+      "post" : {
+        "summary" : "postOBO_HERO_ONL_2",
+        "description" : "postOBO_HERO_ONL_2",
+        "operationId" : "post-OnFFCouponUseCheck",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OnFFUseCoupon" : {
+      "post" : {
+        "summary" : "postOBO_HERO_ONL_2",
+        "description" : "postOBO_HERO_ONL_2",
+        "operationId" : "post-OnFFUseCoupon",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OnFFMemberCheck" : {
+      "post" : {
+        "summary" : "postOBO_HERO_ONL_2",
+        "description" : "postOBO_HERO_ONL_2",
+        "operationId" : "post-OnFFMemberCheck",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OnFFMemberLogAdd" : {
+      "post" : {
+        "summary" : "postOBO_HERO_ONL_2",
+        "description" : "postOBO_HERO_ONL_2",
+        "operationId" : "post-OnFFMemberLogAdd",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OnFFURestoreCoupon" : {
+      "post" : {
+        "summary" : "postOBO_HERO_ONL_2",
+        "description" : "postOBO_HERO_ONL_2",
+        "operationId" : "post-OnFFURestoreCoupon",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/OnFFOrderPayment" : {
+      "post" : {
+        "summary" : "postOBO_HERO_ONL_2",
+        "description" : "postOBO_HERO_ONL_2",
+        "operationId" : "post-OnFFOrderPayment",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

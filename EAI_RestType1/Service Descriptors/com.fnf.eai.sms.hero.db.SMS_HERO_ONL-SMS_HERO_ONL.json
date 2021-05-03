@@ -1,0 +1,664 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "SMS_HERO_ONL",
+    "description" : "SMS_HERO_ONL service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/SmsCustMemberMileageInfo" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCustMemberMileageInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsCouponInfo" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCouponInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SMSSalesGroupSalesView" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SMSSalesGroupSalesView",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SMSGroupCouponPartsInsert" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SMSGroupCouponPartsInsert",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/CustMemberEditSMS" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-CustMemberEditSMS",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsCouponGroupInfo" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCouponGroupInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsCustMemberChildren" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCustMemberChildren",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsBrandMileageInfo" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsBrandMileageInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsMileage" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsMileage",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsCustMemberInfo" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCustMemberInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsCouponIssuenoInfo" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCouponIssuenoInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsCustMemberCardInfo" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCustMemberCardInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsCustMemberDetail" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCustMemberDetail",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SMSGroupCouponPartsDelete" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SMSGroupCouponPartsDelete",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/CustMemberSimple" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-CustMemberSimple",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsRatioDetail" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsRatioDetail",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsCustmemberViewInfo" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCustmemberViewInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/CustMemberSMS" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsNewCustMember",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/CustWakeup" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-CustWakeup",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsCouponShopInfo" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCouponShopInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SMSSalesGroupSalesViewDetail" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SMSSalesGroupSalesViewDetail",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SmsCouponHistoryInfo" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SmsCouponHistoryInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SMSSalesGroupSalesPeriodCidCheck" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SMSSalesGroupSalesPeriodCidCheck",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SMSGroupCouponSync" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SMSGroupCouponSync",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SMSGroupCouponUpdate" : {
+      "post" : {
+        "summary" : "postSMS_HERO_ONL",
+        "description" : "postSMS_HERO_ONL",
+        "operationId" : "post-SMSGroupCouponUpdate",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

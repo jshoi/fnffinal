@@ -1,0 +1,118 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "HERO_OBO_ONL",
+    "description" : "HERO_OBO_ONL service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/SendWakeMemberInfoToOnline" : {
+      "post" : {
+        "summary" : "postHERO_OBO_ONL",
+        "description" : "postHERO_OBO_ONL",
+        "operationId" : "post-SendWakeMemberInfoToOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SendMemberGradeInfoToOnline" : {
+      "post" : {
+        "summary" : "postHERO_OBO_ONL",
+        "description" : "postHERO_OBO_ONL",
+        "operationId" : "post-SendMemberGradeInfoToOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SendDropMemberInfoToOnline" : {
+      "post" : {
+        "summary" : "postHERO_OBO_ONL",
+        "description" : "postHERO_OBO_ONL",
+        "operationId" : "post-SendDropMemberInfoToOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/SendSleepMemberInfoToOnline" : {
+      "post" : {
+        "summary" : "postHERO_OBO_ONL",
+        "description" : "postHERO_OBO_ONL",
+        "operationId" : "post-SendSleepMemberInfoToOnline",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

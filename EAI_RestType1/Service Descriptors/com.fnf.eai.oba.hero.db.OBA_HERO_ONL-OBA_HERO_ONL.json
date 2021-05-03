@@ -1,0 +1,612 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "OBA_HERO_ONL",
+    "description" : "OBA_HERO_ONL service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/BCoMileageInfo" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoMileageInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCustMemberOptNew" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCustMemberOptNew",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoERPMemberListCount" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoERPMemberListCount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCustMemberCartInfo" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCustMemberCartInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoMilEventAdd" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoMilEventAdd",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCustMemberInfo" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCustMemberInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoMileageHistory" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoMileageHistory",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoSleepCustMemberInfo" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoSleepCustMemberInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCustMemberJoin" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCustMemberJoin",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCustMemberEdit" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCustMemberEdit",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCustMemberDel" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCustMemberDel",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCustWakeup" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCustWakeup",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoMemberLogInfo" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoMemberLogInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCustMemberJoinCoupon" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCustMemberJoinCoupon",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoMemberLogNewAndEdit" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoMemberLogNewAndEdit",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoERPMemberList" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoERPMemberList",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/FNFDecode" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-FNFDecode",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCouponStatus" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCouponStatus",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/FNFEncode" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-FNFEncode",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCouponInfo" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCouponInfo",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/CustMemberLeave" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-CustMemberLeave",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoMemberLogRollback" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoMemberLogRollback",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/BCoCustMemberUpdateUserEdit" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoCustMemberUpdateUserEdit",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}

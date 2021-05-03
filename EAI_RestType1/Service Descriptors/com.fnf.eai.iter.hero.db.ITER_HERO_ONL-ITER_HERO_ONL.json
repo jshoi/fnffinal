@@ -1,0 +1,274 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "ITER_HERO_ONL",
+    "description" : "ITER_HERO_ONL service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/IntranetCompleteGroupSales" : {
+      "post" : {
+        "summary" : "postITER_HERO_ONL",
+        "description" : "postITER_HERO_ONL",
+        "operationId" : "post-IntranetCompleteGroupSales",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/IntranetComboGroupSalesList" : {
+      "post" : {
+        "summary" : "postITER_HERO_ONL",
+        "description" : "postITER_HERO_ONL",
+        "operationId" : "post-IntranetComboGroupSalesList",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/IntranetGroupSalesInfo5" : {
+      "post" : {
+        "summary" : "postITER_HERO_ONL",
+        "description" : "postITER_HERO_ONL",
+        "operationId" : "post-IntranetGroupSalesInfo5",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/IntranetMemberMigrate" : {
+      "post" : {
+        "summary" : "postITER_HERO_ONL",
+        "description" : "postITER_HERO_ONL",
+        "operationId" : "post-IntranetMemberMigrate",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/IntranetGroupSalesInfo6" : {
+      "post" : {
+        "summary" : "postITER_HERO_ONL",
+        "description" : "postITER_HERO_ONL",
+        "operationId" : "post-IntranetGroupSalesInfo6",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/IntranetGroupSalesInfo7" : {
+      "post" : {
+        "summary" : "postITER_HERO_ONL",
+        "description" : "postITER_HERO_ONL",
+        "operationId" : "post-IntranetGroupSalesInfo7",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/IntranetGroupSalesInfo1" : {
+      "post" : {
+        "summary" : "postITER_HERO_ONL",
+        "description" : "postITER_HERO_ONL",
+        "operationId" : "post-IntranetGroupSalesInfo1",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/IntranetGroupSalesInfo2" : {
+      "post" : {
+        "summary" : "postITER_HERO_ONL",
+        "description" : "postITER_HERO_ONL",
+        "operationId" : "post-IntranetGroupSalesInfo2",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/IntranetGroupSalesInfo3" : {
+      "post" : {
+        "summary" : "postITER_HERO_ONL",
+        "description" : "postITER_HERO_ONL",
+        "operationId" : "post-IntranetGroupSalesInfo3",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/IntranetGroupSalesInfo4" : {
+      "post" : {
+        "summary" : "postITER_HERO_ONL",
+        "description" : "postITER_HERO_ONL",
+        "operationId" : "post-IntranetGroupSalesInfo4",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : { }
+}
