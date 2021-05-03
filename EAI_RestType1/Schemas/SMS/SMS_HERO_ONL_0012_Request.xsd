@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SMS_HERO_ONL_0012_Request" xmlns:tns="http://www.example.org/SMS_HERO_ONL_0012_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST" minOccurs="1" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="BRAND" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SHOPCODE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SALETYPE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SALEDATE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="CID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="GET_AMOUNT" type="decimal" minOccurs="1" maxOccurs="1"></element>
+							<element name="GET_POINT" type="decimal" minOccurs="1" maxOccurs="1"></element>
+							<element name="USE_POINT" type="decimal" minOccurs="1" maxOccurs="1"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

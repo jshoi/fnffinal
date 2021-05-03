@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/OBA_HERO_ONL_0006_Response" xmlns:tns="http://www.example.org/OBA_HERO_ONL_0006_Response" elementFormDefault="qualified">
+   <element name="element">
+        <complexType>
+    <sequence>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_CD" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_MSG" type="string"/>
+      <element maxOccurs="unbounded" minOccurs="1" name="RESPONSE_DATA" nillable="true">
+        <complexType>
+          <sequence>
+          <element maxOccurs="1" minOccurs="1" name="ID" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="NAME" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="CID" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="EMP_NO" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="EMAIL" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="POSIT_NAME" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="ENT_DATE" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="JOIN_DATE" type="string" nillable="true" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+</schema>

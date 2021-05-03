@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/HERO_OBO_ONL_0003_Request" xmlns:tns="http://www.example.org/HERO_OBO_ONL_0003_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element maxOccurs="unbounded" minOccurs="1" name="RELEASE_DRMNCY_MEMBER_LIST">
+					<complexType>
+						<sequence>
+							<element name="CID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="ID" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PASSWD" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="NAME" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="AUTH_TYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="REALNAME_YN" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="IPIN_CI" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="IPIN_DI" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="ZIPCODE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="ADDRESS1" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="ADDRESS2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="BIRTH_DAY" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="BIRTH_CAL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="GENDER" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="EMAIL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PHONE_HOME" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PHONE_MOBILE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="RECV_SMS" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="RECV_EMAIL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="RECV_PHONE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="RECV_POST" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="RECV_DATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="STATUS" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="DROP_DATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="REMARK_IT" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="INPUT_USERID" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="INPUT_DATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="UPDATE_USERID" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="UPDATE_DATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="AUTH_REALNAME" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="ADDRESS_ROAD" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="LEVEL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="LAST_LOGIN" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="LAST_LOGIN_IP" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="JOIN_DATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="JOIN_FROM" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="OFFLINE_JOIN_DATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="OFFLINE_JOIN_FROM" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="EMP_NO" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element maxOccurs="1" minOccurs="1" name="MEMBER_GRADE_LIST" nillable="true" type="string">
+									</element>
+							<element maxOccurs="1" minOccurs="1" name="FAMILY_LIST" nillable="true" type="string">
+									</element>									
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

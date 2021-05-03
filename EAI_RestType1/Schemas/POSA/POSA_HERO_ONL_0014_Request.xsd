@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/POSA_HERO_ONL_0014_Request" xmlns:tns="http://www.example.org/POSA_HERO_ONL_0014_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST">
+					<complexType>
+						<sequence>
+							<element name="V_SALEDATE" type="string" minOccurs="1" maxOccurs="1" ></element>
+							<element name="V_CID" type="string" minOccurs="1" maxOccurs="1" ></element>
+							<element name="V_SALETYPE" type="string" minOccurs="1" maxOccurs="1" ></element>
+							<element name="V_USE_POINT" type="string" minOccurs="1" maxOccurs="1" nillable="true" ></element>
+							<element name="V_SALE_AMOUNT" type="string" minOccurs="1" maxOccurs="1" ></element>
+							<element name="V_MS_NO" type="string" minOccurs="1" maxOccurs="1" ></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/OMS_MERP_ONL_0001_Response" xmlns:tns="http://www.example.org/OMS_MERP_ONL_0001_Response" elementFormDefault="qualified">
+    <element name="FNFItemCompositionList">
+    	<complexType>
+    		<sequence>
+    			<element name="FNFItemComposition" minOccurs="1"
+    				maxOccurs="unbounded">
+    				<complexType>
+    					<sequence>
+    						<element name="OrganizationCode"
+    							maxOccurs="1" minOccurs="1" nillable="true">
+    							<simpleType>
+    								<restriction base="string">
+    									<maxLength value="24"></maxLength>
+    								</restriction>
+    							</simpleType>
+    						</element>
+    						<element name="Brand" minOccurs="1"
+    							maxOccurs="1" nillable="true">
+    							<simpleType>
+    								<restriction base="string">
+    									<maxLength value="2"></maxLength>
+    								</restriction>
+    							</simpleType>
+    						</element>
+    						<element name="YearSeasonCode" minOccurs="1"
+    							maxOccurs="1" nillable="true">
+    							<simpleType>
+    								<restriction base="string">
+    									<maxLength value="3"></maxLength>
+    								</restriction>
+    							</simpleType>
+    						</element>
+    						<element name="StyleCode" minOccurs="1"
+    							maxOccurs="1" nillable="true">
+    							<simpleType>
+    								<restriction base="string">
+    									<maxLength value="20"></maxLength>
+    								</restriction>
+    							</simpleType>
+    						</element>
+    						<element name="ColorCode" minOccurs="0"
+    							maxOccurs="1" nillable="true">
+    							<simpleType>
+    								<restriction base="string">
+    									<maxLength value="40"></maxLength>
+    								</restriction>
+    							</simpleType>
+    						</element>
+    						<element name="CompositionValue"
+    							minOccurs="1" maxOccurs="1" nillable="true">
+    							<simpleType>
+    								<restriction base="string">
+    									<maxLength value="1000"></maxLength>
+    								</restriction>
+    							</simpleType>
+    						</element>
+    						<element name="Language" minOccurs="0" maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+    					</sequence>
+    				</complexType>
+    			</element>
+    		</sequence>
+    	</complexType>
+    </element>
+</schema>

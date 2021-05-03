@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SAP_SHER_ONL_0001_Request" xmlns:tns="http://www.example.org/SAP_SHER_ONL_0001_Request" elementFormDefault="qualified">
+
+    <element name="xxx_from_urlencoded">
+    	<complexType>
+    		<sequence>
+    			<element name="grant_type" type="string" minOccurs="1" maxOccurs="1"></element>
+    			<element name="client_id" type="string" minOccurs="1" maxOccurs="1"></element>
+    			<element name="client_secret" type="string" minOccurs="1" maxOccurs="1"></element>
+    			<element name="resource" type="string"></element>
+    		</sequence>
+    	</complexType>
+    </element>
+
+    <element name="tokenResult">
+    	<complexType>
+    		<sequence>
+    			<element name="token_type" type="string"></element>
+    			<element name="expires_in" type="string"></element>
+    			<element name="ext_expires_in" type="string"></element>
+    			<element name="expires_on" type="string"></element>
+    			<element name="not_before" type="string"></element>
+    			<element name="resource" type="string"></element>
+    			<element name="access_token" type="string"></element>
+    		</sequence>
+    	</complexType>
+    </element>
+
+    <element name="DataInfo" type="tns:DataInfo"></element>
+    
+    <complexType name="DataInfo">
+    	<sequence>
+    		<element ref="tns:tokenResult"></element>
+            <element ref="tns:SessionResult" minOccurs="0"></element>
+            <element ref="tns:Item" minOccurs="0"></element>
+            <element name="datas" type="base64Binary" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="full_filepath" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="size" type="int" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="filename" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+    		<element name="uploadUrl" type="string" minOccurs="0"
+    			maxOccurs="1">
+    		</element>
+
+    	</sequence>
+    </complexType>
+
+    <element name="SessionResult">
+    	<complexType>
+    		<sequence>
+    			<element name="odata.context" type="string"></element>
+    			<element name="expirationDateTime" type="dateTime"></element>
+    			<element name="nextExpectedRanges" type="string"></element>
+    			<element name="uploadUrl" type="string"></element>
+    		</sequence>
+    		
+    	</complexType>
+    </element>
+
+    <element name="Item">
+    	<complexType>
+    		<sequence>
+    			<element name="odata.context" type="string"></element>
+    			<element name="value" minOccurs="0"
+    				maxOccurs="unbounded">
+    				<complexType>
+    					<sequence>
+    						<element name="odata.type" type="string"></element>
+    						<element name="createdDateTime"
+    							type="string">
+    						</element>
+    						<element name="id" type="string"></element>
+    						<element name="lastModifiedDateTime"
+    							type="string">
+    						</element>
+    						<element name="name" type="string"></element>
+    						<element name="webUrl" type="string"></element>
+    						<element name="size" type="int"></element>
+    						<element name="createdBy">
+    							<complexType>
+    								<sequence>
+    									<element name="user">
+    										<complexType>
+    											<sequence>
+    												<element
+    													name="email" type="string">
+    												</element>
+    												<element
+    													name="displayName" type="string">
+    												</element>
+    											</sequence>
+    										</complexType>
+    									</element>
+    								</sequence>
+    							</complexType>
+    						</element>
+    						<element name="lastModifiedBy">
+    							<complexType>
+    								<sequence>
+    									<element name="user">
+    										<complexType>
+    											<sequence>
+    												<element
+    													name="email" type="string">
+    												</element>
+    												<element
+    													name="displayName" type="string">
+    												</element>
+    											</sequence>
+    										</complexType>
+    									</element>
+    								</sequence>
+    							</complexType>
+    						</element>
+    						<element name="parentReference">
+    							<complexType>
+    								<sequence>
+    									<element name="driveId"
+    										type="string">
+    									</element>
+    									<element name="driveType"
+    										type="string">
+    									</element>
+    									<element name="id"
+    										type="string">
+    									</element>
+    								</sequence>
+    							</complexType>
+    						</element>
+    						<element name="fileSystemInfo">
+    							<complexType>
+    								<sequence>
+    									<element name="createdDateTime"
+    										type="string">
+    									</element>
+    									<element name="lastModifiedDateTime"
+    										type="string">
+    									</element>
+    								</sequence>
+    							</complexType>
+    						</element>
+    						<element name="folder">
+    							<complexType>
+    								<sequence>
+    									<element name="childCount"
+    										type="int">
+    									</element>
+    								</sequence>
+    							</complexType>
+    						</element>
+    						<element name="searchResult" minOccurs="0" maxOccurs="1">
+    							<complexType></complexType>
+    						</element>
+    					</sequence>
+    				</complexType>
+    			</element>
+    		</sequence>
+    	</complexType>
+    </element>
+
+</schema>

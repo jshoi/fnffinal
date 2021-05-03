@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SMS_HERO_ONL_0002_Response" xmlns:tns="http://www.example.org/SMS_HERO_ONL_0002_Response" elementFormDefault="qualified">
+   <element name="element">
+        <complexType>
+    <sequence>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_CD" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_MSG" type="string"/>
+      <element maxOccurs="unbounded" minOccurs="1" name="RESPONSE_DATA" nillable="true">
+        <complexType>
+          <sequence>
+          	<element maxOccurs="1" minOccurs="1" name="cid" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="name" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="gender" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="birth" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="address" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="phone" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="point" type="decimal" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="auth_realname" type="string" nillable="true" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+</schema>

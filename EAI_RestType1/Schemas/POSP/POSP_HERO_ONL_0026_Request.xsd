@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/POSP_HERO_ONL_0026_Request" xmlns:tns="http://www.example.org/POSP_HERO_ONL_0026_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST" minOccurs="1" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="BRAND" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="2"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="SALEDATE" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="10"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="SHOPCODE" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="8"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="USERID" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="16"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="SEQ" minOccurs="1"
+								maxOccurs="1" type="long">
+							</element>
+							<element name="SEASON" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="4"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="PARTCODE" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="18"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="COLOR" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="5"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="SIZ" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="3"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="SALETYPE" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="3"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="SALETRTYPE" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="3"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="LISTPRICE" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="DISCOUNTAMT" type="decimal"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="DISCOUNTPCT" type="decimal"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="SELLPRICE" type="decimal"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="QTY" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="LISTAMT" type="decimal"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="ACTUALAMT" type="decimal"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="APPRTYPE" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="3"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CID" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="10"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="GET_POINT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="USE_POINT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="ISSUENO" minOccurs="1"
+								maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="100"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="INPUT_USERID" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="12"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="INPUT_IP" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="16"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="UPDATE_USERID" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="12"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="EVENTYN" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="PREYN" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="DIVTYPE" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="RETURNYN" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="FK_SALEDATE" minOccurs="1"
+								maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="10"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="FK_SHOPCODE" minOccurs="1"
+								maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="8"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="FK_USERID" minOccurs="1"
+								maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="12"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="FK_SEQ" type="long"
+								minOccurs="1" maxOccurs="1" nillable="true">
+							</element>
+							<element name="SH_DATE" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="10"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="SH_SEQ" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="USE_AMOUNT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="GET_AMOUNT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="ONLINE_YN" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="EMP_USE_POINT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="SALETRTYPE_ORG" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="3"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="HEAD_TAG" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="HEAD_DC" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="HEAD_ACT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="HEAD_CNT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="ALIPAY_YN" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="VAT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="VATR_YN" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="VATR_REFUND" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="COMMISSION" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="AMT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="DELIVERY_YN" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CUST_NATIONALITY"
+								minOccurs="1" maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="2"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="RESERVED_YN" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="SMALL_GROUP_YN" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="TAKE_DATE" minOccurs="1"
+								maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="10"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="FISCAL_DATE" minOccurs="1"
+								maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="10"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="RFID_UID" minOccurs="1"
+								maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+
+										<maxLength value="50"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="RFID_SERIAL" minOccurs="1"
+								maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="7"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="SH_BRAND" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="2"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="SH_SHOPCODE" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="8"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CASH_AMT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="ETC_AMT" type="long"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="AMT_GUBUN" minOccurs="1"
+								maxOccurs="1">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="1"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CNAME" minOccurs="1"
+								maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="100"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="CPHONE" minOccurs="1"
+								maxOccurs="1" nillable="true">
+								<simpleType>
+									<restriction base="string">
+										<maxLength value="80"></maxLength>
+									</restriction>
+								</simpleType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

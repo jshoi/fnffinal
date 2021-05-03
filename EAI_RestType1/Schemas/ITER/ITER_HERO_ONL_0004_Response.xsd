@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ITER_HERO_ONL_0004_Response" xmlns:tns="http://www.example.org/ITER_HERO_ONL_0004_Response" elementFormDefault="qualified">
+   <element name="element">
+        <complexType>
+    <sequence>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_CD" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_MSG" type="string"/>
+      <element maxOccurs="unbounded" minOccurs="1" name="RESPONSE_DATA" nillable="true">
+        <complexType>
+          <sequence>
+          <element maxOccurs="1" minOccurs="1" name="BRAND" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="SHOPCODE" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="SEQ" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="SEASON" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="PARTCODE" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="QTY" type="decimal" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="DC_RATIO" type="decimal" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="COUPON_NO" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="SELLPRICE" type="decimal" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="PRICE" type="decimal" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="AMT" type="decimal" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="DC_AMT" type="decimal" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="SALE_AMT" type="decimal" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="REMARKS" type="string"  nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="IMAGENAME" type="string" nillable="true" />
+          <element maxOccurs="1" minOccurs="1" name="SALETRTYPE_DESC" type="string" nillable="true" />
+                    </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+</schema>

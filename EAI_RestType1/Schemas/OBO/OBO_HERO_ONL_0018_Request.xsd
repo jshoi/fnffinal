@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/OBO_HERO_ONL_0018_Request" xmlns:tns="http://www.example.org/OBO_HERO_ONL_0018_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST">
+					<complexType>
+						<sequence>
+				<element maxOccurs="unbounded" minOccurs="1" name="ORD_LIST">
+					<complexType>
+						<sequence>
+							<element name="BRAND" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SALEDATE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SHOPCODE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SEASON" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PARTCODE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="COLOR" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SIZ" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SALETYPE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SALETRTYPE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="TAGPRICE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SELLPRICE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="QTY" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="ACTUALAMT" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="CARD_AMT" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="CASH_AMT" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="SALEDIS_AMT" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="USE_POINT" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="ISSUENO" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="ISSUENO_AMT" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="ETCDIS_AMT" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="CID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="GET_POINT" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="REGDATE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="ORD_NO" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="ORD_DTL_NO" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="DELI_SHOPCODE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="QUANTITY_TYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="REAL_MILE_YN" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PREYN" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="EMP_NO" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="CLM_TYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PAY_TYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="TMPR_MILE_DDCT_YN" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+		</element>
+		</sequence>
+		</complexType>
+	</element>
+</schema>

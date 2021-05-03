@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/POSP_HERO_ONL_0014_Response" xmlns:tns="http://www.example.org/POSP_HERO_ONL_0014_Response" elementFormDefault="qualified">
+   <element name="element">
+        <complexType>
+    <sequence>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_CD" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_MSG" type="string"/>
+      <element maxOccurs="unbounded" minOccurs="1" name="RESPONSE_DATA" nillable="true">
+        <complexType>
+          <sequence>
+          	<element maxOccurs="1" minOccurs="1" name="WDATE" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="BRAND" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="SHOPCODE" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="CID" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="SALETRTYPE" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="RATIO" type="decimal" nillable="true" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+</schema>

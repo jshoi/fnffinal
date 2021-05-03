@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/OBA_HERO_ONL_0045_Request" xmlns:tns="http://www.example.org/OBA_HERO_ONL_0045_Request" elementFormDefault="qualified">
+<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST">
+					<complexType>
+						<sequence>
+							<element name="CID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="DIRECTFL" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PRDNO" type="decimal" minOccurs="1" maxOccurs="1"></element>
+							<element name="OPTNO" type="decimal" minOccurs="1" maxOccurs="1"></element>
+							<element name="PKGPRDNO" type="decimal" minOccurs="1" maxOccurs="1"></element>
+							<element name="PKGSEQ" type="decimal" minOccurs="1" maxOccurs="1"></element>
+							<element name="PRDCLCD" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="ORDQTY" type="decimal" minOccurs="1" maxOccurs="1"></element>
+							<element name="REGID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="REGDATE" type="dateTime" minOccurs="1" maxOccurs="1"></element>
+							<element name="UPDID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="UPDDATE" type="dateTime" minOccurs="1" maxOccurs="1"></element>
+							<element name="PRDNM" type="string" minOccurs="1" maxOccurs="1"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

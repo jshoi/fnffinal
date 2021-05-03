@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SMS_HERO_ONL_0019_Response" xmlns:tns="http://www.example.org/SMS_HERO_ONL_0019_Response" elementFormDefault="qualified">
+   <element name="element">
+        <complexType>
+    <sequence>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_CD" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_MSG" type="string"/>
+      <element maxOccurs="unbounded" minOccurs="1" name="RESPONSE_DATA" nillable="true">
+        <complexType>
+          <sequence>
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="brand" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="shopcode" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="seq" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="season" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="partcode" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="color" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="siz" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="qty" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="dc_ratio" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="coupon_no" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="sellprice" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="price" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="amt" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="dc_amt" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="sale_amt" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="remarks" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="imagename" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="md_remarks" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+</schema>

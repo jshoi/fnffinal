@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SMS_HERO_ONL_0001_Request" xmlns:tns="http://www.example.org/SMS_HERO_ONL_0001_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST">
+					<complexType>
+						<sequence>
+							<element name="PSV_USERID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_BRAND" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_SHOPCODE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_NAME" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_BIRTH_DAY" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_GENDER" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_PHONE_MOBILE1" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_PHONE_MOBILE2" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_PHONE_MOBILE3" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_EMAIL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_OCID" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_RECV_SMS" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_IPIN_CI" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_IPIN_DI" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_AUTH_CHECK" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_AUTH_MODULE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_AUTH_YOUNG" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_AUTH_BCO" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="PSV_IP" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_STORE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_ZIPCODE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_ADDR1" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_ADDR2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_DAIGONG" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_DAIGONG_COMPANY" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_DAIGONG_COUNTRY" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_DAIGONG_COUNTRY_H" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_DAIGONG_ID_WECHAT" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_DAIGONG_REMARK" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

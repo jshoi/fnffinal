@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/POSA_HERO_ONL_0033_Request" xmlns:tns="http://www.example.org/POSA_HERO_ONL_0033_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST">
+					<complexType>
+						<sequence>
+							<element name="V_CID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_NAME" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_USER_ID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_GENDER" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_BIRTHDAY" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_HANDPHONE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_HOMEPHONE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_EMAIL" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_ZIPCODE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_ADDRESS1" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_ADDRESS2" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_REMARK" type="string" minOccurs="1" maxOccurs="1" nillable="true" ></element>
+							<element name="V_RECV_SMS_YN" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_RECV_EMAIL_YN" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_RECV_PHONE_YN" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_RECV_DM_YN" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_MARRY_YN" type="string" minOccurs="1" maxOccurs="1" nillable="true" ></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

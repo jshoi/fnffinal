@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/OBA_HERO_ONL_0006_Request" xmlns:tns="http://www.example.org/OBA_HERO_ONL_0006_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST">
+					<complexType>
+						<sequence>
+							<element name="V_CID" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_SCHTYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_SCHTXT" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_SCHSTDATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_SCHENDDATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_PAGESIZE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_PAGENUMBER" type="string" minOccurs="1" maxOccurs="1"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

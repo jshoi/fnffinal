@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SMS_HERO_ONL_0017_Response" xmlns:tns="http://www.example.org/SMS_HERO_ONL_0017_Response" elementFormDefault="qualified">
+   <element name="element">
+        <complexType>
+    <sequence>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_CD" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_MSG" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_DATA" nillable="true">
+        <complexType>
+          <sequence>
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="coupon_no" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="brand" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="type" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="title" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="client" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="contact" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="store" />
+          	<element maxOccurs="1" minOccurs="1" type="decimal" nillable="true" name="dc_ratio" />
+          	<element maxOccurs="1" minOccurs="1" type="decimal" nillable="true" name="amt_max" />
+          	<element maxOccurs="1" minOccurs="1" type="decimal" nillable="true" name="amt_use" />
+          	<element maxOccurs="1" minOccurs="1" type="decimal" nillable="true" name="amt_tmp" />
+          	<element maxOccurs="1" minOccurs="1" type="decimal" nillable="true" name="qty_max" />
+          	<element maxOccurs="1" minOccurs="1" type="decimal" nillable="true" name="qty_use" />
+          	<element maxOccurs="1" minOccurs="1" type="decimal" nillable="true" name="qty_tmp" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="balance_type" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+</schema>

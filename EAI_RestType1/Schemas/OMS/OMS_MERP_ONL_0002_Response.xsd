@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/OMS_MERP_ONL_0002_Response" xmlns:tns="http://www.example.org/OMS_MERP_ONL_0002_Response" elementFormDefault="qualified">
+ 
+				<element name="FNFItemPriceList">
+					<complexType>
+						<sequence>
+							<element name="FNFItemPrice" minOccurs="1"
+								maxOccurs="unbounded">
+								<complexType>
+									<sequence>
+										<element name="OrganizationCode" maxOccurs="1"
+											minOccurs="1" nillable="true">
+											<simpleType>
+												<restriction base="string">
+													<maxLength value="24"></maxLength>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="Brand" minOccurs="1" maxOccurs="1"
+											nillable="true">
+											<simpleType>
+												<restriction base="string">
+													<maxLength value="2"></maxLength>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="YearSeasonCode" minOccurs="1"
+											maxOccurs="1" nillable="true">
+											<simpleType>
+												<restriction base="string">
+													<maxLength value="3"></maxLength>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="StyleCode" minOccurs="1" maxOccurs="1"
+											nillable="true">
+											<simpleType>
+												<restriction base="string">
+													<maxLength value="20"></maxLength>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="InvoicingCountry" minOccurs="1" maxOccurs="1"
+											nillable="true">
+											<simpleType>
+												<restriction base="string">
+													<maxLength value="20"></maxLength>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="FxRate" minOccurs="0" maxOccurs="1"
+											nillable="true">
+											<simpleType>
+												<restriction base="decimal">
+
+													<totalDigits
+														value="14" />
+													<fractionDigits
+														value="4" />
+
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="StoreCode" minOccurs="0" maxOccurs="1"
+											nillable="true">
+											<simpleType>
+												<restriction base="string">
+													<maxLength value="40"></maxLength>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="Currency" minOccurs="0" maxOccurs="1"
+											nillable="true">
+											<simpleType>
+												<restriction base="string">
+													<maxLength value="20"></maxLength>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="InvoiceConfirmedDate" minOccurs="0" maxOccurs="1"
+											nillable="true">
+											<simpleType>
+												<restriction base="string">
+													<maxLength value="10"></maxLength>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="VATFlag" minOccurs="0" maxOccurs="1"
+											nillable="true">
+											<simpleType>
+												<restriction base="string">
+													<maxLength value="2"></maxLength>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="InvoiceQty" minOccurs="0" maxOccurs="1"
+											nillable="true">
+											<simpleType>
+										 
+												<restriction base="decimal">
+													<minInclusive value="0"></minInclusive>
+													<totalDigits value="14"></totalDigits>
+													<fractionDigits value="4"></fractionDigits>
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="InvoicedSellInPrice" minOccurs="0" maxOccurs="1"
+											nillable="true">
+											<simpleType>
+										 
+												<restriction base="decimal">
+													<minInclusive value="0"></minInclusive>
+													<totalDigits value="14"></totalDigits>
+													<fractionDigits value="4"></fractionDigits>
+												</restriction>
+											</simpleType>
+										</element>
+										
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+		
+</schema>

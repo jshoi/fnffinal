@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/OBA_HERO_ONL_0002_Request" xmlns:tns="http://www.example.org/OBA_HERO_ONL_0002_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST">
+					<complexType>
+						<sequence>
+							<element name="V_CID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_NAME" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_PASSWD_DATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_REALNAME_YN" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_AUTH_TYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_ADDR_TYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_ZIPCODE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_ADDRESS1" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_ADDRESS2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_BIRTH_DAY" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_BIRTH_CAL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_EMAIL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_PHONE_MOBILE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_RECV_SMS" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_RECV_EMAIL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_IPIN_CI" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_IPIN_DI" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_GENDER" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_AUTH_REALNAME" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_UPDATE_USERID" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_AUTH_FLAG" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_OPT_FLAG" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

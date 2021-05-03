@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SMS_HERO_ONL_0005_Response" xmlns:tns="http://www.example.org/SMS_HERO_ONL_0005_Response" elementFormDefault="qualified">
+   <element name="element">
+        <complexType>
+    <sequence>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_CD" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_MSG" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_DATA" nillable="true">
+        <complexType>
+          <sequence>
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="cid" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="name" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="auth_realname" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="birth_day" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="gender" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="uid1" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="ipin_ci" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="ipin_di" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="email" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="phone_mobile" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="phone_home" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="remark_shop" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="job" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="status" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="marry_yn" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="anniv_type" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="anniv_date" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="birth_cal" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="modify_yn" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="twitter_id" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="zipcode" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="address1" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="address2" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="addr_type" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="recv_sms" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="recv_email" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="recv_phone" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="recv_post" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="auth_type" />
+          	<element maxOccurs="1" minOccurs="1" type="string" nillable="true" name="sleep_yn" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+</schema>

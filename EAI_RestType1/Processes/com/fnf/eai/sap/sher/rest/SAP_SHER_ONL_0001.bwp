@@ -1,0 +1,2371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpws:process exitOnStandardFault="no"
+    name="com.fnf.eai.sap.sher.rest.SAP_SHER_ONL_0001"
+    suppressJoinFailure="yes"
+    targetNamespace="http://xmlns.example.com/20210324162109"
+    xmlns:bpws="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:info="http://www.tibco.com/bw/process/info"
+    xmlns:ns="http://www.tibco.com/pe/EngineTypes"
+    xmlns:ns0="http://www.example.org/SAP_SHER_ONL_0001_Request"
+    xmlns:ns1="http://www.tibco.com/namespaces/tnt/plugins/file/v2"
+    xmlns:ns10="http://tns.tibco.com/bw/activity/get/input+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetInputData"
+    xmlns:ns11="http://tns.tibco.com/bw/activity/get/output+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetOutputBinary"
+    xmlns:ns12="http://tns.tibco.com/bw/activity/get/output+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetOutputASCII"
+    xmlns:ns13="http://www.example.com/namespaces/tns/1610583409932"
+    xmlns:ns14="http://tns.tibco.com/bw/palette/internal/activityerror+bw.file.create"
+    xmlns:ns15="activity.jsonRender.output+b801de23-5e35-45c5-a8d1-16b426bd70bd+ActivityOutputType"
+    xmlns:ns16="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonRender"
+    xmlns:ns17="http://www.example.org/ErrSchema"
+    xmlns:ns18="http://tns.tibco.com/bw/REST"
+    xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/file"
+    xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+bw.file.read"
+    xmlns:ns4="http://tns.tibco.com/bw/activity/dir"
+    xmlns:ns5="http://tns.tibco.com/bw/palette/internal/activityerror+bw.ftp.dir"
+    xmlns:ns6="http://www.tibco.com/pe/WriteToLogActivitySchema"
+    xmlns:ns7="http://tns.tibco.com/bw/activity/get/input+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetInputDataFile"
+    xmlns:ns8="http://tns.tibco.com/bw/activity/get/output+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetOutputFile"
+    xmlns:ns9="http://tns.tibco.com/bw/palette/internal/activityerror+bw.ftp.get"
+    xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
+    xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
+    xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
+    xmlns:tibprop="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <tibex:Types>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/pe/EngineTypes"
+            xmlns:tns="http://www.tibco.com/pe/EngineTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="ErrorReport">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Class" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="OptionalErrorReport">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Class" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="FaultDetail">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ActivityName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0" name="Data" type="tns:anydata"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Msg" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="MsgCode" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessStack" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="StackTrace" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="FullClass" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="Class" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="ProcessContext">
+                <xs:sequence>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="JobId" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ApplicationName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="EngineName" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" name="ProcessInstanceId" type="xs:string"/>
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" minOccurs="0"
+                        name="CustomJobId" type="xs:string"/>
+                    <!--xs:element name="RestartedFromCheckpoint" form="unqualified" block="extension restriction substitution" type="xs:boolean"/-->
+                    <xs:element
+                        block="extension restriction substitution"
+                        form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="TrackingInfo" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType block="extension restriction"
+                final="extension restriction" name="anydata">
+                <xs:sequence>
+                    <xs:any namespace="##any" processContents="lax"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="OptionalErrorReport" type="tns:OptionalErrorReport"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="ErrorReport" type="tns:ErrorReport"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="FaultDetail" type="tns:FaultDetail"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="ProcessContext" type="tns:ProcessContext"/>
+            <xs:element block="extension restriction substitution"
+                final="extension restriction" name="CorrelationValue" type="xs:string"/>
+        </xs:schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="unqualified"
+            targetNamespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"
+            version="" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions">
+            <complexType name="ActivityExceptionType">
+                <sequence>
+                    <element name="msg" type="string"/>
+                    <element minOccurs="0" name="msgCode" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityException" type="tns:ActivityExceptionType"/>
+            <complexType name="ActivityTimedOutExceptionType">
+                <complexContent>
+                    <extension base="tns:ActivityExceptionType"/>
+                </complexContent>
+            </complexType>
+            <element name="ActivityTimedOutException" type="tns:ActivityTimedOutExceptionType"/>
+            <complexType name="DuplicateKeyExceptionType">
+                <complexContent>
+                    <extension base="tns:ActivityExceptionType">
+                        <sequence>
+                            <element name="duplicateKey" type="string"/>
+                            <element minOccurs="0" name="previousJobID" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
+        </schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/dir"
+            xmlns:tns="http://tns.tibco.com/bw/activity/dir" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType name="Input">
+                <xs:sequence>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="Host" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="Port" type="xs:int"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="UserName" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="Password" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="DirParameters" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="Directory" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="Timeout" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="Output">
+                <xs:sequence>
+                    <xs:element form="unqualified" name="ItemCount" type="xs:int"/>
+                    <xs:element form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="DirectoryItems" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="Input" type="tns:Input"/>
+            <xs:element name="Output" type="tns:Output"/>
+            <xs:element name="Iterate_Current_Element_DirectoryItems" type="xs:string"/>
+        </xs:schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/ftp/exception"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/palette/ftp/exception">
+            <complexType name="CommandExecutionExceptionType">
+                <sequence>
+                    <element form="unqualified" name="msg" type="string"/>
+                    <element form="unqualified" name="msgCode" type="string"/>
+                </sequence>
+            </complexType>
+            <complexType name="ConnectionErrorExceptionType">
+                <complexContent>
+                    <extension base="tns:CommandExecutionExceptionType"/>
+                </complexContent>
+            </complexType>
+            <complexType name="ConnectionTimeoutExceptionType">
+                <complexContent>
+                    <extension base="tns:CommandExecutionExceptionType"/>
+                </complexContent>
+            </complexType>
+            <complexType name="GetFilesExceptionType">
+                <sequence>
+                    <element form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="SuccessfulFiles" type="string"/>
+                    <element form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="FailedFiles" type="tns:FAIL_TYPE"/>
+                </sequence>
+            </complexType>
+            <complexType name="PutFilesExceptionType">
+                <complexContent>
+                    <extension base="tns:GetFilesExceptionType"/>
+                </complexContent>
+            </complexType>
+            <complexType name="FAIL_TYPE">
+                <sequence>
+                    <element form="unqualified" name="Filename" type="string"/>
+                    <element form="unqualified" name="Error" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="GetFilesException" type="tns:GetFilesExceptionType"/>
+            <element name="ConnectionTimeoutException" type="tns:ConnectionTimeoutExceptionType"/>
+            <element name="CommandExecutionException" type="tns:CommandExecutionExceptionType"/>
+            <element name="ConnectionErrorException" type="tns:ConnectionErrorExceptionType"/>
+            <element name="PutFilesException" type="tns:PutFilesExceptionType"/>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.ftp.dir"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://tns.tibco.com/bw/palette/ftp/exception" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.ftp.dir">
+            <import namespace="http://tns.tibco.com/bw/palette/ftp/exception"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:CommandExecutionException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:ConnectionErrorException"/>
+                </choice>
+            </complexType>
+        </schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/pe/WriteToLogActivitySchema"
+            xmlns:tns="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType name="LogParametersType">
+                <xs:sequence>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="msgCode" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="loggerName" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="logLevel" type="xs:string"/>
+                    <xs:element form="unqualified" name="message" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ActivityInput" type="tns:LogParametersType"/>
+        </xs:schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.ftp.get"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://tns.tibco.com/bw/palette/ftp/exception" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.ftp.get">
+            <import namespace="http://tns.tibco.com/bw/palette/ftp/exception"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:GetFilesException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:ConnectionErrorException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:CommandExecutionException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:ConnectionTimeoutException"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/get/input+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetInputData"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Q1="http://tns.tibco.com/bw/activity/get/input+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetInputData">
+            <element name="FTPGetInputData" type="Q1:FTPInputType"/>
+            <complexType name="FTPInputType">
+                <sequence>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="RemoteFileName" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Host" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Port" type="int"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="UserName" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Password" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Timeout" type="int"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/get/output+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetOutputBinary"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Q1="http://tns.tibco.com/bw/activity/get/output+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetOutputBinary">
+            <complexType name="FTPTransferFile">
+                <sequence>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Name" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="NumOfBytes" type="int"/>
+                </sequence>
+            </complexType>
+            <element name="FTPGetOutputBinary" type="Q1:FTPGetOutputClassLocal50"/>
+            <complexType name="FTPGetOutputClassLocal50">
+                <sequence>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="BinaryData" type="base64Binary"/>
+                    <element form="unqualified" maxOccurs="unbounded"
+                        minOccurs="0" name="FileTransferred" type="Q1:FTPTransferFile"/>
+                </sequence>
+            </complexType>
+        </schema>
+        <schema
+            targetNamespace="activity.jsonRender.output+b801de23-5e35-45c5-a8d1-16b426bd70bd+ActivityOutputType"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="activity.jsonRender.output+b801de23-5e35-45c5-a8d1-16b426bd70bd+ActivityOutputType">
+            <complexType name="ActivityOutputClassType">
+                <sequence>
+                    <element maxOccurs="1" minOccurs="1"
+                        name="jsonString" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="ActivityOutputClass" type="tns:ActivityOutputClassType"/>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions">
+            <element name="JSONActivityException" type="tns:JSONActivityException"/>
+            <complexType name="JSONActivityException">
+                <sequence>
+                    <element name="msg" type="string"/>
+                    <element minOccurs="0" name="msgCode" type="string"/>
+                </sequence>
+            </complexType>
+            <element name="UnsupportedEncodingException" type="tns:UnsupportedEncodingExceptionType"/>
+            <complexType name="UnsupportedEncodingExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException">
+                        <sequence>
+                            <element name="encoding" type="string"/>
+                        </sequence>
+                    </extension>
+                </complexContent>
+            </complexType>
+            <complexType name="JSONParserExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException"/>
+                </complexContent>
+            </complexType>
+            <element name="JSONParserException" type="tns:JSONParserExceptionType"/>
+            <complexType name="JSONTransformExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException"/>
+                </complexContent>
+            </complexType>
+            <element name="JSONTransformException" type="tns:JSONTransformExceptionType"/>
+            <complexType name="JSONRenderExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException"/>
+                </complexContent>
+            </complexType>
+            <element name="JSONRenderException" type="tns:JSONRenderExceptionType"/>
+            <complexType name="JSONRestExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException"/>
+                </complexContent>
+            </complexType>
+            <element name="JSONRestException" type="tns:JSONRestExceptionType"/>
+            <complexType name="ValidationExceptionType">
+                <complexContent>
+                    <extension base="tns:JSONActivityException"/>
+                </complexContent>
+            </complexType>
+            <element name="ValidationException" type="tns:ValidationExceptionType"/>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonRender"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonRender">
+            <import namespace="http://schemas.tibco.com/bw/plugins/xml/5.0/JSONActivitiesExceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JSONRenderException"/>
+                </choice>
+            </complexType>
+        </schema>
+    </tibex:Types>
+    <tibex:ProcessInfo callable="true" createdBy="jschoi"
+        createdOn="Tue Mar 23 10:05:29 KST 2021" description=""
+        extraErrorVars="true" modifiers="public"
+        productVersion="6.7.0 V34 2020-11-06" scalable="false"
+        singleton="true" stateless="false" type="IT"/>
+    <tibex:ProcessInterface context=""
+        input="{http://tns.tibco.com/bw/REST}messageBody" output=""/>
+    <tibex:ProcessTemplateConfigurations/>
+    <notation:Diagram measurementUnit="Pixel" type="BWProcess"
+        xmlns:bwnotation="http://tns.tibco.com/bw/runtime/BWNotation"
+        xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <children type="2001">
+            <children type="5001">
+                <element href="//0/@process"/>
+            </children>
+            <children type="3002">
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <children type="3003">
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <children type="3004">
+                <children type="4018">
+                    <children type="3018">
+                        <children type="4020">
+                            <children type="3020">
+                                <children type="4005">
+                                    <children type="3007">
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint x="-83"
+                                    xsi:type="notation:Bounds" y="185"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint x="1201"
+                                    xsi:type="notation:Bounds" y="185"/>
+                                    </children>
+                                    <children type="4002 bw.ftp.dir">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.2"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="203"
+                                    xsi:type="notation:Bounds" y="185"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.log">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="816"
+                                    xsi:type="notation:Bounds" y="9"/>
+                                    </children>
+                                    <children type="4018">
+                                    <children type="3018">
+                                    <children type="4020">
+                                    <children type="3020">
+                                    <children type="4005">
+                                    <children type="3007">
+
+                                    <children type="4002 bw.generalactivities.callprocess">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="445"
+                                    xsi:type="notation:Bounds" y="48"/>
+                                    </children>
+
+                                    <children type="4002 bw.ftp.get">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="111"
+                                    xsi:type="notation:Bounds" y="48"/>
+                                    </children>
+
+                                    <children type="4002 bw.generalactivities.callprocess">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.4"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="549"
+                                    xsi:type="notation:Bounds" y="48"/>
+                                    </children>
+
+                                    <children type="4002 bw.generalactivities.callprocess">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.5"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="10"
+                                    xsi:type="notation:Bounds" y="48"/>
+                                    </children>
+
+                                    <children type="4002 bw.generalactivities.callprocess">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.6"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="351"
+                                    xsi:type="notation:Bounds" y="48"/>
+                                    </children>
+
+                                    <children type="4002 bw.generalactivities.callprocess">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.7"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="256"
+                                    xsi:type="notation:Bounds" y="48"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity"/>
+
+                                    <layoutConstraint
+                                    height="235"
+                                    width="733" xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint
+                                    height="235"
+                                    width="736"
+                                    x="15"
+                                    xsi:type="notation:Bounds" y="20"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles restoreHeight="165"
+                                    restoreWidth="454"
+                                    restoreX="176"
+                                    restoreY="46" xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.4"/>
+                                    <layoutConstraint
+                                    height="279" width="776"
+                                    x="344"
+                                    xsi:type="notation:Bounds" y="67"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.bwassign">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.5"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="9"
+                                    xsi:type="notation:Bounds" y="185"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.callprocess">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.6"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="110"
+                                    xsi:type="notation:Bounds" y="185"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.callprocess">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.7"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="1121"
+                                    xsi:type="notation:Bounds" y="185"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.callprocess">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="544"
+                                    xsi:type="notation:Bounds" y="351"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.callprocess">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="312"
+                                    xsi:type="notation:Bounds" y="351"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@activity"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity"/>
+                                    <layoutConstraint height="449"
+                                    width="1399" xsi:type="notation:Bounds"/>
+                                </children>
+                                <styles xsi:type="notation:SortingStyle"/>
+                                <styles xsi:type="notation:FilteringStyle"/>
+                                <element href="//0/@process/@activity"/>
+                            </children>
+                            <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                            <styles xsi:type="bwnotation:BackgroundStyle"/>
+                            <styles xsi:type="bwnotation:ResizingStyle"/>
+                            <element href="//0/@process/@activity"/>
+                            <layoutConstraint height="449" width="1402" xsi:type="notation:Bounds"/>
+                        </children>
+                        <children type="4022">
+                            <children type="3022">
+                                <children type="4029">
+                                    <children type="3031">
+                                    <children type="4033">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
+                                    <layoutConstraint
+                                    height="34" width="34"
+                                    xsi:type="notation:Bounds" y="68"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
+                                    </children>
+                                    <children type="3032">
+                                    <children type="4005">
+                                    <children type="3007">
+                                    <children type="4002 bw.generalactivities.callprocess">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="305"
+                                    xsi:type="notation:Bounds" y="58"/>
+                                    </children>
+                                    <children type="4002 bw.restjson.JsonRender">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="171"
+                                    xsi:type="notation:Bounds" y="58"/>
+                                    </children>
+                                    <styles xsi:type="notation:DrawerStyle"/>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
+                                    <layoutConstraint
+                                    height="168"
+                                    width="1010" xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles restoreHeight="178"
+                                    restoreWidth="1352" xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
+                                    <layoutConstraint height="178"
+                                    width="1352" xsi:type="notation:Bounds"/>
+                                </children>
+                                <styles xsi:type="notation:SortingStyle"/>
+                                <styles xsi:type="notation:FilteringStyle"/>
+                                <element href="//0/@process/@activity/@faultHandlers"/>
+                            </children>
+                            <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                            <styles xsi:type="bwnotation:BackgroundStyle"/>
+                            <styles xsi:type="bwnotation:ResizingStyle"/>
+                            <element href="//0/@process/@activity/@faultHandlers"/>
+                            <layoutConstraint height="200" width="1362"
+                                x="22" xsi:type="notation:Bounds" y="471"/>
+                        </children>
+                        <styles xsi:type="notation:SortingStyle"/>
+                        <styles xsi:type="notation:FilteringStyle"/>
+                        <element href="//0/@process/@activity"/>
+                    </children>
+                    <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                    <element href="//0/@process/@activity"/>
+                    <layoutConstraint height="672" width="1402" x="1"
+                        xsi:type="notation:Bounds" y="1"/>
+                </children>
+                <styles xsi:type="notation:SortingStyle"/>
+                <styles xsi:type="notation:FilteringStyle"/>
+                <element href="//0/@process"/>
+            </children>
+            <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
+            <element href="//0/@process"/>
+            <layoutConstraint height="724" width="1744" xsi:type="notation:Bounds"/>
+        </children>
+        <styles xsi:type="notation:DiagramStyle"/>
+        <element href="//0"/>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.1"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="-18"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[25, 0, -152, -35]$[170, 0, -7, -35]" xsi:type="notation:RelativeBendpoints"/>
+            <targetAnchor id="(0.017094017094017096,0.5169811320754717)" xsi:type="notation:IdentityAnchor"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint x="21" xsi:type="notation:Location" y="-17"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.3"/>
+            <bendpoints
+                points="[0, -24, -600, 102]$[0, -124, -600, 2]$[576, -124, -24, 2]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.4"/>
+            <bendpoints
+                points="[25, 3, -292, -159]$[305, 3, -12, -159]$[305, 152, -12, -10]" xsi:type="notation:RelativeBendpoints"/>
+            <targetAnchor id="(0.7479674796747967,0.21333333333333335)" xsi:type="notation:IdentityAnchor"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.1"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@links/@children.1"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint x="2" xsi:type="notation:Location" y="-17"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.6"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint x="1" xsi:type="notation:Location" y="-14"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@links/@children.2"/>
+            <bendpoints
+                points="[0, 25, -490, -15]$[0, 96, -490, 56]$[470, 96, -20, 56]$[470, 40, -20, 0]$[478, 40, -12, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@links/@children.3"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[25, -1, -135, 0]$[136, 0, -24, 1]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[15, -24, -33, 56]$[33, -55, -15, 25]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint x="2" xsi:type="notation:Location" y="-17"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[25, 0, -91, 0]$[92, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@links/@children.6"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.4/@activity/@activities.1/@activity/@activity/@links/@children.7"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.8"/>
+            <bendpoints points="[25, 0, -87, 0]$[88, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.9"/>
+            <bendpoints
+                points="[25, 0, -672, 166]$[697, 0, 0, 166]$[697, -141, 0, 25]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
+            <children type="6002">
+                <layoutConstraint x="1" xsi:type="notation:Location" y="-17"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
+            <bendpoints
+                points="[0, 25, -202, -141]$[0, 166, -202, 0]$[178, 166, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.11"/>
+            <bendpoints
+                points="[0, 25, -1011, 25]$[0, 225, -1011, 225]$[1017, 225, 6, 225]$[1017, 25, 6, 25]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+    </notation:Diagram>
+    <tibex:NamespaceRegistry enabled="true">
+        <tibex:namespaceItem
+            namespace="http://www.example.org/SAP_SHER_ONL_0001_Request" prefix="tns"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/file/v2" prefix="tns1"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/file" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://tns.tibco.com/bw/activity/dir" prefix="tns3"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/pe/WriteToLogActivitySchema" prefix="tns4"/>
+        <tibex:namespaceItem
+            namespace="http://tns.tibco.com/bw/activity/get/input+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetInputData" prefix="tns5"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.com/namespaces/tns/1610583409932" prefix="tns6"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.org/ErrSchema" prefix="tns7"/>
+    </tibex:NamespaceRegistry>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/SAP_SHER_ONL_0001_Request"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1610583409932"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/ErrSchema"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
+    <bpws:variables>
+        <bpws:variable element="ns:ProcessContext"
+            name="_processContext" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:DataInfo" name="putUpladFile-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
+        <bpws:variable name="FTPConnectionProperty"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            sca-bpel:sharedResourceType="{http://ns.tibco.com/bw/palette/ftpconnection}ftpconnection" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>com.fnf.eai.resources.ftp.client.sap.FTPConnectionResource_sap</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
+        <bpws:variable element="ns4:Input" name="FTPDir-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns4:Output" name="FTPDir" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:ActivityErrorData"
+            name="_error_FTPDir" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:ActivityInput"
+            name="NoSerarchFile-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns10:FTPGetInputData"
+            name="FTPGet-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns11:FTPGetOutputBinary" name="FTPGet" sca-bpel:internal="true"/>
+        <bpws:variable element="ns9:ActivityErrorData"
+            name="_error_FTPGet" sca-bpel:internal="true"/>
+        <bpws:variable element="ns13:JobInfo" name="JobInfo"/>
+        <bpws:variable element="ns13:JobTotal" name="LOG_START-input" sca-bpel:internal="true"/>
+        <bpws:variable name="loglevel" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/COMMON/LOG_LEVEL" type="xsd:string"/>
+        <bpws:variable name="sap_filepath" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>/usr/sap/EAI/ZCO_DOWN/</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
+        <bpws:variable name="sher_filepath" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>/General/손익Dashboard파일/</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
+        <bpws:variable element="ns13:JobTotal" name="LOG_END-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns13:JobTotal" name="LOG_SEND-input" sca-bpel:internal="true"/>
+        <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
+        <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
+        <bpws:variable element="ns13:JobTotal"
+            name="RenderJSON_catch-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns17:element" name="RenderJSON-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns15:ActivityOutputClass"
+            name="RenderJSON" sca-bpel:internal="true"/>
+        <bpws:variable element="ns16:ActivityErrorData"
+            name="_error_RenderJSON" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:DataInfo" name="getToken" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:DataInfo" name="CreateSession-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:SessionResult" name="CreateSession" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:tokenResult" name="getItem-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:Item" name="getItem" sca-bpel:internal="true"/>
+        <bpws:variable element="ns0:tokenResult"
+            name="CreateItemFolder2-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns18:messageBody" name="Start"
+            sca-bpel:internal="true" tibex:parameter="in"/>
+        <bpws:variable element="ns0:DataInfo" name="getToken2" sca-bpel:internal="true"/>
+    </bpws:variables>
+    <bpws:extensions>
+        <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
+        <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bw/process/info"/>
+        <bpws:extension mustUnderstand="no" namespace="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"/>
+        <bpws:extension mustUnderstand="no" namespace="http://docs.oasis-open.org/ns/opencsa/sca/200912"/>
+        <bpws:extension mustUnderstand="no" namespace="http://ns.tibco.com/bw/property"/>
+        <bpws:extension mustUnderstand="no" namespace="http://www.tibco.com/bpel/2007/extensions"/>
+    </bpws:extensions>
+    <bpws:scope name="scope">
+        <bpws:faultHandlers>
+            <bpws:catchAll tibex:faultDetailsVar="FaultDetails"
+                tibex:faultNameVar="FaultName" tibex:xpdlId="403142d8-b774-45df-81fd-107dd6a56f30">
+                <bpws:scope name="scope1">
+                    <bpws:flow name="flow2">
+                        <bpws:links>
+                            <bpws:link
+                                name="RenderJSONToRenderJSON_catch" tibex:linkType="SUCCESS"/>
+                        </bpws:links>
+                        <bpws:extensionActivity>
+                            <tibex:extActivity
+                                inputVariable="RenderJSON_catch-input"
+                                name="RenderJSON_catch"
+                                tibex:xpdlId="1cc89d3d-3aa6-42f7-87dc-72ea17be14cc"
+                                type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                <bpws:targets>
+                                    <bpws:target linkName="RenderJSONToRenderJSON_catch"/>
+                                </bpws:targets>
+                                <tibex:inputBindings>
+                                    <tibex:inputBinding coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;FTPDir&quot;/>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:template name=&quot;RenderJSON_catch-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'ERROR'&quot;/>&lt;/STEP>&lt;ERROR_MSG>&lt;xsl:value-of select=&quot;$FaultDetails/Msg&quot;/>&lt;/ERROR_MSG>&lt;ERROR_STACKTRACE>&lt;xsl:value-of select=&quot;$FaultDetails/StackTrace&quot;/>&lt;/ERROR_STACKTRACE>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;$FTPDir&quot;/>&lt;/DEBUG_DATA>&lt;ERROR_ACTIVITY>&lt;xsl:value-of select=&quot;$FaultDetails/ActivityName&quot;/>&lt;/ERROR_ACTIVITY>&lt;ERROR_CODE>&lt;xsl:value-of select=&quot;$FaultDetails/MsgCode&quot;/>&lt;/ERROR_CODE>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                </tibex:inputBindings>
+                                <tibex:CallProcess spawn="true"
+                                    subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                            </tibex:extActivity>
+                        </bpws:extensionActivity>
+                        <bpws:extensionActivity>
+                            <tibex:activityExtension
+                                inputVariable="RenderJSON-input"
+                                name="RenderJSON"
+                                outputVariable="RenderJSON"
+                                tibex:xpdlId="b801de23-5e35-45c5-a8d1-16b426bd70bd" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                <bpws:sources>
+                                    <bpws:source linkName="RenderJSONToRenderJSON_catch"/>
+                                </bpws:sources>
+                                <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.example.org/ErrSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;FaultDetails&quot;/>&#xa;    &lt;xsl:template name=&quot;RenderJSON-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns7:element>&#xa;            &lt;tns7:RESPONSE_CD>&#xa;                &lt;xsl:value-of select=&quot;'500'&quot;/>&#xa;            &lt;/tns7:RESPONSE_CD>&#xa;            &lt;tns7:RESPONSE_MSG>&#xa;                &lt;xsl:value-of select=&quot;$FaultDetails/Msg&quot;/>&#xa;            &lt;/tns7:RESPONSE_MSG>&#xa;            &lt;tns7:RESPONSE_DATA xsi:nil=&quot;true&quot;/>&#xa;        &lt;/tns7:element>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                </tibex:inputBindings>
+                                <tibex:config>
+                                    <bwext:BWActivity
+                                    activityTypeID="bw.restjson.JsonRender"
+                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                                    xmlns:restjson="http://ns.tibco.com/bw/palette/restjson" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <activityConfig>
+                                    <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/restjson#//JsonRender"/>
+                                    <value
+                                    jsonOutputStyle="None"
+                                    schemaType="Xsd" xsi:type="restjson:JsonRender">
+                                    <inputEditorElement href="platform:/resource/EAI_RestType1/Schemas/COMMON/ErrSchema.xsd#//element;XSDElementDeclaration"/>
+                                    </value>
+                                    </properties>
+                                    </activityConfig>
+                                    </bwext:BWActivity>
+                                </tibex:config>
+                            </tibex:activityExtension>
+                        </bpws:extensionActivity>
+                    </bpws:flow>
+                </bpws:scope>
+            </bpws:catchAll>
+        </bpws:faultHandlers>
+        <bpws:flow name="flow">
+            <bpws:links>
+                <bpws:link name="StartToFTPDir" tibex:linkType="SUCCESS"/>
+                <bpws:link name="IterateToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="FTPDirToIterate" tibex:label="count>0" tibex:linkType="SUCCESSWITHCONDITION"/>
+                <bpws:link name="FTPDirToLog" tibex:label="no files" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+                <bpws:link name="NoSerarchFileToLOG_END" tibex:linkType="SUCCESS"/>
+                <bpws:link name="AssignToFTPDir" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LOG_STARTToFTPDir" tibex:label="03:30" tibex:linkType="SUCCESSWITHCONDITION"/>
+                <bpws:link name="CallProcessToEnd" tibex:linkType="SUCCESS"/>
+                <bpws:link name="getToken2ToCreateItemFolder2" tibex:linkType="SUCCESS"/>
+                <bpws:link name="CreateItemFolder2ToLOG_END" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LOG_X0130" tibex:label="01:30" tibex:linkType="SUCCESSWITHCONDITION"/>
+                <bpws:link name="LOG_STARTToLOG_otherwise"
+                    tibex:label="otherwise" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+            </bpws:links>
+            <bpws:extensionActivity>
+                <tibex:receiveEvent createInstance="yes"
+                    eventTimeout="0" name="Start"
+                    tibex:xpdlId="86d8190a-ceb3-41bf-9e5f-736afb97ba88"
+                    variable="Start" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:sources>
+                        <bpws:source linkName="StartToFTPDir"/>
+                    </bpws:sources>
+                    <tibex:eventSource>
+                        <tibex:StartEvent xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                    </tibex:eventSource>
+                </tibex:receiveEvent>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension name="End"
+                    tibex:xpdlId="c5a5c487-d433-45f4-8eab-96fc2ea725af" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="CallProcessToEnd"/>
+                    </bpws:targets>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.internal.end"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:internalactivities="http://ns.tibco.com/bw/core/internalactivity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/core/internalactivity#//End"/>
+                                    <value xsi:type="internalactivities:End"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension inputVariable="FTPDir-input"
+                    name="FTPDir" outputVariable="FTPDir"
+                    tibex:xpdlId="92a80f76-f27b-4865-8c47-02701b39c581" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="LOG_STARTToFTPDir"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="FTPDirToIterate">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="$FTPDir/ItemCount>0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$FTPDir/ItemCount>0]]></bpws:transitionCondition>
+                        </bpws:source>
+                        <bpws:source linkName="FTPDirToLog">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                        </bpws:source>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://tns.tibco.com/bw/activity/dir&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;sap_filepath&quot;/>&lt;xsl:template name=&quot;FTPDir-input&quot; match=&quot;/&quot;>&lt;tns3:Input>&lt;Directory>&lt;xsl:value-of select=&quot;$sap_filepath&quot;/>&lt;/Directory>&lt;/tns3:Input>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity activityTypeID="bw.ftp.dir"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:ftpPalette="http://ns.tibco.com/bw/palette/ftp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/ftp#//FTPDir"/>
+                                    <value
+                                    ftpConnection="FTPConnectionProperty"
+                                    nlst="true" xsi:type="ftpPalette:FTPDir"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:activityExtension
+                    inputVariable="NoSerarchFile-input"
+                    name="NoSerarchFile"
+                    tibex:xpdlId="3f448beb-e488-4f72-95a2-cac76c867e58" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="FTPDirToLog"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="NoSerarchFileToLOG_END"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&lt;tns4:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;'no Files'&quot;/>&lt;/message>&lt;/tns4:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.log"
+                            version="6.0.0.001"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Log"/>
+                                    <value controlBy="Application"
+                                    role="Info"
+                                    suppressJobInfo="true" xsi:type="generalactivities:Log"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:scope name="Iterate" tibex:group="iterate" tibex:xpdlId="70e80a96-325f-4682-806a-ca8f9d3b577e">
+                <bpws:targets>
+                    <bpws:target linkName="FTPDirToIterate"/>
+                </bpws:targets>
+                <bpws:sources>
+                    <bpws:source linkName="IterateToEnd"/>
+                </bpws:sources>
+                <bpws:sequence name="sequence" tibex:group="iterate">
+                    <bpws:empty name="GroupInit" tibex:group="groupInit"/>
+                    <bpws:forEach counterName="index" name="iterate"
+                        parallel="no" tibex:group="iterate">
+                        <tibex:DesignExpression name="variableList">
+                            <tibex:expression
+                                expression="$FTPDir/DirectoryItems" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                        </tibex:DesignExpression>
+                        <bpws:startCounterValue><![CDATA[1]]></bpws:startCounterValue>
+                        <bpws:finalCounterValue expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[count($FTPDir/DirectoryItems)]]></bpws:finalCounterValue>
+                        <bpws:scope name="innerScope">
+                            <bpws:variables>
+                                <bpws:variable
+                                    element="ns4:Iterate_Current_Element_DirectoryItems"
+                                    name="currentElement" sca-bpel:internal="true"/>
+                            </bpws:variables>
+                            <bpws:flow name="flow1">
+                                <bpws:links>
+                                    <bpws:link
+                                    name="GroupStartTogetToken" tibex:linkType="SUCCESS"/>
+                                    <bpws:link
+                                    name="putUpladFileToGroupEnd" tibex:linkType="SUCCESS"/>
+                                    <bpws:link
+                                    name="FTPGetToGroupEnd_otherwise"
+                                    tibex:label="otherwise" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+                                    <bpws:link
+                                    name="CallProcessToGroupEnd" tibex:linkType="SUCCESS"/>
+                                    <bpws:link name="getTokenToFTPGet" tibex:linkType="SUCCESS"/>
+                                    <bpws:link name="FTPGetTogetItem"
+                                    tibex:label="'KE30*'" tibex:linkType="SUCCESSWITHCONDITION"/>
+                                    <bpws:link
+                                    name="CallProcessToputUpladFile" tibex:linkType="SUCCESS"/>
+                                    <bpws:link
+                                    name="CallProcessToCreateSession" tibex:linkType="SUCCESS"/>
+                                </bpws:links>
+                                <bpws:assign name="GroupStart"
+                                    tibex:group="groupStart"
+                                    tibex:xpdlId="c1b7cbcd-d673-46bc-bed7-9340451389d0" validate="no">
+                                    <bpws:sources>
+                                    <bpws:source linkName="GroupStartTogetToken"/>
+                                    </bpws:sources>
+                                    <bpws:copy>
+                                    <bpws:from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[($FTPDir/DirectoryItems)[number($index)]]]></bpws:from>
+                                    <bpws:to variable="currentElement"/>
+                                    </bpws:copy>
+                                </bpws:assign>
+                                <bpws:empty name="GroupEnd"
+                                    tibex:group="groupEnd" tibex:xpdlId="05825ebd-c769-450e-a6c8-e648b2dd0576">
+                                    <bpws:targets>
+                                    <bpws:target linkName="FTPGetToGroupEnd_otherwise"/>
+                                    <bpws:target linkName="CallProcessToGroupEnd"/>
+                                    </bpws:targets>
+                                </bpws:empty>
+                                <bpws:extensionActivity>
+                                    <tibex:extActivity
+                                    inputVariable="putUpladFile-input"
+                                    name="putUpladFile"
+                                    tibex:xpdlId="523c90bb-edd1-43db-bc98-f0fa904c8428"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="CallProcessToputUpladFile"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="putUpladFileToGroupEnd"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/SAP_SHER_ONL_0001_Request&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;FTPGet&quot;/>&lt;xsl:param name=&quot;sher_filepath&quot;/>&lt;xsl:param name=&quot;currentElement&quot;/>&lt;xsl:param name=&quot;getToken&quot;/>&lt;xsl:param name=&quot;CreateSession&quot;/>&lt;xsl:param name=&quot;getItem&quot;/>&lt;xsl:template name=&quot;putUpladFile-input&quot; match=&quot;/&quot;>&lt;tns:DataInfo>&lt;xsl:variable name=&quot;CURR_DATE&quot; select=&quot;format-dateTime(current-dateTime(), '[Y0001][M01][D01]')&quot;/>&lt;xsl:copy-of select=&quot;$getToken/tns:tokenResult&quot;/>&lt;xsl:copy-of select=&quot;$CreateSession&quot;/>&lt;xsl:copy-of select=&quot;$getItem&quot;/>&lt;tns:datas>&lt;xsl:value-of select=&quot;$FTPGet/BinaryData&quot;/>&lt;/tns:datas>&lt;tns:full_filepath>&lt;xsl:value-of select=&quot;concat($sher_filepath,$CURR_DATE,'/',$currentElement)&quot;/>&lt;/tns:full_filepath>&lt;xsl:if test=&quot;$FTPGet/FileTransferred[1]/NumOfBytes&quot;>&lt;tns:size>&lt;xsl:value-of select=&quot;$FTPGet/FileTransferred[1]/NumOfBytes&quot;/>&lt;/tns:size>&lt;/xsl:if>&lt;tns:filename>&lt;xsl:value-of select=&quot;$currentElement&quot;/>&lt;/tns:filename>&lt;tns:uploadUrl>&lt;xsl:value-of select=&quot;replace($CreateSession/tns:uploadUrl, 'https://fnf365.sharepoint.com', '')&quot;/>&lt;/tns:uploadUrl>&lt;/tns:DataInfo>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="com.fnf.eai.common.sher.putUploadFile" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                    </tibex:extActivity>
+                                </bpws:extensionActivity>
+                                <bpws:extensionActivity>
+                                    <tibex:activityExtension
+                                    inputVariable="FTPGet-input"
+                                    name="FTPGet"
+                                    outputVariable="FTPGet"
+                                    tibex:xpdlId="94b0662f-a228-414e-9d3b-230117db9f3d" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="getTokenToFTPGet"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="FTPGetToGroupEnd_otherwise">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    <bpws:source linkName="FTPGetTogetItem">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="substring(upper-case($currentElement), 1, 4)='KE30'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[substring(upper-case($currentElement), 1, 4)='KE30']]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://tns.tibco.com/bw/activity/get/input+94b0662f-a228-414e-9d3b-230117db9f3d+FTPGetInputData&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;sap_filepath&quot;/>&lt;xsl:param name=&quot;currentElement&quot;/>&lt;xsl:template name=&quot;FTPGet-input&quot; match=&quot;/&quot;>&lt;tns5:FTPGetInputData>&lt;RemoteFileName>&lt;xsl:value-of select=&quot;concat($sap_filepath,'/',$currentElement)&quot;/>&lt;/RemoteFileName>&lt;/tns5:FTPGetInputData>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:config>
+                                    <bwext:BWActivity
+                                    activityTypeID="bw.ftp.get"
+                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                                    xmlns:ftpPalette="http://ns.tibco.com/bw/palette/ftp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <activityConfig>
+                                    <properties
+                                    name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/ftp#//FTPGet"/>
+                                    <value
+                                    binary="true"
+                                    ftpConnection="FTPConnectionProperty"
+                                    useProcessData="true" xsi:type="ftpPalette:FTPGet"/>
+                                    </properties>
+                                    </activityConfig>
+                                    </bwext:BWActivity>
+                                    </tibex:config>
+                                    </tibex:activityExtension>
+                                </bpws:extensionActivity>
+                                <bpws:extensionActivity>
+                                    <tibex:extActivity
+                                    inputVariable="LOG_SEND-input"
+                                    name="LOG_SEND"
+                                    tibex:xpdlId="3e8a6791-ab0a-45f0-b8d0-84431598349f"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="putUpladFileToGroupEnd"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="CallProcessToGroupEnd"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;currentElement&quot;/>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:template name=&quot;LOG_SEND-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;xsd:int($index)&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'SEND'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;$currentElement&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int($index)&quot;/>&lt;/DATA_CNT>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess spawn="true"
+                                    subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                    </tibex:extActivity>
+                                </bpws:extensionActivity>
+                                <bpws:extensionActivity>
+                                    <tibex:extActivity name="getToken"
+                                    outputVariable="getToken"
+                                    tibex:xpdlId="e2cdeb91-5769-4a61-a11a-f0a73f26ca30"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="GroupStartTogetToken"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="getTokenToFTPGet"/>
+                                    </bpws:sources>
+                                    <tibex:CallProcess
+                                    subProcessName="com.fnf.eai.common.sher.getToken" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                    </tibex:extActivity>
+                                </bpws:extensionActivity>
+                                <bpws:extensionActivity>
+                                    <tibex:extActivity
+                                    inputVariable="CreateSession-input"
+                                    name="CreateSession"
+                                    outputVariable="CreateSession"
+                                    tibex:xpdlId="0fc6273b-2663-4787-8674-0ac4451e5d9c"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="CallProcessToCreateSession"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="CallProcessToputUpladFile"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/SAP_SHER_ONL_0001_Request&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;currentElement&quot;/>&lt;xsl:param name=&quot;getToken&quot;/>&lt;xsl:param name=&quot;FTPGet&quot;/>&lt;xsl:param name=&quot;getItem&quot;/>&lt;xsl:template name=&quot;CreateSession-input&quot; match=&quot;/&quot;>&lt;tns:DataInfo>&lt;xsl:copy-of select=&quot;$getToken/tns:tokenResult&quot;/>&lt;xsl:copy-of select=&quot;$getItem&quot;/>&lt;xsl:if test=&quot;$FTPGet/FileTransferred[1]/NumOfBytes&quot;>&lt;tns:size>&lt;xsl:value-of select=&quot;$FTPGet/FileTransferred[1]/NumOfBytes&quot;/>&lt;/tns:size>&lt;/xsl:if>&lt;tns:filename>&lt;xsl:value-of select=&quot;$currentElement&quot;/>&lt;/tns:filename>&lt;/tns:DataInfo>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="com.fnf.eai.common.sher.CreateUploadSession" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                    </tibex:extActivity>
+                                </bpws:extensionActivity>
+                                <bpws:extensionActivity>
+                                    <tibex:extActivity
+                                    inputVariable="getItem-input"
+                                    name="getItem"
+                                    outputVariable="getItem"
+                                    tibex:xpdlId="a32ee6fb-aec2-4212-ad07-99ea97039974"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="FTPGetTogetItem"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="CallProcessToCreateSession"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/SAP_SHER_ONL_0001_Request&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;getToken&quot;/>&lt;xsl:template name=&quot;getItem-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$getToken/tns:tokenResult&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="com.fnf.eai.common.sher.getItemId" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                    </tibex:extActivity>
+                                </bpws:extensionActivity>
+                            </bpws:flow>
+                        </bpws:scope>
+                    </bpws:forEach>
+                </bpws:sequence>
+            </bpws:scope>
+            <bpws:extensionActivity>
+                <tibex:activityExtension inputVariable="JobInfo"
+                    name="Assign_JobInfo" outputVariable="JobInfo"
+                    tibex:xpdlId="0f25b7ac-9033-44cb-9080-04d8a65ec2f1" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="StartToFTPDir"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="AssignToFTPDir"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_processContext&quot;/>&lt;xsl:template name=&quot;JobInfo&quot; match=&quot;/&quot;>&lt;tns6:JobInfo>&lt;xsl:variable name=&quot;IF_ID&quot; select=&quot;substring(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;), tib:last-index-of(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;), '.')+1)&quot;/>&lt;xsl:variable name=&quot;CURR_TM&quot; select=&quot;format-dateTime(current-dateTime(), '[Y0001][M01][D01][H01][m01][s01][f001]')&quot;/>&lt;IF_ID>&lt;xsl:value-of select=&quot;$IF_ID&quot;/>&lt;/IF_ID>&lt;TR_ID>&lt;xsl:value-of select=&quot;concat($IF_ID, '', $CURR_TM, '', $_processContext/JobId)&quot;/>&lt;/TR_ID>&lt;/tns6:JobInfo>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:config>
+                        <bwext:BWActivity
+                            activityTypeID="bw.generalactivities.bwassign"
+                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                            xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <activityConfig>
+                                <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//BWAssign"/>
+                                    <value processVariable="JobInfo" xsi:type="generalactivities:BWAssign"/>
+                                </properties>
+                            </activityConfig>
+                        </bwext:BWActivity>
+                    </tibex:config>
+                </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LOG_START-input"
+                    name="LOG_START"
+                    tibex:xpdlId="f735cb4a-68fa-4410-979d-548c0e83bb66"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="AssignToFTPDir"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LOG_X0130">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="$Start='1'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$Start='1']]></bpws:transitionCondition>
+                        </bpws:source>
+                        <bpws:source linkName="LOG_STARTToLOG_otherwise">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                        </bpws:source>
+                        <bpws:source linkName="LOG_STARTToFTPDir">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="$Start='3' or $Start='send'" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[$Start='3' or $Start='send']]></bpws:transitionCondition>
+                        </bpws:source>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:template name=&quot;LOG_START-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'START'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess spawn="true"
+                        subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LOG_END-input"
+                    name="LOG_END"
+                    tibex:xpdlId="ca60648c-8ce2-447b-8f20-d7286f23996b"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="IterateToEnd"/>
+                        <bpws:target linkName="NoSerarchFileToLOG_END"/>
+                        <bpws:target linkName="CreateItemFolder2ToLOG_END"/>
+                        <bpws:target linkName="LOG_STARTToLOG_otherwise"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="CallProcessToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;FTPDir&quot;/>&lt;xsl:template name=&quot;LOG_END-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'END'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;xsl:choose>&lt;xsl:when test=&quot;$FTPDir/ItemCount>0&quot;>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;$FTPDir/ItemCount&quot;/>&lt;/DATA_CNT>&lt;/xsl:when>&lt;xsl:otherwise>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess spawn="true"
+                        subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity
+                    inputVariable="CreateItemFolder2-input"
+                    name="CreateItemFolder2"
+                    tibex:xpdlId="0ef73a52-db26-44d4-98ec-1a5c618e91e8"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="getToken2ToCreateItemFolder2"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="CreateItemFolder2ToLOG_END"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/SAP_SHER_ONL_0001_Request&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;getToken2&quot;/>&lt;xsl:template name=&quot;CreateItemFolder2-input&quot; match=&quot;/&quot;>&lt;xsl:copy-of select=&quot;$getToken2/tns:tokenResult&quot;/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        subProcessName="com.fnf.eai.common.sher.CreateItemfolder" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity name="getToken2"
+                    outputVariable="getToken2"
+                    tibex:xpdlId="fa85029a-7549-4910-9bbc-cf6303283e46"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="LOG_X0130"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="getToken2ToCreateItemFolder2"/>
+                    </bpws:sources>
+                    <tibex:CallProcess
+                        subProcessName="com.fnf.eai.common.sher.getToken" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
+            </bpws:extensionActivity>
+        </bpws:flow>
+    </bpws:scope>
+</bpws:process>

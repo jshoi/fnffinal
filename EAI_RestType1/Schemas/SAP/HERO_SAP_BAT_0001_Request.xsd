@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/HERO_SAP_BAT_0001_Request" xmlns:tns="http://www.example.org/HERO_SAP_BAT_0001_Request" elementFormDefault="qualified">
+    <element name="element">
+            <complexType>
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="1" name="REQUEST">
+    	<complexType>
+    		<sequence>
+				<element name="IF_NO" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYYYMM" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="BRAND" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="NAME_KOR" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="OPN_FUND" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="CUM_GRS_GET" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="CUM_GRS_USE" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="CUM_GRS_BORROW" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="CUM_GRS_LEND" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="CUM_GRS_EXPDROP" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="CUM_NET_GET" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="CUM_NET_USE" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="CUM_CLS_STOCK" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="CUM_RETURN_RATIO" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="CUM_CLS_FUND" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYY_USE_FUND" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYY_ADD_FUND" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYY_GOOD_AMOUNT" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYY_GOOD_RATIO" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYY_GOOD_FUND" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYY_PROD_AMOUNT" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYY_PROD_RATIO" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYY_PROD_FUND" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="INPUT_DATE" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYY_USE_FUND_SELF" type="string" minOccurs="1" maxOccurs="1"></element>
+				<element name="YYY_USE_FUND_OTHR" type="string" minOccurs="1" maxOccurs="1"></element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+</schema>

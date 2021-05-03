@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SMS_HERO_ONL_0013_Request" xmlns:tns="http://www.example.org/SMS_HERO_ONL_0013_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST">
+					<complexType>
+						<sequence>
+							<element name="V_SEARCH_COUPON_TYPE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_SEARCH_COUPON_STR" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_BRAND" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_SHOPCODE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_COUPON_TYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_DC_TYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_COUPON_DESC" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_OPEN_DATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_DUE_DATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SMS_HERO_ONL_0009_Request" xmlns:tns="http://www.example.org/SMS_HERO_ONL_0009_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST">
+					<complexType>
+						<sequence>
+							<element name="V_CID" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_NAME" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_IPIN_CI" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_IPIN_DI" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_GENDER" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_AUTH_REALNAME" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_BIRTHDAY" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_HOMEPHONE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_HANDPHONE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_EMAIL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_ZIPCODE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_ADDRESS1" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_ADDRESS2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_REMARK" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_RECV_SMS_YN" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_RECV_EMAIL_YN" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_RECV_PHONE_YN" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_RECV_DM_YN" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_F_NAME0" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_GENDER0" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_BIRTH0" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_REMARK0" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_NAME1" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_GENDER1" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_BIRTH1" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_REMARK1" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_NAME2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_GENDER2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_BIRTH2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_F_REMARK2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_ADDR_TYPE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_MARRY_YN" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_AUTH_TYPE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_BRAND" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_USERID" type="string" minOccurs="1" maxOccurs="1"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

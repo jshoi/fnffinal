@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SMS_HERO_ONL_0015_Response" xmlns:tns="http://www.example.org/SMS_HERO_ONL_0015_Response" elementFormDefault="qualified">
+   <element name="element">
+        <complexType>
+    <sequence>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_CD" type="string"/>
+      <element maxOccurs="1" minOccurs="1" name="RESPONSE_MSG" type="string"/>
+      <element maxOccurs="unbounded" minOccurs="1" name="RESPONSE_DATA" nillable="true">
+        <complexType>
+          <sequence>
+          	<element maxOccurs="1" minOccurs="1" name="issueno" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="cid" type="string" nillable="true" />
+          	<element maxOccurs="1" minOccurs="1" name="coupon_type" type="string" nillable="true" />
+			<element maxOccurs="1" minOccurs="1" name="coupon_text" type="string" nillable="true" />
+			<element maxOccurs="1" minOccurs="1" name="coupon_desc" type="string" nillable="true" />
+			<element maxOccurs="1" minOccurs="1" name="dc_max" type="decimal" nillable="true" />
+			<element maxOccurs="1" minOccurs="1" name="open_date" type="string" nillable="true" />
+			<element maxOccurs="1" minOccurs="1" name="due_date" type="string" nillable="true" />
+			<element maxOccurs="1" minOccurs="1" name="available_date" type="string" nillable="true" />
+			<element maxOccurs="1" minOccurs="1" name="spd_shopcode" type="string" nillable="true" />
+			<element maxOccurs="1" minOccurs="1" name="spd_date" type="string" nillable="true" />
+			<element maxOccurs="1" minOccurs="1" name="available_yn" type="string" nillable="true" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+</schema>

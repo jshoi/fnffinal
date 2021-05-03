@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SMS_HERO_ONL_0022_Request" xmlns:tns="http://www.example.org/SMS_HERO_ONL_0022_Request" elementFormDefault="qualified">
+	<element name="element">
+		<complexType>
+			<sequence>
+				<element name="REQUEST" maxOccurs="unbounded" minOccurs="1">
+					<complexType>
+						<sequence>
+							<element name="V_BRAND" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="V_SHOPCODE" type="string"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="V_SEQ" type="decimal"
+								minOccurs="1" maxOccurs="1">
+							</element>
+							<element name="V_STATUS" type="string" minOccurs="1" maxOccurs="1" nillable="true">
+							</element>
+							<element name="V_DATE_FROM" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_DATE_TO" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_REQDATE_SALE" type="string" minOccurs="1" maxOccurs="1" nillable="true">
+							</element>
+							<element name="V_UPDATE_USERID" type="string" minOccurs="1" maxOccurs="1"></element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

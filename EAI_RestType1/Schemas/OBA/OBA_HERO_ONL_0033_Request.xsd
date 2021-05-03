@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/OBA_HERO_ONL_0033_Request" elementFormDefault="qualified" targetNamespace="http://www.example.org/OBA_HERO_ONL_0033_Request">
+   <element name="element">
+        <complexType>
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="1" name="REQUEST">
+        <complexType>
+          <sequence>
+              <element maxOccurs="1" minOccurs="1" name="V_CID" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+        </complexType>
+    </element>
+</schema>
