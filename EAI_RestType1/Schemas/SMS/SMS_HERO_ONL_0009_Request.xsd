@@ -36,7 +36,7 @@
 							<element name="V_F_GENDER2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_F_BIRTH2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_F_REMARK2" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
-							<element name="V_ADDR_TYPE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_ADDR_TYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_MARRY_YN" type="string" minOccurs="1" maxOccurs="1"></element>
 							<element name="V_AUTH_TYPE" type="string" minOccurs="1" maxOccurs="1"></element>
 							<element name="V_BRAND" type="string" minOccurs="1" maxOccurs="1"></element>
