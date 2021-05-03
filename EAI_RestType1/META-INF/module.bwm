@@ -1550,7 +1550,7 @@
   </sca:service>
   <sca:service xmi:id="_lfVxwJkMEeu-bd5PsjGydg" name="UseCoupon" promote="ComponentPOSP_HERO_ONL_2/UseCoupon">
     <sca:interface.wsdl xmi:id="_lfe7sJkMEeu-bd5PsjGydg" interface="http://xmlns.example.com/20210209184958PLT#wsdl.interface(UseCoupon)" scaext:wsdlLocation="../Processes/com/fnf/eai/posp/hero/rest/POSP_HERO_ONL_2.bwp"/>
-    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_lfm3gJkMEeu-bd5PsjGydg" name="RestService7" path="/UseCoupon" docBasePath="http://localhost:7777/EAI_RestType1" docResourcePath="POSP_HERO_ONL_2" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.posp.hero.rest.POSP_HERO_ONL_2-POSP_HERO_ONL_2.json">
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_lfm3gJkMEeu-bd5PsjGydg" name="RestService7" path="/UseCoupon" docBasePath="http://localhost:7777/EAI_RestType1" docResourcePath="POSP_HERO_ONL_2" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.posp.hero.rest.POSP_HERO_ONL_2-POSP_HERO_ONL_2.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
       <operation xmi:id="_lhdRoJkMEeu-bd5PsjGydg" operationName="post" nickname="post-UseCoupon" httpMethod="POST" notes="postPOSP_HERO_ONL_2" responseStyle="element" outputPartName="item">
         <clientFormat>json</clientFormat>
         <clientRequestFormat>json</clientRequestFormat>
@@ -1562,7 +1562,7 @@
   </sca:service>
   <sca:service xmi:id="_-YjC0pkTEeu-bd5PsjGydg" name="SMSGroupCouponPartsInsert" promote="ComponentSMS_HERO_ONL/SMSGroupCouponPartsInsert">
     <sca:interface.wsdl xmi:id="_-Yjp4JkTEeu-bd5PsjGydg" interface="http://xmlns.example.com/20210215105347PLT#wsdl.interface(SMSGroupCouponPartsInsert)" scaext:wsdlLocation="../Processes/com/fnf/eai/sms/hero/db/SMS_HERO_ONL.bwp"/>
-    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_-ZT30JkTEeu-bd5PsjGydg" name="RestService134" path="/SMSGroupCouponPartsInsert" docBasePath="http://localhost:7777/EAI_RestType1" docResourcePath="SMS_HERO_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.sms.hero.db.SMS_HERO_ONL-SMS_HERO_ONL.json">
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_-ZT30JkTEeu-bd5PsjGydg" name="RestService134" path="/SMSGroupCouponPartsInsert" docBasePath="http://localhost:7777/EAI_RestType1" docResourcePath="SMS_HERO_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.sms.hero.db.SMS_HERO_ONL-SMS_HERO_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
       <operation xmi:id="_-bNVQJkTEeu-bd5PsjGydg" operationName="post" nickname="post-SMSGroupCouponPartsInsert" httpMethod="POST" notes="postSMS_HERO_ONL" responseStyle="element" outputPartName="item">
         <clientFormat>json</clientFormat>
         <clientRequestFormat>json</clientRequestFormat>
@@ -1574,7 +1574,7 @@
   </sca:service>
   <sca:service xmi:id="_C0PLApkUEeu-bd5PsjGydg" name="SMSGroupCouponPartsDelete" promote="ComponentSMS_HERO_ONL/SMSGroupCouponPartsDelete">
     <sca:interface.wsdl xmi:id="_C0PyEJkUEeu-bd5PsjGydg" interface="http://xmlns.example.com/20210215105347PLT#wsdl.interface(SMSGroupCouponPartsDelete)" scaext:wsdlLocation="../Processes/com/fnf/eai/sms/hero/db/SMS_HERO_ONL.bwp"/>
-    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_C1ERcJkUEeu-bd5PsjGydg" name="RestService136" path="/SMSGroupCouponPartsDelete" docBasePath="http://localhost:7777/EAI_RestType1" docResourcePath="SMS_HERO_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.sms.hero.db.SMS_HERO_ONL-SMS_HERO_ONL.json">
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_C1ERcJkUEeu-bd5PsjGydg" name="RestService136" path="/SMSGroupCouponPartsDelete" docBasePath="http://localhost:7777/EAI_RestType1" docResourcePath="SMS_HERO_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.sms.hero.db.SMS_HERO_ONL-SMS_HERO_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
       <operation xmi:id="_C275sJkUEeu-bd5PsjGydg" operationName="post" nickname="post-SMSGroupCouponPartsDelete" httpMethod="POST" notes="postSMS_HERO_ONL" responseStyle="element" outputPartName="item">
         <clientFormat>json</clientFormat>
         <clientRequestFormat>json</clientRequestFormat>
