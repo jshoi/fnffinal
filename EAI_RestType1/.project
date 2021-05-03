@@ -3,6 +3,7 @@
 	<name>EAI_RestType1</name>
 	<comment></comment>
 	<projects>
+		<project>SharedModule</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
