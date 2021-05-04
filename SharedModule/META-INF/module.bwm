@@ -10,6 +10,7 @@
   <sca:property xmi:id="_lKt8IKwREeug2PqthfxuKw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_lK4UMKwREeug2PqthfxuKw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_grdGEKwSEeug2PqthfxuKw" name="/EAI_INFO/HTTP/HTTP_PORT1" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_NtdCMKyaEeu2Jsqp8Vqw8Q" name="/EAI_INFO/HTTP/ACTIVE_TIMEOUT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_lZMnkKwSEeug2PqthfxuKw" name="/EAI_INFO/CONFIG/QTP_MAX" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_m9nAoKwSEeug2PqthfxuKw" name="/EAI_INFO/CONFIG/QTP_MIN" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
 </sca:composite>

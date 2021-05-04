@@ -92,6 +92,15 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
+			<name>/EAI_INFO/HTTP/ACTIVE_TIMEOUT</name>
+			<value>60</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
 			<name>/EAI_INFO/CONFIG/QTP_MAX</name>
 			<value>75</value>
 			<deploymentSettable>false</deploymentSettable>
