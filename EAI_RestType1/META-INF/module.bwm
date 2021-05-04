@@ -1618,6 +1618,7 @@
   <sca:property xmi:id="_C5OvAGXrEeuhFpGsQLsBaA" name="/DB_INFO/MAX_ROW" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_GrsUAGXrEeuhFpGsQLsBaA" name="/DB_INFO/SUBSET_SIZE" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_GvM7AGXrEeuhFpGsQLsBaA" name="/DB_INFO/TIME_OUT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_sMg-IKzFEeuEx-UUGCLv-A" name="/DB_INFO/MAX_ROW_LONG" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_Ifz9AGXrEeuhFpGsQLsBaA" name="/EAI_INFO/JMS/URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_JhSoIGXrEeuhFpGsQLsBaA" name="/EAI_INFO/JMS/USERNAME" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_JlZFAGXrEeuhFpGsQLsBaA" name="/EAI_INFO/JMS/PASSWORD" type="property:password" scaext:simpleValue="#!pzvm8m5XnBvLJSRNWm2erQ==" publicAccess="true" scalable="true"/>

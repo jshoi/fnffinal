@@ -2343,6 +2343,9 @@
         <bpws:variable element="ns5:JobTotal" name="LOG_QUERY-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns5:JobTotal" name="LOG_Invoke-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns5:JobTotal" name="LOG_Render-input" sca-bpel:internal="true"/>
+        <bpws:variable name="MAX_ROW_LONG" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/DB_INFO/MAX_ROW_LONG" type="xsd:int"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -2550,9 +2553,7 @@
                     </tibex:config>
                 </tibex:activityExtension>
             </bpws:extensionActivity>
-            <bpws:scope name="Repeat" tibex:group="repeatUntil"
-                tibex:indexOriginalName="index"
-                tibex:indexToGlobal="false" tibex:xpdlId="ade963d8-7293-40a7-bb01-fbc65d55658a">
+            <bpws:scope name="Repeat" tibex:group="repeatUntil" tibex:xpdlId="ade963d8-7293-40a7-bb01-fbc65d55658a">
                 <bpws:targets>
                     <bpws:target linkName="LOG_STARTToRepeat"/>
                 </bpws:targets>
@@ -2654,7 +2655,7 @@
                                     eAttributeName="timeout" processProperty="SharedModule-DB_TIME_OUT"/>
                                     <attributeBindings
                                     bindingType="moduleProperty"
-                                    eAttributeName="maxRows" processProperty="SharedModule-MAX_ROW"/>
+                                    eAttributeName="maxRows" processProperty="MAX_ROW_LONG"/>
                                     <activityConfig>
                                     <properties
                                     name="config" xsi:type="activityconfig:EMFProperty">

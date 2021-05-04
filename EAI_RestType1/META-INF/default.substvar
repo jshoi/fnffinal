@@ -200,6 +200,15 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
+			<name>/DB_INFO/MAX_ROW_LONG</name>
+			<value>0</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<isOverride>false</isOverride>
+			<useLookupValue>false</useLookupValue>
+		</globalVariable>
+		<globalVariable>
 			<name>/EAI_INFO/JMS/URL</name>
 			<value>tcp://ip-10-200-0-238.ap-northeast-2.compute.internal:8103,tcp://ip-10-200-1-187.ap-northeast-2.compute.internal:8103</value>
 			<deploymentSettable>false</deploymentSettable>
