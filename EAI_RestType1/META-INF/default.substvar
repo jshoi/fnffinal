@@ -183,7 +183,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/DB_INFO/SUBSET_SIZE</name>
-			<value>1000</value>
+			<value>3000</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
