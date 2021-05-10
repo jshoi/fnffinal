@@ -6,7 +6,7 @@
 				<element name="REQUEST">
 					<complexType>
 						<sequence>
-							<element name="PSV_CID" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="PSV_CID" type="string" minOccurs="1" maxOccurs="1"></element>
 						</sequence>
 					</complexType>
 				</element>

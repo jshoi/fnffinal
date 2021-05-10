@@ -7,7 +7,7 @@
 					<complexType>
 						<sequence>
 							<element name="V_CID" type="string" minOccurs="1" maxOccurs="1"></element>
-							<element name="V_NAME" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_NAME" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_PASSWD_DATE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_REALNAME_YN" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_AUTH_TYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
@@ -26,7 +26,7 @@
 							<element name="V_GENDER" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_AUTH_REALNAME" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_UPDATE_USERID" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
-							<element name="V_AUTH_FLAG" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_AUTH_FLAG" type="string" minOccurs="1" maxOccurs="1"></element>
 							<element name="V_OPT_FLAG" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 						</sequence>
 					</complexType>

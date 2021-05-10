@@ -8,12 +8,12 @@
 						<sequence>
 							<element name="V_CID" type="string" minOccurs="1" maxOccurs="1"></element>
 							<element name="V_OPT_DATE" type="string" minOccurs="1" maxOccurs="1"></element>
-							<element name="V_RECV_EMAIL" type="string" minOccurs="1" maxOccurs="1"></element>
-							<element name="V_RECV_SMS" type="string" minOccurs="1" maxOccurs="1"></element>
-							<element name="V_RECV_PHONE" type="string" minOccurs="1" maxOccurs="1"></element>
-							<element name="V_RECV_POST" type="string" minOccurs="1" maxOccurs="1"></element>
-							<element name="V_STATUS" type="string" minOccurs="1" maxOccurs="1"></element>
-							<element name="V_REMARK" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_RECV_EMAIL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_RECV_SMS" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_RECV_PHONE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_RECV_POST" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_STATUS" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_REMARK" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 						</sequence>
 					</complexType>
 				</element>

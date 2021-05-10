@@ -13,7 +13,7 @@
 							<element name="V_EMAIL" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_IPIN_CI" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_IPIN_DI" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
-							<element name="V_STATUS_CHECK" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_STATUS_CHECK" type="string" minOccurs="1" maxOccurs="1"></element>
 							<element name="V_LEAVE_YN" type="string" minOccurs="1" maxOccurs="1"></element>
 						</sequence>
 					</complexType>

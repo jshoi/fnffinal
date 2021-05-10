@@ -9,7 +9,7 @@
 							<element name="V_CID" type="string" minOccurs="1" maxOccurs="1"></element>
 							<element name="V_TYPE" type="string" minOccurs="1" maxOccurs="1"></element>
 							<element name="V_POINT" type="string" minOccurs="1" maxOccurs="1"></element>
-							<element name="V_AMOUNT" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_AMOUNT" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 							<element name="V_REMARK" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 						</sequence>
 					</complexType>

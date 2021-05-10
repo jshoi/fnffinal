@@ -7,8 +7,8 @@
 					<complexType>
 						<sequence>
 							<element name="V_CID" type="string" minOccurs="1" maxOccurs="1"></element>
-							<element name="V_SITE" type="string" minOccurs="1" maxOccurs="1"></element>
-							<element name="V_LOGTYPE" type="string" minOccurs="1" maxOccurs="1"></element>
+							<element name="V_SITE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
+							<element name="V_LOGTYPE" type="string" minOccurs="1" maxOccurs="1" nillable="true"></element>
 						</sequence>
 					</complexType>
 				</element>
