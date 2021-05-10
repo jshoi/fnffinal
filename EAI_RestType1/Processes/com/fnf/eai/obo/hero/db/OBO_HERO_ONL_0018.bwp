@@ -1217,6 +1217,39 @@
                                     x="831"
                                     xsi:type="notation:Bounds" y="117"/>
                                     </children>
+                                    <children type="4002 bw.generalactivities.callprocess">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.12"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="1158"
+                                    xsi:type="notation:Bounds" y="234"/>
+                                    </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -1548,7 +1581,7 @@
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
+                <layoutConstraint x="10" xsi:type="notation:Location" y="-27"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
@@ -1612,6 +1645,28 @@
             <bendpoints
                 points="[0, 25, -221, 25]$[0, 77, -221, 77]$[234, 77, 13, 77]$[234, 25, 13, 25]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.12" type="4006">
+            <children type="6002">
+                <layoutConstraint x="14" xsi:type="notation:Location" y="-26"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.13"/>
+            <bendpoints points="[22, 25, -84, -92]$[84, 93, -22, -24]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.12"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.14"/>
+            <bendpoints points="[25, -22, -104, 95]$[105, -95, -24, 22]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1632,6 +1687,8 @@
             namespace="http://www.example.org/OBO_HERO_ONL_0018_Response" prefix="tns8"/>
         <tibex:namespaceItem
             namespace="http://www.example.org/ErrSchema" prefix="tns11"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.org/ReqSchema" prefix="tns10"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1610583409932"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/OBO_HERO_ONL_0018_Response"/>
@@ -1724,6 +1781,7 @@
             name="_error_INSERT_HERO" sca-bpel:internal="true"/>
         <bpws:variable element="ns25:ActivityErrorData"
             name="_error_INSERT_MERP" sca-bpel:internal="true"/>
+        <bpws:variable element="ns5:JobTotal" name="LOG_ERRO-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1817,7 +1875,8 @@
                 <bpws:link name="LOG_STARTToParseJSON" tibex:linkType="SUCCESS"/>
                 <bpws:link name="StartToAssign_JobInfo" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Assign_JobInfoToLOG_START" tibex:linkType="SUCCESS"/>
-                <bpws:link name="RenderJSONToLOG_END" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RenderJSONToLOG_success"
+                    tibex:label="success" tibex:linkType="SUCCESSWITHNOCONDITION"/>
                 <bpws:link name="INSERT_HEROToINSERT_HER" tibex:linkType="SUCCESS"/>
                 <bpws:link name="INSERT_MERToINSERT_HERO" tibex:linkType="SUCCESS"/>
                 <bpws:link name="INSERT_HERToRenderJSON" tibex:linkType="SUCCESS"/>
@@ -1825,6 +1884,9 @@
                 <bpws:link name="INSERT_MERPToINSERT_MER" tibex:linkType="SUCCESS"/>
                 <bpws:link name="INSERT_MERPToRenderJSON" tibex:linkType="ERROR"/>
                 <bpws:link name="INSERT_HEROToRenderJSON" tibex:linkType="ERROR"/>
+                <bpws:link name="RenderJSONToLOG_error"
+                    tibex:label="error" tibex:linkType="SUCCESSWITHCONDITION"/>
+                <bpws:link name="LOG_ERROToEnd" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:extActivity inputVariable="LOG_START-input"
@@ -1851,7 +1913,7 @@
                     tibex:xpdlId="94eb1068-f03a-41b3-952b-9eab0b52ac48"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="RenderJSONToLOG_END"/>
+                        <bpws:target linkName="RenderJSONToLOG_success"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="LOG_ENDToEnd"/>
@@ -1870,6 +1932,7 @@
                     tibex:xpdlId="f7f88954-10c5-40ea-b48b-2ea1d34c3159" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="LOG_ENDToEnd"/>
+                        <bpws:target linkName="LOG_ERROToEnd"/>
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1997,7 +2060,20 @@
                         <bpws:target linkName="INSERT_HEROToRenderJSON"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="RenderJSONToLOG_END"/>
+                        <bpws:source linkName="RenderJSONToLOG_success">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                        </bpws:source>
+                        <bpws:source linkName="RenderJSONToLOG_error">
+                            <tibex:DesignExpression>
+                                <tibex:expression
+                                    expression="exists($_error)=true()" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                            </tibex:DesignExpression>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[exists($_error)=true()]]></bpws:transitionCondition>
+                        </bpws:source>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -2256,6 +2332,25 @@
                         </bwext:BWActivity>
                     </tibex:config>
                 </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LOG_ERRO-input"
+                    name="LOG_ERRO"
+                    tibex:xpdlId="f4a15525-471d-4986-89da-7dfbabeeff9d"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="RenderJSONToLOG_error"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LOG_ERROToEnd"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tns10=&quot;http://www.example.org/ReqSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;_error_INSERT_HERO&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:param name=&quot;_error_INSERT_MERP&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;LOG_ERRO-input&quot; match=&quot;/&quot;>&lt;tns7:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns7:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'ERROR'&quot;/>&lt;/STEP>&lt;xsl:if test=&quot;$_error/Msg&quot;>&lt;ERROR_MSG>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/ERROR_MSG>&lt;/xsl:if>&lt;xsl:if test=&quot;$_error/StackTrace&quot;>&lt;ERROR_STACKTRACE>&lt;xsl:value-of select=&quot;$_error/StackTrace&quot;/>&lt;/ERROR_STACKTRACE>&lt;/xsl:if>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;$ParseJSON&quot;/>&lt;/DEBUG_DATA>&lt;xsl:choose>&lt;xsl:when test=&quot;exists($_error_INSERT_HERO)&quot;>&lt;ERROR_ACTIVITY>&lt;xsl:value-of select=&quot;'INSERT_HERO'&quot;/>&lt;/ERROR_ACTIVITY>&lt;/xsl:when>&lt;xsl:when test=&quot;exists($_error_INSERT_MERP)&quot;>&lt;ERROR_ACTIVITY>&lt;xsl:value-of select=&quot;'INSERT_MERP'&quot;/>&lt;/ERROR_ACTIVITY>&lt;/xsl:when>&lt;xsl:otherwise>&lt;ERROR_ACTIVITY>&lt;xsl:value-of select=&quot;tib:substring-after-last($_error/ProcessStack, '/')&quot;/>&lt;/ERROR_ACTIVITY>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;ERROR_CODE>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/ERROR_CODE>&lt;/xsl:if>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/tns7:TxInfo>&lt;/tns7:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>
