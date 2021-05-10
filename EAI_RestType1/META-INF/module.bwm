@@ -1596,6 +1596,18 @@
     </scaext:binding>
     <scact:bindingAdjunct xmi:id="_qyOOIZwhEeuhuNcULp6IIw" bindingName="RestService16"/>
   </sca:service>
+  <sca:service xmi:id="_ZSOQQLFYEeuLkNOzDaj4Hw" name="BCoMemberLogMerge" promote="ComponentOBA_HERO_ONL/BCoMemberLogMerge">
+    <sca:interface.wsdl xmi:id="_ZSYBQLFYEeuLkNOzDaj4Hw" interface="http://xmlns.example.com/20210204135733PLT#wsdl.interface(BCoMemberLogMerge)" scaext:wsdlLocation="../Processes/com/fnf/eai/oba/hero/db/OBA_HERO_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_ZS0GILFYEeuLkNOzDaj4Hw" name="RestService31" path="/BCoMemberLogMerge" docBasePath="http://localhost:7777/EAI_RestType1" docResourcePath="OBA_HERO_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.oba.hero.db.OBA_HERO_ONL-OBA_HERO_ONL.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
+      <operation xmi:id="_ZUv_0LFYEeuLkNOzDaj4Hw" operationName="post" nickname="post-BCoMemberLogMerge" httpMethod="POST" notes="postOBA_HERO_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_ZVSyYLFYEeuLkNOzDaj4Hw"/>
+      <advancedConfig xmi:id="_ZS0GIbFYEeuLkNOzDaj4Hw" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_ZUycELFYEeuLkNOzDaj4Hw" bindingName="RestService31"/>
+  </sca:service>
   <sca:property xmi:id="_VyyrcGXqEeuhFpGsQLsBaA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_Vy2V0GXqEeuhFpGsQLsBaA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_Vy284GXqEeuhFpGsQLsBaA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
@@ -1828,6 +1840,9 @@
     </sca:service>
     <sca:service xmi:id="_FEN6YJNSEeur2KT_VcaPkA" name="BCoERPMemberListCount">
       <sca:interface.wsdl xmi:id="_FEN6YZNSEeur2KT_VcaPkA" interface="http://xmlns.example.com/20210204135733PLT#wsdl.interface(BCoERPMemberListCount)"/>
+    </sca:service>
+    <sca:service xmi:id="_ZSEfQLFYEeuLkNOzDaj4Hw" name="BCoMemberLogMerge">
+      <sca:interface.wsdl xmi:id="_ZSEfQbFYEeuLkNOzDaj4Hw" interface="http://xmlns.example.com/20210204135733PLT#wsdl.interface(BCoMemberLogMerge)"/>
     </sca:service>
   </sca:component>
   <sca:component xmi:id="_ebjA8GdeEeuNbfmxgUmihw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">

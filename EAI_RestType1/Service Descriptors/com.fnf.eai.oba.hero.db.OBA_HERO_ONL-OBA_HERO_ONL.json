@@ -191,6 +191,32 @@
         }
       }
     },
+    "/BCoMemberLogMerge" : {
+      "post" : {
+        "summary" : "postOBA_HERO_ONL",
+        "description" : "postOBA_HERO_ONL",
+        "operationId" : "post-BCoMemberLogMerge",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
     "/BCoSleepCustMemberInfo" : {
       "post" : {
         "summary" : "postOBA_HERO_ONL",
