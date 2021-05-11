@@ -2460,8 +2460,8 @@
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
-            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
-            <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.12"/>
             <bendpoints points="[25, 17, -962, 0]$[963, 17, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
@@ -2998,7 +2998,7 @@
                         <bpws:link
                             name="DEL_LOG_DELETEToThrow_INSERT_HERO" tibex:linkType="SUCCESSWITHCONDITION"/>
                         <bpws:link name="UPDATE_MERPToDELETE_MERP" tibex:linkType="ERROR"/>
-                        <bpws:link name="JDBCUpdateToThrow_MERP" tibex:linkType="ERROR"/>
+                        <bpws:link name="JDBCUpdateToThrow_MERP" tibex:linkType="SUCCESS"/>
                     </bpws:links>
                     <bpws:empty name="GroupStart"
                         tibex:group="groupStart" tibex:xpdlId="1fb970e8-5849-4d7c-81e7-453c1bca67ab">
@@ -3413,11 +3413,7 @@
                                 <bpws:source
                                     linkName="JDBCUpdateToThrow_MERP"
                                     tibex:faultDetailsVar="JDBCUpdate" tibex:faultNameVar="FaultName">
-                                    <tibex:DesignExpression>
-                                    <tibex:expression
-                                    expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
-                                    </tibex:DesignExpression>
-                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##error##]]></bpws:transitionCondition>
+                                    <tibex:DesignExpression/>
                                 </bpws:source>
                             </bpws:sources>
                             <tibex:inputBindings>
