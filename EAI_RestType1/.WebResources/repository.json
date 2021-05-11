@@ -210,10 +210,6 @@
             "type": "generated"
         },
         {
-            "location": "Service Descriptors/com.fnf.eai.crma.hero.db.CRMA_HERO_ONL-CRMA_HERO_ONL.json",
-            "type": "generated"
-        },
-        {
             "location": "Service Descriptors/com.fnf.eai.obo.hero.db.OBO_HERO_ONL_2-OBO_HERO_ONL_2.json",
             "type": "generated"
         },
@@ -258,26 +254,6 @@
             "type": "generated"
         },
         {
-            "location": "Service Descriptors/com.fnf.eai.obo.o3pl.rest.OBO_O3PL_ONL-OBO_O3PL_ONL.json",
-            "type": "generated"
-        },
-        {
-            "location": "Service Descriptors/com.fnf.eai.o3pl.merp.db.O3PL_MERP_ONL-O3PL_MERP_ONL.json",
-            "type": "generated"
-        },
-        {
-            "location": "Service Descriptors/com.fnf.eai.o3pl.obo.rest.O3PL_OBO_ONLINE-O3PL_OBO_ONLINE.json",
-            "type": "generated"
-        },
-        {
-            "location": "Service Descriptors/com.fnf.eai.o3pl.merp.rest.O3PL_MERP_ONL_2-O3PL_MERP_ONL_2.json",
-            "type": "generated"
-        },
-        {
-            "location": "Service Descriptors/com.fnf.eai.o3pl.obo.rest.O3PL_OBO_ONL-O3PL_OBO_ONLINE.json",
-            "type": "generated"
-        },
-        {
             "location": "Service Descriptors/com.fnf.eai.sms.hero.rest.SMS_HERO_ONL_2-SMS_HERO_ONL_2.json",
             "type": "generated"
         },
@@ -291,6 +267,10 @@
         },
         {
             "location": "Service Descriptors/com.fnf.eai.merp.o3pl.rest.MERP_O3PL_ONL-MERP_O3PL_ONL.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/com.fnf.eai.obo.o3pl.rest.OBO_O3PL_ONL-OBO_O3PL_ONL.json",
             "type": "generated"
         }
     ]

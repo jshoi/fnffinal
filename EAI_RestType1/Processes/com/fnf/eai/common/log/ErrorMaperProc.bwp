@@ -616,7 +616,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension
                     inputVariable="RenderJSON-input" name="RenderJSON"
-                    outputVariable="RenderJSON"
+                    outputVariable="RenderJSON" tibex:copyOf="Mapper"
                     tibex:xpdlId="be91587b-9235-43aa-8208-6191ebedca03" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="MapperToThrow"/>

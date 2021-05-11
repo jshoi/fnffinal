@@ -718,62 +718,6 @@
                                     xsi:type="notation:Bounds" y="10"/>
                                     </children>
 
-                                    <children type="4002 bw.generalactivities.callprocess">
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-
-                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.1/@activity/@activity/@activities.3"/>
-
-                                    <layoutConstraint
-                                    height="40"
-                                    width="40"
-                                    x="42"
-                                    xsi:type="notation:Bounds" y="10"/>
-                                    </children>
-
                                     <styles xsi:type="notation:DrawerStyle"/>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1233,62 +1177,6 @@
                                     xsi:type="notation:Bounds" y="10"/>
                                     </children>
 
-                                    <children type="4002 bw.generalactivities.callprocess">
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-
-                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.3/@activity/@activity/@activities.3"/>
-
-                                    <layoutConstraint
-                                    height="40"
-                                    width="40"
-                                    x="49"
-                                    xsi:type="notation:Bounds" y="10"/>
-                                    </children>
-
                                     <styles xsi:type="notation:DrawerStyle"/>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1465,28 +1353,6 @@
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
-        <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.1/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.1/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.1/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[25, -1, -160, 0]$[161, 0, -24, 1]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.3/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.3/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.0/@messages.3/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[25, 0, -171, 0]$[172, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1512,16 +1378,12 @@
         <bpws:variable messageType="ns:postRequest" name="post" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns:postResponse"
             name="postOut-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:post" name="StressCheckProc-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns2:messageBody" name="StressCheckProc" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns:getRequest1" name="get1" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns:getResponse1"
             name="getOut1-input" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns:postRequest1" name="post1" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns:postResponse1"
             name="postOut1-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:post" name="StressCheckProc3-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns2:messageBody" name="StressCheckProc3" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1564,10 +1426,7 @@
                     tibex:xpdlId="2ce4231b-7be8-4c9c-a417-6ec4ba0c1c0a" variable="post">
                     <bpws:scope name="scope2">
                         <bpws:flow name="flow2">
-                            <bpws:links>
-                                <bpws:link
-                                    name="StressCheckProcTopostOut" tibex:linkType="SUCCESS"/>
-                            </bpws:links>
+                            <bpws:links/>
                             <bpws:empty name="OnMessageStart1"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="a532ff6c-19b5-401e-a9d4-5e9d30afc289"/>
                             <bpws:empty name="OnMessageEnd1"
@@ -1578,34 +1437,11 @@
                                 tibex:xpdlId="611a7202-0bcd-40cd-8b8b-5402846410c7" variable="postOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://xmlns.example.com/20210216113212PLT&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;StressCheckProc&quot;/>&#xa;    &lt;xsl:template name=&quot;postOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;$StressCheckProc&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://xmlns.example.com/20210216113212PLT&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;postOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;200&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20210216113212PLT" version="2.0"&gt;&lt;xsl:param name="StressCheckProc"/&gt;&lt;xsl:template name="postOut-input" match="/"&gt;&lt;tns:postResponse&gt;&lt;item&gt;&lt;xsl:value-of select="$StressCheckProc"/&gt;&lt;/item&gt;&lt;/tns:postResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
-                                <bpws:targets>
-                                    <bpws:target linkName="StressCheckProcTopostOut"/>
-                                </bpws:targets>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20210216113212PLT" version="2.0"&gt;&lt;xsl:template name="postOut-input" match="/"&gt;&lt;tns:postResponse&gt;&lt;item&gt;&lt;xsl:value-of select="200"/&gt;&lt;/item&gt;&lt;/tns:postResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                             </bpws:reply>
-                            <bpws:extensionActivity>
-                                <tibex:extActivity
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns2=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;post&quot;/>&lt;xsl:template name=&quot;StressCheckProc-input&quot; match=&quot;/&quot;>&lt;tns2:post>&lt;tns2:httpHeaders>&lt;xsl:if test=&quot;$post/httpHeaders/tns1:httpHeaders/Accept&quot;>&lt;Accept>&lt;xsl:value-of select=&quot;$post/httpHeaders/tns1:httpHeaders/Accept&quot;/>&lt;/Accept>&lt;/xsl:if>&lt;xsl:if test=&quot;$post/httpHeaders/tns1:httpHeaders/Accept-Charset&quot;>&lt;Accept-Charset>&lt;xsl:value-of select=&quot;$post/httpHeaders/tns1:httpHeaders/Accept-Charset&quot;/>&lt;/Accept-Charset>&lt;/xsl:if>&lt;xsl:if test=&quot;$post/httpHeaders/tns1:httpHeaders/Accept-Encoding&quot;>&lt;Accept-Encoding>&lt;xsl:value-of select=&quot;$post/httpHeaders/tns1:httpHeaders/Accept-Encoding&quot;/>&lt;/Accept-Encoding>&lt;/xsl:if>&lt;xsl:if test=&quot;$post/httpHeaders/tns1:httpHeaders/Content-Type&quot;>&lt;Content-Type>&lt;xsl:value-of select=&quot;$post/httpHeaders/tns1:httpHeaders/Content-Type&quot;/>&lt;/Content-Type>&lt;/xsl:if>&lt;xsl:if test=&quot;$post/httpHeaders/tns1:httpHeaders/Content-Length&quot;>&lt;Content-Length>&lt;xsl:value-of select=&quot;$post/httpHeaders/tns1:httpHeaders/Content-Length&quot;/>&lt;/Content-Length>&lt;/xsl:if>&lt;xsl:if test=&quot;$post/httpHeaders/tns1:httpHeaders/Connection&quot;>&lt;Connection>&lt;xsl:value-of select=&quot;$post/httpHeaders/tns1:httpHeaders/Connection&quot;/>&lt;/Connection>&lt;/xsl:if>&lt;xsl:if test=&quot;$post/httpHeaders/tns1:httpHeaders/Cookie&quot;>&lt;Cookie>&lt;xsl:value-of select=&quot;$post/httpHeaders/tns1:httpHeaders/Cookie&quot;/>&lt;/Cookie>&lt;/xsl:if>&lt;xsl:if test=&quot;$post/httpHeaders/tns1:httpHeaders/Pragma&quot;>&lt;Pragma>&lt;xsl:value-of select=&quot;$post/httpHeaders/tns1:httpHeaders/Pragma&quot;/>&lt;/Pragma>&lt;/xsl:if>&lt;xsl:if test=&quot;$post/httpHeaders/tns1:httpHeaders/Authorization&quot;>&lt;Authorization>&lt;xsl:value-of select=&quot;$post/httpHeaders/tns1:httpHeaders/Authorization&quot;/>&lt;/Authorization>&lt;/xsl:if>&lt;tns2:DynamicHeaders>&lt;xsl:copy-of select=&quot;$post/httpHeaders/tns1:httpHeaders/DynamicHeaders/ancestor-or-self::*/namespace::node()&quot;/>&lt;xsl:copy-of select=&quot;$post/httpHeaders/tns1:httpHeaders/DynamicHeaders/@*&quot;/>&lt;xsl:copy-of select=&quot;$post/httpHeaders/tns1:httpHeaders/DynamicHeaders/node()&quot;/>&lt;/tns2:DynamicHeaders>&lt;/tns2:httpHeaders>&lt;tns2:messageBody>&lt;xsl:value-of select=&quot;$post/item&quot;/>&lt;/tns2:messageBody>&lt;/tns2:post>&lt;/xsl:template>&lt;/xsl:stylesheet>"
-                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
-                                    inputVariable="StressCheckProc-input"
-                                    name="StressCheckProc"
-                                    outputVariable="StressCheckProc"
-                                    tibex:xpdlId="a374ae85-cafd-47de-b137-03ae0294a7d7"
-                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                                    <bpws:sources>
-                                    <bpws:source linkName="StressCheckProcTopostOut"/>
-                                    </bpws:sources>
-                                    <tibex:inputBindings>
-                                    <tibex:inputBinding coercion=""
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns2=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;post.item&quot;/>&#xa;    &lt;xsl:param name=&quot;post.httpHeaders&quot;/>&#xa;    &lt;xsl:template name=&quot;StressCheckProc-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:post>&#xa;            &lt;tns2:httpHeaders>&#xa;                &lt;xsl:if test=&quot;$post.httpHeaders/Accept&quot;>&#xa;                    &lt;Accept>&#xa;                        &lt;xsl:value-of select=&quot;$post.httpHeaders/Accept&quot;/>&#xa;                    &lt;/Accept>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post.httpHeaders/Accept-Charset&quot;>&#xa;                    &lt;Accept-Charset>&#xa;                        &lt;xsl:value-of select=&quot;$post.httpHeaders/Accept-Charset&quot;/>&#xa;                    &lt;/Accept-Charset>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post.httpHeaders/Accept-Encoding&quot;>&#xa;                    &lt;Accept-Encoding>&#xa;                        &lt;xsl:value-of select=&quot;$post.httpHeaders/Accept-Encoding&quot;/>&#xa;                    &lt;/Accept-Encoding>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post.httpHeaders/Content-Type&quot;>&#xa;                    &lt;Content-Type>&#xa;                        &lt;xsl:value-of select=&quot;$post.httpHeaders/Content-Type&quot;/>&#xa;                    &lt;/Content-Type>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post.httpHeaders/Content-Length&quot;>&#xa;                    &lt;Content-Length>&#xa;                        &lt;xsl:value-of select=&quot;$post.httpHeaders/Content-Length&quot;/>&#xa;                    &lt;/Content-Length>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post.httpHeaders/Connection&quot;>&#xa;                    &lt;Connection>&#xa;                        &lt;xsl:value-of select=&quot;$post.httpHeaders/Connection&quot;/>&#xa;                    &lt;/Connection>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post.httpHeaders/Cookie&quot;>&#xa;                    &lt;Cookie>&#xa;                        &lt;xsl:value-of select=&quot;$post.httpHeaders/Cookie&quot;/>&#xa;                    &lt;/Cookie>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post.httpHeaders/Pragma&quot;>&#xa;                    &lt;Pragma>&#xa;                        &lt;xsl:value-of select=&quot;$post.httpHeaders/Pragma&quot;/>&#xa;                    &lt;/Pragma>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post.httpHeaders/Authorization&quot;>&#xa;                    &lt;Authorization>&#xa;                        &lt;xsl:value-of select=&quot;$post.httpHeaders/Authorization&quot;/>&#xa;                    &lt;/Authorization>&#xa;                &lt;/xsl:if>&#xa;                &lt;tns2:DynamicHeaders>&#xa;                    &lt;xsl:copy-of select=&quot;$post.httpHeaders/DynamicHeaders/ancestor-or-self::*/namespace::node()&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;$post.httpHeaders/DynamicHeaders/@*&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;$post.httpHeaders/DynamicHeaders/node()&quot;/>&#xa;                &lt;/tns2:DynamicHeaders>&#xa;            &lt;/tns2:httpHeaders>&#xa;            &lt;tns2:messageBody>&#xa;                &lt;xsl:value-of select=&quot;$post.item&quot;/>&#xa;            &lt;/tns2:messageBody>&#xa;        &lt;/tns2:post>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                                    </tibex:inputBindings>
-                                    <tibex:CallProcess
-                                    subProcessName="com.fnf.eai.common.StressCheckProc" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
-                                </tibex:extActivity>
-                            </bpws:extensionActivity>
                         </bpws:flow>
                     </bpws:scope>
                 </bpws:onMessage>
@@ -1638,9 +1474,7 @@
                     tibex:xpdlId="cef5acfd-53ad-4b32-8756-3aa49a16cfbb" variable="post1">
                     <bpws:scope name="scope4">
                         <bpws:flow name="flow4">
-                            <bpws:links>
-                                <bpws:link name="CallProcessTopostOut1" tibex:linkType="SUCCESS"/>
-                            </bpws:links>
+                            <bpws:links/>
                             <bpws:empty name="OnMessageStart3"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="6c77c054-eba5-4d49-a88a-d2d4c3d5d556"/>
                             <bpws:empty name="OnMessageEnd3"
@@ -1650,35 +1484,12 @@
                                 portType="ns:healthcheck"
                                 tibex:xpdlId="bf496670-a622-487b-9a70-a55bf7650f3d" variable="postOut1-input">
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20210216113212PLT" version="2.0"&gt;&lt;xsl:param name="StressCheckProc3"/&gt;&lt;xsl:template name="postOut1-input" match="/"&gt;&lt;tns:postResponse1&gt;&lt;item&gt;&lt;xsl:value-of select="$StressCheckProc3"/&gt;&lt;/item&gt;&lt;/tns:postResponse1&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns="http://xmlns.example.com/20210216113212PLT" version="2.0"&gt;&lt;xsl:template name="postOut1-input" match="/"&gt;&lt;tns:postResponse1&gt;&lt;item&gt;&lt;xsl:value-of select="200"/&gt;&lt;/item&gt;&lt;/tns:postResponse1&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://xmlns.example.com/20210216113212PLT&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;StressCheckProc3&quot;/>&#xa;    &lt;xsl:template name=&quot;postOut1-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;$StressCheckProc3&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://xmlns.example.com/20210216113212PLT&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;postOut1-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;200&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
-                                <bpws:targets>
-                                    <bpws:target linkName="CallProcessTopostOut1"/>
-                                </bpws:targets>
                             </bpws:reply>
-                            <bpws:extensionActivity>
-                                <tibex:extActivity
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns2=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;post1&quot;/>&lt;xsl:template name=&quot;StressCheckProc3-input&quot; match=&quot;/&quot;>&lt;tns2:post>&lt;tns2:httpHeaders>&lt;xsl:if test=&quot;$post1/httpHeaders/tns1:httpHeaders/Accept&quot;>&lt;Accept>&lt;xsl:value-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/Accept&quot;/>&lt;/Accept>&lt;/xsl:if>&lt;xsl:if test=&quot;$post1/httpHeaders/tns1:httpHeaders/Accept-Charset&quot;>&lt;Accept-Charset>&lt;xsl:value-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/Accept-Charset&quot;/>&lt;/Accept-Charset>&lt;/xsl:if>&lt;xsl:if test=&quot;$post1/httpHeaders/tns1:httpHeaders/Accept-Encoding&quot;>&lt;Accept-Encoding>&lt;xsl:value-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/Accept-Encoding&quot;/>&lt;/Accept-Encoding>&lt;/xsl:if>&lt;xsl:if test=&quot;$post1/httpHeaders/tns1:httpHeaders/Content-Type&quot;>&lt;Content-Type>&lt;xsl:value-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/Content-Type&quot;/>&lt;/Content-Type>&lt;/xsl:if>&lt;xsl:if test=&quot;$post1/httpHeaders/tns1:httpHeaders/Content-Length&quot;>&lt;Content-Length>&lt;xsl:value-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/Content-Length&quot;/>&lt;/Content-Length>&lt;/xsl:if>&lt;xsl:if test=&quot;$post1/httpHeaders/tns1:httpHeaders/Connection&quot;>&lt;Connection>&lt;xsl:value-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/Connection&quot;/>&lt;/Connection>&lt;/xsl:if>&lt;xsl:if test=&quot;$post1/httpHeaders/tns1:httpHeaders/Cookie&quot;>&lt;Cookie>&lt;xsl:value-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/Cookie&quot;/>&lt;/Cookie>&lt;/xsl:if>&lt;xsl:if test=&quot;$post1/httpHeaders/tns1:httpHeaders/Pragma&quot;>&lt;Pragma>&lt;xsl:value-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/Pragma&quot;/>&lt;/Pragma>&lt;/xsl:if>&lt;xsl:if test=&quot;$post1/httpHeaders/tns1:httpHeaders/Authorization&quot;>&lt;Authorization>&lt;xsl:value-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/Authorization&quot;/>&lt;/Authorization>&lt;/xsl:if>&lt;tns2:DynamicHeaders>&lt;xsl:copy-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/DynamicHeaders/ancestor-or-self::*/namespace::node()&quot;/>&lt;xsl:copy-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/DynamicHeaders/@*&quot;/>&lt;xsl:copy-of select=&quot;$post1/httpHeaders/tns1:httpHeaders/DynamicHeaders/node()&quot;/>&lt;/tns2:DynamicHeaders>&lt;/tns2:httpHeaders>&lt;tns2:messageBody>&lt;xsl:value-of select=&quot;$post1/item&quot;/>&lt;/tns2:messageBody>&lt;/tns2:post>&lt;/xsl:template>&lt;/xsl:stylesheet>"
-                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
-                                    inputVariable="StressCheckProc3-input"
-                                    name="StressCheckProc3"
-                                    outputVariable="StressCheckProc3"
-                                    tibex:xpdlId="e6f7d19e-fbeb-4f2c-90df-8faed2fe1dc2"
-                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                                    <bpws:sources>
-                                    <bpws:source linkName="CallProcessTopostOut1"/>
-                                    </bpws:sources>
-                                    <tibex:inputBindings>
-                                    <tibex:inputBinding coercion=""
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns2=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;post1.item&quot;/>&#xa;    &lt;xsl:param name=&quot;post1.httpHeaders&quot;/>&#xa;    &lt;xsl:template name=&quot;StressCheckProc3-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:post>&#xa;            &lt;tns2:httpHeaders>&#xa;                &lt;xsl:if test=&quot;$post1.httpHeaders/Accept&quot;>&#xa;                    &lt;Accept>&#xa;                        &lt;xsl:value-of select=&quot;$post1.httpHeaders/Accept&quot;/>&#xa;                    &lt;/Accept>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post1.httpHeaders/Accept-Charset&quot;>&#xa;                    &lt;Accept-Charset>&#xa;                        &lt;xsl:value-of select=&quot;$post1.httpHeaders/Accept-Charset&quot;/>&#xa;                    &lt;/Accept-Charset>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post1.httpHeaders/Accept-Encoding&quot;>&#xa;                    &lt;Accept-Encoding>&#xa;                        &lt;xsl:value-of select=&quot;$post1.httpHeaders/Accept-Encoding&quot;/>&#xa;                    &lt;/Accept-Encoding>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post1.httpHeaders/Content-Type&quot;>&#xa;                    &lt;Content-Type>&#xa;                        &lt;xsl:value-of select=&quot;$post1.httpHeaders/Content-Type&quot;/>&#xa;                    &lt;/Content-Type>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post1.httpHeaders/Content-Length&quot;>&#xa;                    &lt;Content-Length>&#xa;                        &lt;xsl:value-of select=&quot;$post1.httpHeaders/Content-Length&quot;/>&#xa;                    &lt;/Content-Length>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post1.httpHeaders/Connection&quot;>&#xa;                    &lt;Connection>&#xa;                        &lt;xsl:value-of select=&quot;$post1.httpHeaders/Connection&quot;/>&#xa;                    &lt;/Connection>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post1.httpHeaders/Cookie&quot;>&#xa;                    &lt;Cookie>&#xa;                        &lt;xsl:value-of select=&quot;$post1.httpHeaders/Cookie&quot;/>&#xa;                    &lt;/Cookie>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post1.httpHeaders/Pragma&quot;>&#xa;                    &lt;Pragma>&#xa;                        &lt;xsl:value-of select=&quot;$post1.httpHeaders/Pragma&quot;/>&#xa;                    &lt;/Pragma>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post1.httpHeaders/Authorization&quot;>&#xa;                    &lt;Authorization>&#xa;                        &lt;xsl:value-of select=&quot;$post1.httpHeaders/Authorization&quot;/>&#xa;                    &lt;/Authorization>&#xa;                &lt;/xsl:if>&#xa;                &lt;tns2:DynamicHeaders>&#xa;                    &lt;xsl:copy-of select=&quot;$post1.httpHeaders/DynamicHeaders/ancestor-or-self::*/namespace::node()&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;$post1.httpHeaders/DynamicHeaders/@*&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;$post1.httpHeaders/DynamicHeaders/node()&quot;/>&#xa;                &lt;/tns2:DynamicHeaders>&#xa;            &lt;/tns2:httpHeaders>&#xa;            &lt;tns2:messageBody>&#xa;                &lt;xsl:value-of select=&quot;$post1.item&quot;/>&#xa;            &lt;/tns2:messageBody>&#xa;        &lt;/tns2:post>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                                    </tibex:inputBindings>
-                                    <tibex:CallProcess
-                                    subProcessName="com.fnf.eai.common.StressCheckProc" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
-                                </tibex:extActivity>
-                            </bpws:extensionActivity>
                         </bpws:flow>
                     </bpws:scope>
                 </bpws:onMessage>
