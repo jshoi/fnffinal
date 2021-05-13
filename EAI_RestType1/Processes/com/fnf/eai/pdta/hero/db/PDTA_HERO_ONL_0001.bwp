@@ -35,6 +35,9 @@
     xmlns:ns32="activity.jsonRender.output+03c2be57-eae3-4e52-95bb-7a4acc9dba05+ActivityOutputType"
     xmlns:ns33="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+ef0ed005-7a2f-4370-8927-9597f6576780"
     xmlns:ns34="http://www.tibco.com/namespaces/tnt/plugins/jdbc+7a5e6ccf-0115-437d-ab40-e088283d741a+input"
+    xmlns:ns35="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+c40fc0f2-ce69-410f-b4f0-36939239d75f"
+    xmlns:ns36="http://www.tibco.com/namespaces/tnt/plugins/jdbc+6f48d174-a094-493a-882e-c9e48d7cba01+input"
+    xmlns:ns37="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+6f48d174-a094-493a-882e-c9e48d7cba01"
     xmlns:ns4="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonRender"
     xmlns:ns5="http://www.tibco.com/namespaces/tnt/plugins/jdbc+835c293c-e5a9-4d4f-90da-3992392124c8+input"
     xmlns:ns6="http://www.tibco.com/namespaces/tnt/plugins/jdbc"
@@ -615,105 +618,13 @@
             </complexType>
         </schema>
         <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+12e213df-556e-4ea6-8895-f310bf734d6b+input"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+12e213df-556e-4ea6-8895-f310bf734d6b+input">
-            <element name="jdbcQueryActivityInput">
-                <complexType>
-                    <sequence>
-                        <element maxOccurs="1" minOccurs="1"
-                            name="VI_CD_SALEBILL" nillable="true" type="string"/>
-                        <element maxOccurs="1" minOccurs="0"
-                            name="ServerTimeZone" type="string"/>
-                        <element maxOccurs="1" minOccurs="0"
-                            name="timeout" type="long"/>
-                        <element maxOccurs="1" minOccurs="0"
-                            name="maxRows" type="long"/>
-                    </sequence>
-                </complexType>
-            </element>
-        </schema>
-        <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+12e213df-556e-4ea6-8895-f310bf734d6b+output"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+12e213df-556e-4ea6-8895-f310bf734d6b+output">
-            <element name="resultSet">
-                <complexType>
-                    <sequence>
-                        <element maxOccurs="unbounded" minOccurs="0" name="Record">
-                            <complexType>
-                                <sequence>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="v_salebill"
-                                    nillable="false" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="v_brand" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="v_saledate" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="v_shopcode" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="v_userid" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="v_seq" type="decimal"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="v_tp_yn" nillable="false" type="string"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="v_get_point"
-                                    nillable="false" type="decimal"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="v_use_point"
-                                    nillable="false" type="decimal"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="v_use_amount"
-                                    nillable="false" type="decimal"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="v_eai_status"
-                                    nillable="false" type="string"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="v_eai_message"
-                                    nillable="false" type="string"/>
-                                </sequence>
-                            </complexType>
-                        </element>
-                    </sequence>
-                </complexType>
-            </element>
-        </schema>
-        <schema
             targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+c40fc0f2-ce69-410f-b4f0-36939239d75f+input"
             xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+c40fc0f2-ce69-410f-b4f0-36939239d75f+input">
             <element name="jdbcUpdateActivityInput">
                 <complexType>
                     <sequence>
-                        <element maxOccurs="unbounded" minOccurs="0" name="Record">
-                            <complexType>
-                                <sequence>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="V_GET_POINT"
-                                    nillable="true" type="decimal"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="V_USE_POINT"
-                                    nillable="true" type="decimal"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="V_USE_AMOUNT"
-                                    nillable="true" type="decimal"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="V_SALEBILL"
-                                    nillable="true" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="V_BRAND" nillable="true" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="V_SALEDATE"
-                                    nillable="true" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="V_SHOPCODE"
-                                    nillable="true" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="V_USERID" nillable="true" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="V_SEQ" nillable="true" type="decimal"/>
-                                </sequence>
-                            </complexType>
-                        </element>
+                        <element maxOccurs="1" minOccurs="1"
+                            name="V_SALEBILL" nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
                             name="ServerTimeZone" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
@@ -847,24 +758,60 @@
                 </choice>
             </complexType>
         </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+edfa9268-4680-4254-b23b-bded9a792fe1"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"
+            xmlns:Q2="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+edfa9268-4680-4254-b23b-bded9a792fe1">
+            <import namespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <element name="ErrorLinkHandlerFaultData" type="tns:ErrorLinkHandlerFaultDataType"/>
+            <complexType name="ErrorLinkHandlerFaultDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JDBCConnectionNotFoundException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvalidTimeZoneException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JDBCSQLException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LoginTimedOutException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvalidSQLTypeException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q2:ActivityTimedOutException"/>
+                </choice>
+            </complexType>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+c40fc0f2-ce69-410f-b4f0-36939239d75f"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"
+            xmlns:Q2="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+c40fc0f2-ce69-410f-b4f0-36939239d75f">
+            <import namespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <element name="ErrorLinkHandlerFaultData" type="tns:ErrorLinkHandlerFaultDataType"/>
+            <complexType name="ErrorLinkHandlerFaultDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JDBCConnectionNotFoundException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvalidTimeZoneException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JDBCSQLException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LoginTimedOutException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvalidSQLTypeException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q2:ActivityTimedOutException"/>
+                </choice>
+            </complexType>
+        </schema>
         <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+7a5e6ccf-0115-437d-ab40-e088283d741a+input"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+7a5e6ccf-0115-437d-ab40-e088283d741a+input">
+            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+6f48d174-a094-493a-882e-c9e48d7cba01+input"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+6f48d174-a094-493a-882e-c9e48d7cba01+input">
             <element name="jdbcUpdateActivityInput">
                 <complexType>
                     <sequence>
-                        <element maxOccurs="unbounded" minOccurs="0" name="Record">
-                            <complexType>
-                                <sequence>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="EAI_MESSAGE"
-                                    nillable="true" type="string"/>
-                                    <element maxOccurs="1" minOccurs="1"
-                                    name="V_SALEBILL"
-                                    nillable="true" type="string"/>
-                                </sequence>
-                            </complexType>
-                        </element>
+                        <element maxOccurs="1" minOccurs="1"
+                            name="V_SALEBILL" nillable="true" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
                             name="ServerTimeZone" type="string"/>
                         <element maxOccurs="1" minOccurs="0"
@@ -872,6 +819,29 @@
                     </sequence>
                 </complexType>
             </element>
+        </schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+6f48d174-a094-493a-882e-c9e48d7cba01"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"
+            xmlns:Q2="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions" xmlns:tns="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+6f48d174-a094-493a-882e-c9e48d7cba01">
+            <import namespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <import namespace="http://schemas.tibco.com/bw/plugins/jdbc/5.0/jdbcExceptions"/>
+            <element name="ErrorLinkHandlerFaultData" type="tns:ErrorLinkHandlerFaultDataType"/>
+            <complexType name="ErrorLinkHandlerFaultDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JDBCConnectionNotFoundException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvalidTimeZoneException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:JDBCSQLException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:LoginTimedOutException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:InvalidSQLTypeException"/>
+                    <element maxOccurs="1" minOccurs="0" ref="Q2:ActivityTimedOutException"/>
+                </choice>
+            </complexType>
         </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="true" createdBy="jschoi"
@@ -1252,7 +1222,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.9/@activity/@activities.2"/>
 
                                     <layoutConstraint
-                                    x="19"
+                                    x="391"
                                     xsi:type="notation:Bounds" y="31"/>
                                     </children>
 
@@ -1308,11 +1278,11 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="320"
+                                    x="625"
                                     xsi:type="notation:Bounds" y="31"/>
                                     </children>
 
-                                    <children type="4002">
+                                    <children type="4002 bw.jdbc.update">
 
                                     <children type="4017">
 
@@ -1362,7 +1332,9 @@
                                     <element href="//0/@process/@activity/@activity/@activities.9/@activity/@activities.4"/>
 
                                     <layoutConstraint
-                                    x="603"
+                                    height="40"
+                                    width="40"
+                                    x="145"
                                     xsi:type="notation:Bounds" y="31"/>
                                     </children>
 
@@ -1418,11 +1390,11 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="814"
+                                    x="917"
                                     xsi:type="notation:Bounds" y="31"/>
                                     </children>
 
-                                    <children type="4002 bw.jdbc.update">
+                                    <children type="4002 bw.generalactivities.callprocess">
 
                                     <children type="4017">
 
@@ -1474,8 +1446,8 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="1114"
-                                    xsi:type="notation:Bounds" y="31"/>
+                                    x="504"
+                                    xsi:type="notation:Bounds" y="87"/>
                                     </children>
 
                                     <children type="4002 bw.generalactivities.callprocess">
@@ -1530,7 +1502,7 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="163"
+                                    x="759"
                                     xsi:type="notation:Bounds" y="87"/>
                                     </children>
 
@@ -1586,7 +1558,7 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="465"
+                                    x="262"
                                     xsi:type="notation:Bounds" y="87"/>
                                     </children>
 
@@ -1642,11 +1614,11 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="956"
+                                    x="1029"
                                     xsi:type="notation:Bounds" y="87"/>
                                     </children>
 
-                                    <children type="4002 bw.generalactivities.callprocess">
+                                    <children type="4002">
 
                                     <children type="4017">
 
@@ -1696,10 +1668,120 @@
                                     <element href="//0/@process/@activity/@activity/@activities.9/@activity/@activities.10"/>
 
                                     <layoutConstraint
+                                    x="1132"
+                                    xsi:type="notation:Bounds" y="177"/>
+                                    </children>
+
+                                    <children type="4002 bw.jdbc.update">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.9/@activity/@activities.11"/>
+
+                                    <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="1263"
-                                    xsi:type="notation:Bounds" y="87"/>
+                                    x="145"
+                                    xsi:type="notation:Bounds" y="177"/>
+                                    </children>
+
+                                    <children type="4002 com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.9/@activity/@activities.12"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="280"
+                                    xsi:type="notation:Bounds" y="177"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1716,7 +1798,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.9/@activity"/>
 
                                     <layoutConstraint
-                                    height="172"
+                                    height="302"
                                     width="1453" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1729,7 +1811,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint
-                                    height="172"
+                                    height="293"
                                     width="1456"
                                     x="15"
                                     xsi:type="notation:Bounds" y="20"/>
@@ -1812,202 +1894,6 @@
                                     <element href="//0/@process/@activity/@activity/@activities.9/@activity/@activities.1"/>
                                     <layoutConstraint xsi:type="notation:Bounds"/>
                                     </children>
-                                    <children type="4022">
-                                    <children type="3022">
-                                    <children type="4029">
-                                    <children type="3031">
-
-                                    <children type="4033">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <element href="//0/@process/@activity/@activity/@activities.9/@faultHandlers/@catchAll"/>
-
-                                    <layoutConstraint
-                                    height="34"
-                                    width="34"
-                                    xsi:type="notation:Bounds" y="68"/>
-                                    </children>
-                                    <styles xsi:type="notation:SortingStyle"/>
-                                    <styles xsi:type="notation:FilteringStyle"/>
-                                    </children>
-                                    <children type="3032">
-
-                                    <children type="4005">
-
-                                    <children type="3007">
-
-                                    <eAnnotations source="Pixel"/>
-
-                                    <children type="4002 bw.jdbc.update">
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-
-                                    <element href="//0/@process/@activity/@activity/@activities.9/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
-
-                                    <layoutConstraint
-                                    height="40"
-                                    width="40"
-                                    x="550"
-                                    xsi:type="notation:Bounds" y="34"/>
-                                    </children>
-
-                                    <children type="4002 com.tibco.bw.core.design.process.editor.Activity_4002_Throw">
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <children type="4017">
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
-                                    </children>
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-
-                                    <element href="//0/@process/@activity/@activity/@activities.9/@faultHandlers/@catchAll/@activity/@activity/@activities.1"/>
-
-                                    <layoutConstraint
-                                    height="53"
-                                    width="53"
-                                    x="749"
-                                    xsi:type="notation:Bounds" y="34"/>
-                                    </children>
-
-                                    <styles xsi:type="notation:DrawerStyle"/>
-
-                                    <styles xsi:type="notation:SortingStyle"/>
-
-                                    <styles xsi:type="notation:FilteringStyle"/>
-                                    </children>
-
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-
-                                    <styles
-                                    backgroundColor="16777215"
-                                    gradientEndColor="50431"
-                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
-
-                                    <styles xsi:type="bwnotation:ResizingStyle"/>
-
-                                    <element href="//0/@process/@activity/@activity/@activities.9/@faultHandlers/@catchAll/@activity/@activity"/>
-
-                                    <layoutConstraint
-                                    height="227"
-                                    width="1375" xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles xsi:type="notation:SortingStyle"/>
-                                    <styles xsi:type="notation:FilteringStyle"/>
-                                    </children>
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
-                                    <styles
-                                    restoreHeight="514"
-                                    restoreWidth="1426" xsi:type="bwnotation:ResizingStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9/@faultHandlers/@catchAll"/>
-
-                                    <layoutConstraint
-                                    height="142"
-                                    width="1426" xsi:type="notation:Bounds"/>
-                                    </children>
-                                    <styles xsi:type="notation:SortingStyle"/>
-                                    <styles xsi:type="notation:FilteringStyle"/>
-                                    </children>
-                                    <styles
-                                    fontName="맑은 고딕"
-                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
-                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
-                                    <styles xsi:type="bwnotation:ResizingStyle"/>
-                                    <element href="//0/@process/@activity/@activity/@activities.9/@faultHandlers"/>
-                                    <layoutConstraint
-                                    height="168"
-                                    width="1436"
-                                    x="21"
-                                    xsi:type="notation:Bounds" y="177"/>
-                                    </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
                                     </children>
@@ -2017,7 +1903,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.9"/>
                                     <layoutConstraint
-                                    height="361"
+                                    height="346"
                                     width="1496" x="924"
                                     xsi:type="notation:Bounds" y="39"/>
                                     </children>
@@ -2066,7 +1952,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="439"
+                                    <layoutConstraint height="531"
                                     width="2917" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -2076,7 +1962,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="766" width="2920" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="445" width="2920" xsi:type="notation:Bounds"/>
                         </children>
                         <children type="4022">
                             <children type="3022">
@@ -2250,9 +2136,11 @@
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
                                     <styles xsi:type="bwnotation:BackgroundStyle"/>
-                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <styles restoreHeight="178"
+                                    restoreWidth="2870" xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@faultHandlers/@catchAll"/>
-                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    <layoutConstraint height="178"
+                                    width="2870" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -2261,7 +2149,8 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity/@faultHandlers"/>
-                            <layoutConstraint height="200" width="2803" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="200" width="2880"
+                                x="22" xsi:type="notation:Bounds" y="439"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -2271,7 +2160,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="967" width="2920" x="1"
+                    <layoutConstraint height="646" width="2920" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -2280,7 +2169,7 @@
             </children>
             <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="692" width="3262" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="698" width="3262" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -2352,7 +2241,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -2363,7 +2252,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -2374,14 +2263,14 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.2"/>
-            <bendpoints points="[25, 0, -135, 0]$[136, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints points="[25, 0, -122, 0]$[123, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
@@ -2392,17 +2281,6 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.3"/>
-            <bendpoints points="[25, 0, -122, 0]$[123, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.4"/>
             <bendpoints points="[25, 0, -122, 0]$[123, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
@@ -2463,14 +2341,15 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.1"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.5"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.4"/>
+            <bendpoints
+                points="[12, 0, -95, 86]$[42, 0, -65, 86]$[42, -84, -65, 2]$[83, -84, -24, 2]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
@@ -2485,17 +2364,6 @@
                 points="[0, -24, -1771, -24]$[0, -101, -1771, -101]$[1756, -101, -15, -101]$[1756, -24, -15, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.9/@faultHandlers/@catchAll/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[19, -5, -165, 0]$[166, 0, -18, 5]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
             <children type="6002">
@@ -2508,48 +2376,94 @@
                 points="[25, 0, -799, -35]$[60, 0, -764, -35]$[60, -70, -764, -105]$[94, -70, -730, -105]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.6"/>
+            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.5"/>
             <bendpoints points="[25, -8, -148, 48]$[149, -48, -24, 8]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2" type="4006">
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.7"/>
+            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.6"/>
             <bendpoints points="[25, -10, -113, 46]$[114, -46, -24, 10]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.8"/>
-            <bendpoints points="[25, -8, -143, 48]$[144, -48, -24, 8]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
             target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.2" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.9"/>
+            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.7"/>
             <bendpoints points="[25, -9, -61, 21]$[74, -26, -12, 4]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.8"/>
+            <bendpoints points="[25, -20, -71, 60]$[72, -60, -24, 20]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.9"/>
+            <bendpoints
+                points="[0, 25, -292, 25]$[0, 128, -292, 128]$[292, 128, 0, 128]$[292, 25, 0, 25]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.10"/>
+            <bendpoints
+                points="[0, 25, -103, -65]$[0, 88, -103, -2]$[79, 88, -24, -2]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.11"/>
+            <bendpoints points="[-5, 25, -5, -136]$[-5, 137, -5, -24]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.9/@activity/@links/@children.12"/>
+            <bendpoints points="[25, 17, -962, 0]$[963, 17, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -2559,6 +2473,20 @@
             namespace="http://www.example.com/namespaces/tns/1610583409932" prefix="tns5"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+c40fc0f2-ce69-410f-b4f0-36939239d75f+input" prefix="tns15"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.org/PDTA_HERO_ONL_0001" prefix="tns"/>
+        <tibex:namespaceItem
+            namespace="http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions" prefix="tns1"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.org/ErrSchema" prefix="tns19"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+6f48d174-a094-493a-882e-c9e48d7cba01+input" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.org/ReqSchema" prefix="tns3"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1610583409932"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
@@ -2609,13 +2537,11 @@
         <bpws:variable element="ns13:jdbcQueryActivityInput"
             name="SELECT_MERP-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns14:resultSet" name="SELECT_MERP" sca-bpel:internal="true"/>
-        <bpws:variable element="ns15:ActivityErrorData"
-            name="_error_SELECT_HERO" sca-bpel:internal="true"/>
         <bpws:variable element="ns16:jdbcUpdateActivityInput"
             name="INSERT_HERO-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:jdbcUpdateActivityOutput"
             name="INSERT_HERO" sca-bpel:internal="true"/>
-        <bpws:variable element="ns17:ActivityErrorData"
+        <bpws:variable element="ns23:ErrorLinkHandlerFaultData"
             name="_error_INSERT_HERO" sca-bpel:internal="true"/>
         <bpws:variable name="jdbcProperty_MERP"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
@@ -2625,9 +2551,6 @@
                 <bpws:literal>com.fnf.eai.resources.db.merp.JDBC_MERP</bpws:literal>
             </bpws:from>
         </bpws:variable>
-        <bpws:variable element="ns19:jdbcQueryActivityInput"
-            name="SELECT_HERO-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns20:resultSet" name="SELECT_HERO" sca-bpel:internal="true"/>
         <bpws:variable element="ns15:ActivityErrorData"
             name="_error_Call_Function" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
@@ -2650,7 +2573,7 @@
             name="_error_JDBCCallProcedure" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName1" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
-        <bpws:variable element="ns29:element"
+        <bpws:variable element="ns18:element"
             name="RenderJSON_catch-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns32:ActivityOutputClass"
             name="RenderJSON_catch" sca-bpel:internal="true"/>
@@ -2663,15 +2586,10 @@
             name="_errorOptional" sca-bpel:internal="true"/>
         <bpws:variable element="ns15:ActivityErrorData"
             name="_error_SELECT_MERP" sca-bpel:internal="true"/>
-        <bpws:variable element="ns17:ActivityErrorData"
+        <bpws:variable element="ns35:ErrorLinkHandlerFaultData"
             name="_error_UPDATE_MERP" sca-bpel:internal="true"/>
-        <bpws:variable element="ns34:jdbcUpdateActivityInput"
-            name="UPDATE_MERP_Err-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns6:jdbcUpdateActivityOutput"
-            name="UPDATE_MERP_Err" sca-bpel:internal="true"/>
         <bpws:variable element="ns17:ActivityErrorData"
             name="_error_UPDATE_MERP_Err" sca-bpel:internal="true"/>
-        <bpws:variable element="ns28:DefaultFault" name="Throw1-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:JobTotal" name="LOG_QUERY-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:JobTotal" name="SEL_LOG_QUERY-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:JobTotal"
@@ -2680,6 +2598,16 @@
             name="UPD_LOG_UPDATE-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:JobTotal"
             name="DEL_LOG_DELETE-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns28:DefaultFault"
+            name="Throw_INSERT-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns36:jdbcUpdateActivityInput"
+            name="JDBCUpdate-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns6:jdbcUpdateActivityOutput"
+            name="JDBCUpdate" sca-bpel:internal="true"/>
+        <bpws:variable element="ns37:ErrorLinkHandlerFaultData"
+            name="_error_JDBCUpdate" sca-bpel:internal="true"/>
+        <bpws:variable element="ns28:DefaultFault"
+            name="Throw_UPDATE-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -2710,7 +2638,7 @@
                                 </bpws:sources>
                                 <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns19=&quot;http://www.example.org/ErrSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;RenderJSON1-input&quot; match=&quot;/&quot;>&lt;tns19:element>&lt;tns19:RESPONSE_CD>&lt;xsl:value-of select=&quot;'500'&quot;/>&lt;/tns19:RESPONSE_CD>&lt;tns19:RESPONSE_MSG>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/tns19:RESPONSE_MSG>&lt;tns19:RESPONSE_DATA xsi:nil=&quot;true&quot;/>&lt;/tns19:element>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns4=&quot;http://www.example.org/PDTA_HERO_ONL_0001_Response&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;RenderJSON_catch-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:element>&#xa;            &lt;tns4:RESPONSE_CD>&#xa;                &lt;xsl:value-of select=&quot;'200'&quot;/>&#xa;            &lt;/tns4:RESPONSE_CD>&#xa;            &lt;tns4:RESPONSE_MSG>&#xa;                &lt;xsl:value-of select=&quot;'SUCCESS'&quot;/>&#xa;            &lt;/tns4:RESPONSE_MSG>&#xa;            &lt;tns4:RESPONSE_DATA>&#xa;                &lt;tns4:RESULT_CD>&#xa;                    &lt;xsl:value-of select=&quot;'99'&quot;/>&#xa;                &lt;/tns4:RESULT_CD>&#xa;                &lt;tns4:RESULT_MSG>&#xa;                    &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;                &lt;/tns4:RESULT_MSG>&#xa;            &lt;/tns4:RESPONSE_DATA>&#xa;        &lt;/tns4:element>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:config>
                                     <bwext:BWActivity
@@ -2724,7 +2652,7 @@
                                     <value
                                     jsonOutputStyle="None"
                                     schemaType="Xsd" xsi:type="restjson:JsonRender">
-                                    <inputEditorElement href="platform:/resource/EAI_RestType1/Schemas/COMMON/ErrSchema.xsd#//element;XSDElementDeclaration"/>
+                                    <inputEditorElement href="platform:/resource/EAI_RestType1/Schemas/PDTA/PDTA_HERO_ONL_0001_Response.xsd#//element;XSDElementDeclaration"/>
                                     </value>
                                     </properties>
                                     </activityConfig>
@@ -2746,9 +2674,9 @@
                                 </bpws:sources>
                                 <tibex:inputBindings>
                                     <tibex:inputBinding coercion=""
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tns=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:template name=&quot;LOG_ERROR-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'ERROR'&quot;/>&lt;/STEP>&lt;ERROR_MSG>&lt;xsl:value-of select=&quot;$FaultDetails/Msg&quot;/>&lt;/ERROR_MSG>&lt;ERROR_STACKTRACE>&lt;xsl:value-of select=&quot;$FaultDetails/StackTrace&quot;/>&lt;/ERROR_STACKTRACE>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;$Start/tns:messageBody&quot;/>&lt;/DEBUG_DATA>&lt;ERROR_ACTIVITY>&lt;xsl:value-of select=&quot;$FaultDetails/ActivityName&quot;/>&lt;/ERROR_ACTIVITY>&lt;ERROR_CODE>&lt;xsl:value-of select=&quot;$FaultDetails/MsgCode&quot;/>&lt;/ERROR_CODE>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tns3=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:param name=&quot;RenderJSON_catch&quot;/>&lt;xsl:template name=&quot;LOG_ERROR-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'ERROR'&quot;/>&lt;/STEP>&lt;ERROR_MSG>&lt;xsl:value-of select=&quot;$RenderJSON_catch/jsonString&quot;/>&lt;/ERROR_MSG>&lt;ERROR_STACKTRACE>&lt;xsl:value-of select=&quot;$FaultDetails/StackTrace&quot;/>&lt;/ERROR_STACKTRACE>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;$Start/tns3:messageBody&quot;/>&lt;/DEBUG_DATA>&lt;ERROR_ACTIVITY>&lt;xsl:value-of select=&quot;$FaultDetails/ActivityName&quot;/>&lt;/ERROR_ACTIVITY>&lt;ERROR_CODE>&lt;xsl:value-of select=&quot;$FaultDetails/MsgCode&quot;/>&lt;/ERROR_CODE>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
-                                <tibex:CallProcess spawn="false"
+                                <tibex:CallProcess
                                     subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                             </tibex:extActivity>
                         </bpws:extensionActivity>
@@ -2756,7 +2684,7 @@
                             faultVariable="Throw-input" name="Throw" tibex:xpdlId="bec55732-90f2-4454-a6bb-6bd50e6d9783">
                             <tibex:inputBindings>
                                 <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns20=&quot;http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;RenderJSON_catch&quot;/>&#xa;    &lt;xsl:template name=&quot;Throw-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns20:DefaultFault>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$RenderJSON_catch/jsonString&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns20:DefaultFault>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;RenderJSON_catch&quot;/>&#xa;    &lt;xsl:template name=&quot;Throw-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:DefaultFault>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$RenderJSON_catch/jsonString&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns1:DefaultFault>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                             </tibex:inputBindings>
                             <bpws:targets>
                                 <bpws:target linkName="LOG_ERRORToThrow"/>
@@ -2837,7 +2765,7 @@
                         <tibex:inputBinding coercion=""
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;LOG_START-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'START'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($Start)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:CallProcess spawn="false"
+                    <tibex:CallProcess
                         subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
@@ -2853,7 +2781,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; xmlns:tns=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_processContext&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;JobInfo&quot; match=&quot;/&quot;>&lt;tns5:JobInfo>&lt;xsl:variable name=&quot;IF_ID&quot; select=&quot;substring(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;), tib:last-index-of(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;), '.')+1)&quot;/>&lt;xsl:variable name=&quot;CURR_TM&quot; select=&quot;format-dateTime(current-dateTime(), '[Y0001][M01][D01][H01][m01][s01][f001]')&quot;/>&lt;IF_ID>&lt;xsl:value-of select=&quot;$IF_ID&quot;/>&lt;/IF_ID>&lt;TR_ID>&lt;xsl:value-of select=&quot;concat($IF_ID, '', $CURR_TM, '', $_processContext/JobId)&quot;/>&lt;/TR_ID>&lt;xsl:if test=&quot;$Start/tns:httpHeaders/tns:DynamicHeaders/Header[Name='X-Forwarded-For']/Value&quot;>&lt;CLIENT_IP>&lt;xsl:value-of select=&quot;$Start/tns:httpHeaders/tns:DynamicHeaders/Header[Name='X-Forwarded-For']/Value&quot;/>&lt;/CLIENT_IP>&lt;/xsl:if>&lt;xsl:if test=&quot;$Start/tns:httpHeaders/tns:DynamicHeaders/Header[Name='X-Forwarded-Port']/Value&quot;>&lt;CLIENT_PORT>&lt;xsl:value-of select=&quot;$Start/tns:httpHeaders/tns:DynamicHeaders/Header[Name='X-Forwarded-Port']/Value&quot;/>&lt;/CLIENT_PORT>&lt;/xsl:if>&lt;/tns5:JobInfo>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tns3=&quot;http://www.example.org/ReqSchema&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_processContext&quot;/>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;JobInfo&quot; match=&quot;/&quot;>&#xa;        &lt;tns5:JobInfo>&#xa;            &lt;xsl:variable name=&quot;IF_ID&quot; select=&quot;substring(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;), tib:last-index-of(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;), '.')+1)&quot;/>&#xa;            &lt;xsl:variable name=&quot;CURR_TM&quot; select=&quot;format-dateTime(current-dateTime(), '[Y0001][M01][D01][H01][m01][s01][f001]')&quot;/>&#xa;            &lt;IF_ID>&#xa;                &lt;xsl:value-of select=&quot;$IF_ID&quot;/>&#xa;            &lt;/IF_ID>&#xa;            &lt;TR_ID>&#xa;                &lt;xsl:value-of select=&quot;concat($IF_ID, '', $CURR_TM, '', $_processContext/JobId)&quot;/>&#xa;            &lt;/TR_ID>&#xa;            &lt;xsl:if test=&quot;$Start/tns3:httpHeaders/tns3:DynamicHeaders/Header[Name='X-Forwarded-For']/Value&quot;>&#xa;                &lt;CLIENT_IP>&#xa;                    &lt;xsl:value-of select=&quot;$Start/tns3:httpHeaders/tns3:DynamicHeaders/Header[Name='X-Forwarded-For']/Value&quot;/>&#xa;                &lt;/CLIENT_IP>&#xa;            &lt;/xsl:if>&#xa;            &lt;xsl:if test=&quot;$Start/tns3:httpHeaders/tns3:DynamicHeaders/Header[Name='X-Forwarded-Port']/Value&quot;>&#xa;                &lt;CLIENT_PORT>&#xa;                    &lt;xsl:value-of select=&quot;$Start/tns3:httpHeaders/tns3:DynamicHeaders/Header[Name='X-Forwarded-Port']/Value&quot;/>&#xa;                &lt;/CLIENT_PORT>&#xa;            &lt;/xsl:if>&#xa;        &lt;/tns5:JobInfo>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2883,7 +2811,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;activity.jsonParser.input+d5f9016b-d304-4dbd-802d-cfb44ae7a463+ActivityInputType&quot; xmlns:tns=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;ParseJSON-input&quot; match=&quot;/&quot;>&lt;tns7:ActivityInputClass>&lt;jsonString>&lt;xsl:value-of select=&quot;$Start/tns:messageBody&quot;/>&lt;/jsonString>&lt;/tns7:ActivityInputClass>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns7=&quot;activity.jsonParser.input+d5f9016b-d304-4dbd-802d-cfb44ae7a463+ActivityInputType&quot; xmlns:tns3=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;ParseJSON-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns7:ActivityInputClass>&#xa;            &lt;jsonString>&#xa;                &lt;xsl:value-of select=&quot;$Start/tns3:messageBody&quot;/>&#xa;            &lt;/jsonString>&#xa;        &lt;/tns7:ActivityInputClass>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2919,7 +2847,7 @@
                         <tibex:inputBinding coercion=""
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;LOG_Parse-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'PARSER'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($ParseJSON)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:CallProcess spawn="false"
+                    <tibex:CallProcess
                         subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
@@ -2938,7 +2866,7 @@
                         <tibex:inputBinding coercion=""
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:template name=&quot;LOG_END-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'END'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:CallProcess spawn="false"
+                    <tibex:CallProcess
                         subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
@@ -3006,7 +2934,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns18=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+ef0ed005-7a2f-4370-8927-9597f6576780+input&quot; xmlns:tns1=&quot;http://www.example.org/PDTA_HERO_ONL_0001&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;JDBCCallProcedure-input&quot; match=&quot;/&quot;>&lt;tns18:inputs>&lt;inputSet>&lt;VI_CD_SHOP>&lt;xsl:value-of select=&quot;$ParseJSON/tns1:REQUEST/tns1:VI_CD_SHOP&quot;/>&lt;/VI_CD_SHOP>&lt;VI_DT_SALE>&lt;xsl:value-of select=&quot;$ParseJSON/tns1:REQUEST/tns1:VI_DT_SALE&quot;/>&lt;/VI_DT_SALE>&lt;VI_CD_SALEBILL>&lt;xsl:value-of select=&quot;$ParseJSON/tns1:REQUEST/tns1:VI_CD_SALEBILL&quot;/>&lt;/VI_CD_SALEBILL>&lt;/inputSet>&lt;/tns18:inputs>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns18=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+ef0ed005-7a2f-4370-8927-9597f6576780+input&quot; xmlns:tns=&quot;http://www.example.org/PDTA_HERO_ONL_0001&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ParseJSON&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCCallProcedure-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns18:inputs>&#xa;            &lt;inputSet>&#xa;                &lt;VI_CD_SHOP>&#xa;                    &lt;xsl:value-of select=&quot;$ParseJSON/tns:REQUEST/tns:VI_CD_SHOP&quot;/>&#xa;                &lt;/VI_CD_SHOP>&#xa;                &lt;VI_DT_SALE>&#xa;                    &lt;xsl:value-of select=&quot;$ParseJSON/tns:REQUEST/tns:VI_DT_SALE&quot;/>&#xa;                &lt;/VI_DT_SALE>&#xa;                &lt;VI_CD_SALEBILL>&#xa;                    &lt;xsl:value-of select=&quot;$ParseJSON/tns:REQUEST/tns:VI_CD_SALEBILL&quot;/>&#xa;                &lt;/VI_CD_SALEBILL>&#xa;            &lt;/inputSet>&#xa;        &lt;/tns18:inputs>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -3056,101 +2984,28 @@
                 <bpws:sources>
                     <bpws:source linkName="ScopeToRenderJSON"/>
                 </bpws:sources>
-                <bpws:variables>
-                    <bpws:variable name="FaultName2"
-                        sca-bpel:internal="true" type="xsd:string"/>
-                    <bpws:variable element="ns:FaultDetail"
-                        name="FaultDetails1" sca-bpel:internal="true"/>
-                </bpws:variables>
-                <bpws:faultHandlers>
-                    <bpws:catchAll tibex:faultDetailsVar="FaultDetails1"
-                        tibex:faultNameVar="FaultName2" tibex:xpdlId="4e4bad35-eb00-431c-9a8a-02964f74ab1e">
-                        <bpws:scope name="scope2">
-                            <bpws:flow name="flow3">
-                                <bpws:links>
-                                    <bpws:link
-                                    name="UPDATE_MERP_ErrToThrow1" tibex:linkType="SUCCESS"/>
-                                </bpws:links>
-                                <bpws:extensionActivity>
-                                    <tibex:activityExtension
-                                    inputVariable="UPDATE_MERP_Err-input"
-                                    name="UPDATE_MERP_Err"
-                                    outputVariable="UPDATE_MERP_Err"
-                                    tibex:xpdlId="7a5e6ccf-0115-437d-ab40-e088283d741a" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                                    <bpws:sources>
-                                    <bpws:source linkName="UPDATE_MERP_ErrToThrow1"/>
-                                    </bpws:sources>
-                                    <tibex:inputBindings>
-                                    <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns21=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+7a5e6ccf-0115-437d-ab40-e088283d741a+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://www.example.org/PDTA_HERO_ONL_0001&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;UPDATE_MERP_Err-input&quot; match=&quot;/&quot;>&lt;tns21:jdbcUpdateActivityInput>&lt;Record>&lt;EAI_MESSAGE>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/EAI_MESSAGE>&lt;V_SALEBILL>&lt;xsl:value-of select=&quot;$ParseJSON/tns1:REQUEST/tns1:VI_CD_SALEBILL&quot;/>&lt;/V_SALEBILL>&lt;/Record>&lt;/tns21:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                                    </tibex:inputBindings>
-                                    <tibex:config>
-                                    <bwext:BWActivity
-                                    activityTypeID="bw.jdbc.update"
-                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                                    xmlns:jdbcPalette="http://ns.tibco.com/bw/palette/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                    <attributeBindings
-                                    bindingType="moduleProperty"
-                                    eAttributeName="timeout" processProperty="SharedModule-DB_TIME_OUT"/>
-                                    <activityConfig>
-                                    <properties
-                                    name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCUpdateActivity"/>
-                                    <value
-                                    batchUpdate="true"
-                                    sharedResourceProperty="jdbcProperty_MERP"
-                                    sqlStatement="UPDATE FNF.SALE_POSD&#xa;SET EAI_STATUS = 'E'&#xa;&#x9;, EAI_MESSAGE = ?&#xa;WHERE SALEBILL = ?&#xa;AND STATUS = 'N'&#xa;" xsi:type="jdbcPalette:JDBCUpdateActivity">
-
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="EAI_MESSAGE"/>
-
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="V_SALEBILL"/>
-                                    </value>
-                                    </properties>
-                                    </activityConfig>
-                                    </bwext:BWActivity>
-                                    </tibex:config>
-                                    </tibex:activityExtension>
-                                </bpws:extensionActivity>
-                                <bpws:throw
-                                    faultName="ns28:DefaultFault"
-                                    faultVariable="Throw1-input"
-                                    name="Throw1" tibex:xpdlId="17b99fc3-7cf2-4f5a-8f6a-91a314760ed9">
-                                    <tibex:inputBindings>
-                                    <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns20=&quot;http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;Throw1-input&quot; match=&quot;/&quot;>&lt;tns20:DefaultFault>&lt;message>&lt;xsl:value-of select=&quot;substring-after($_error/StackTrace, &amp;quot;Caused&amp;quot;)&quot;/>&lt;/message>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;msgCode>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/msgCode>&lt;/xsl:if>&lt;/tns20:DefaultFault>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                                    </tibex:inputBindings>
-                                    <bpws:targets>
-                                    <bpws:target linkName="UPDATE_MERP_ErrToThrow1"/>
-                                    </bpws:targets>
-                                </bpws:throw>
-                            </bpws:flow>
-                        </bpws:scope>
-                    </bpws:catchAll>
-                </bpws:faultHandlers>
                 <bpws:flow name="flow1">
                     <bpws:links>
                         <bpws:link name="SELECT_MERPToCopy_1_LOG_QUERY" tibex:linkType="SUCCESS"/>
                         <bpws:link
                             name="INSERT_HEROToCopy_1_SEL_LOG_QUERY" tibex:linkType="SUCCESS"/>
-                        <bpws:link name="SELECT_HEROToUPDATE_MERP" tibex:linkType="SUCCESS"/>
                         <bpws:link name="UPDATE_MERPToUPD_LOG_QUERY" tibex:linkType="SUCCESS"/>
                         <bpws:link name="DELETE_MERPToDEL_LOG_QUERY" tibex:linkType="SUCCESS"/>
-                        <bpws:link name="GroupStartToSELECT_MERP" tibex:linkType="SUCCESS"/>
+                        <bpws:link name="GroupStartToUPDATE_MERP" tibex:linkType="SUCCESS"/>
                         <bpws:link name="Copy_1_LOG_QUERYToINSERT_HERO" tibex:linkType="SUCCESS"/>
+                        <bpws:link name="INS_LOG_INSERTToDELETE_MERP" tibex:linkType="SUCCESS"/>
+                        <bpws:link name="DEL_LOG_QUERYToGroupEnd" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+                        <bpws:link name="UPD_LOG_UPDATEToSELECT_MERP" tibex:linkType="SUCCESS"/>
+                        <bpws:link name="INSERT_HEROToDELETE_MERP" tibex:linkType="ERROR"/>
                         <bpws:link
-                            name="Copy_1_SEL_LOG_QUERYToSELECT_HERO" tibex:linkType="SUCCESS"/>
-                        <bpws:link name="UPD_LOG_QUERYToDELETE_MERP" tibex:linkType="SUCCESS"/>
-                        <bpws:link name="DEL_LOG_QUERYToGroupEnd" tibex:linkType="SUCCESS"/>
+                            name="DEL_LOG_DELETEToThrow_INSERT_HERO" tibex:linkType="SUCCESSWITHCONDITION"/>
+                        <bpws:link name="UPDATE_MERPToDELETE_MERP" tibex:linkType="ERROR"/>
+                        <bpws:link name="JDBCUpdateToThrow_MERP" tibex:linkType="SUCCESS"/>
                     </bpws:links>
                     <bpws:empty name="GroupStart"
                         tibex:group="groupStart" tibex:xpdlId="1fb970e8-5849-4d7c-81e7-453c1bca67ab">
                         <bpws:sources>
-                            <bpws:source linkName="GroupStartToSELECT_MERP"/>
+                            <bpws:source linkName="GroupStartToUPDATE_MERP"/>
                         </bpws:sources>
                     </bpws:empty>
                     <bpws:empty name="GroupEnd" tibex:group="groupEnd" tibex:xpdlId="f09f5863-12f5-4180-bf1e-d88b811fde7c">
@@ -3165,14 +3020,14 @@
                             outputVariable="SELECT_MERP"
                             tibex:xpdlId="b13088dd-3ceb-4018-9256-e619216350d2" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                             <bpws:targets>
-                                <bpws:target linkName="GroupStartToSELECT_MERP"/>
+                                <bpws:target linkName="UPD_LOG_UPDATEToSELECT_MERP"/>
                             </bpws:targets>
                             <bpws:sources>
                                 <bpws:source linkName="SELECT_MERPToCopy_1_LOG_QUERY"/>
                             </bpws:sources>
                             <tibex:inputBindings>
                                 <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.example.org/PDTA_HERO_ONL_0001&quot; xmlns:tns11=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+b13088dd-3ceb-4018-9256-e619216350d2+input&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;SELECT_MERP-input&quot; match=&quot;/&quot;>&lt;tns11:jdbcQueryActivityInput>&lt;VI_CD_SALEBILL>&lt;xsl:value-of select=&quot;$ParseJSON/tns1:REQUEST/tns1:VI_CD_SALEBILL&quot;/>&lt;/VI_CD_SALEBILL>&lt;/tns11:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/PDTA_HERO_ONL_0001&quot; xmlns:tns11=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+b13088dd-3ceb-4018-9256-e619216350d2+input&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ParseJSON&quot;/>&#xa;    &lt;xsl:template name=&quot;SELECT_MERP-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:jdbcQueryActivityInput>&#xa;            &lt;VI_CD_SALEBILL>&#xa;                &lt;xsl:value-of select=&quot;$ParseJSON/tns:REQUEST/tns:VI_CD_SALEBILL&quot;/>&#xa;            &lt;/VI_CD_SALEBILL>&#xa;        &lt;/tns11:jdbcQueryActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                             </tibex:inputBindings>
                             <tibex:config>
                                 <bwext:BWActivity
@@ -3278,6 +3133,15 @@
                             </bpws:targets>
                             <bpws:sources>
                                 <bpws:source linkName="INSERT_HEROToCopy_1_SEL_LOG_QUERY"/>
+                                <bpws:source
+                                    linkName="INSERT_HEROToDELETE_MERP"
+                                    tibex:faultDetailsVar="INSERT_HERO" tibex:faultNameVar="FaultName">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##error##]]></bpws:transitionCondition>
+                                </bpws:source>
                             </bpws:sources>
                             <tibex:inputBindings>
                                 <tibex:inputBinding
@@ -3343,118 +3207,28 @@
                     </bpws:extensionActivity>
                     <bpws:extensionActivity>
                         <tibex:activityExtension
-                            inputVariable="SELECT_HERO-input"
-                            name="SELECT_HERO"
-                            outputVariable="SELECT_HERO"
-                            tibex:xpdlId="12e213df-556e-4ea6-8895-f310bf734d6b" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
-                            <bpws:targets>
-                                <bpws:target linkName="Copy_1_SEL_LOG_QUERYToSELECT_HERO"/>
-                            </bpws:targets>
-                            <bpws:sources>
-                                <bpws:source linkName="SELECT_HEROToUPDATE_MERP"/>
-                            </bpws:sources>
-                            <tibex:inputBindings>
-                                <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+12e213df-556e-4ea6-8895-f310bf734d6b+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://www.example.org/PDTA_HERO_ONL_0001&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;SELECT_HERO-input&quot; match=&quot;/&quot;>&lt;tns12:jdbcQueryActivityInput>&lt;VI_CD_SALEBILL>&lt;xsl:value-of select=&quot;$ParseJSON/tns1:REQUEST/tns1:VI_CD_SALEBILL&quot;/>&lt;/VI_CD_SALEBILL>&lt;/tns12:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
-                            </tibex:inputBindings>
-                            <tibex:config>
-                                <bwext:BWActivity
-                                    activityTypeID="bw.jdbc.JDBCQuery"
-                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                                    xmlns:jdbcPalette="http://ns.tibco.com/bw/palette/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                    <attributeBindings
-                                    bindingType="moduleProperty"
-                                    eAttributeName="timeout" processProperty="SharedModule-DB_TIME_OUT"/>
-                                    <attributeBindings
-                                    bindingType="moduleProperty"
-                                    eAttributeName="maxRows" processProperty="SharedModule-MAX_ROW"/>
-                                    <activityConfig>
-                                    <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
-                                    <value
-                                    sharedResourceProperty="jdbcProperty_HERO"
-                                    sqlStatement="SELECT SALEBILL AS V_SALEBILL&#xd;&#xa;, BRAND AS V_BRAND&#xd;&#xa;, SALEDATE AS V_SALEDATE&#xd;&#xa;, SHOPCODE AS V_SHOPCODE&#xd;&#xa;, USERID AS V_USERID&#xd;&#xa;, SEQ AS V_SEQ&#xd;&#xa;, TP_YN AS V_TP_YN&#xd;&#xa;, GET_POINT AS V_GET_POINT&#xd;&#xa;, USE_POINT AS V_USE_POINT&#xd;&#xa;, USE_AMOUNT AS V_USE_AMOUNT&#xd;&#xa;, EAI_STATUS AS V_EAI_STATUS&#xd;&#xa;, EAI_MESSAGE AS V_EAI_MESSAGE&#xd;&#xa;FROM FNF.SALE_POSD&#xd;&#xa;WHERE SALEBILL = ?" xsi:type="jdbcPalette:JDBCQueryActivity">
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="VI_CD_SALEBILL"/>
-                                    <columnMetadata
-                                    columnIndex="1"
-                                    columnName="v_salebill"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="varchar"/>
-                                    <columnMetadata
-                                    columnIndex="2"
-                                    columnName="v_brand"
-                                    dataType="12" typeName="varchar"/>
-                                    <columnMetadata
-                                    columnIndex="3"
-                                    columnName="v_saledate"
-                                    dataType="12" typeName="varchar"/>
-                                    <columnMetadata
-                                    columnIndex="4"
-                                    columnName="v_shopcode"
-                                    dataType="12" typeName="varchar"/>
-                                    <columnMetadata
-                                    columnIndex="5"
-                                    columnName="v_userid"
-                                    dataType="12" typeName="varchar"/>
-                                    <columnMetadata
-                                    columnIndex="6"
-                                    columnName="v_seq"
-                                    dataType="2" typeName="numeric"/>
-                                    <columnMetadata
-                                    columnIndex="7"
-                                    columnName="v_tp_yn"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="varchar"/>
-                                    <columnMetadata
-                                    columnIndex="8"
-                                    columnName="v_get_point"
-                                    dataType="2"
-                                    status="OptionalElement" typeName="numeric"/>
-                                    <columnMetadata
-                                    columnIndex="9"
-                                    columnName="v_use_point"
-                                    dataType="2"
-                                    status="OptionalElement" typeName="numeric"/>
-                                    <columnMetadata
-                                    columnIndex="10"
-                                    columnName="v_use_amount"
-                                    dataType="2"
-                                    status="OptionalElement" typeName="numeric"/>
-                                    <columnMetadata
-                                    columnIndex="11"
-                                    columnName="v_eai_status"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="varchar"/>
-                                    <columnMetadata
-                                    columnIndex="12"
-                                    columnName="v_eai_message"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="varchar"/>
-                                    </value>
-                                    </properties>
-                                    </activityConfig>
-                                </bwext:BWActivity>
-                            </tibex:config>
-                        </tibex:activityExtension>
-                    </bpws:extensionActivity>
-                    <bpws:extensionActivity>
-                        <tibex:activityExtension
                             inputVariable="UPDATE_MERP-input"
                             name="UPDATE_MERP"
                             outputVariable="UPDATE_MERP"
                             tibex:xpdlId="c40fc0f2-ce69-410f-b4f0-36939239d75f" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                             <bpws:targets>
-                                <bpws:target linkName="SELECT_HEROToUPDATE_MERP"/>
+                                <bpws:target linkName="GroupStartToUPDATE_MERP"/>
                             </bpws:targets>
                             <bpws:sources>
                                 <bpws:source linkName="UPDATE_MERPToUPD_LOG_QUERY"/>
+                                <bpws:source
+                                    linkName="UPDATE_MERPToDELETE_MERP"
+                                    tibex:faultDetailsVar="UPDATE_MERP" tibex:faultNameVar="FaultName">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##error##]]></bpws:transitionCondition>
+                                </bpws:source>
                             </bpws:sources>
                             <tibex:inputBindings>
                                 <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns15=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+c40fc0f2-ce69-410f-b4f0-36939239d75f+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;SELECT_HERO&quot;/>&lt;xsl:template name=&quot;UPDATE_MERP-input&quot; match=&quot;/&quot;>&lt;tns15:jdbcUpdateActivityInput>&lt;xsl:for-each select=&quot;$SELECT_HERO/Record&quot;>&lt;Record>&lt;xsl:choose>&lt;xsl:when test=&quot;empty(v_get_point)&quot;>&lt;V_GET_POINT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/V_GET_POINT>&lt;/xsl:when>&lt;xsl:otherwise>&lt;V_GET_POINT>&lt;xsl:choose>&lt;xsl:when test=&quot;exists(v_get_point)&quot;>&lt;xsl:value-of select=&quot;v_get_point&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/V_GET_POINT>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;V_USE_POINT>&lt;xsl:choose>&lt;xsl:when test=&quot;exists(v_use_point)&quot;>&lt;xsl:value-of select=&quot;v_use_point&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/V_USE_POINT>&lt;V_USE_AMOUNT>&lt;xsl:choose>&lt;xsl:when test=&quot;exists(v_use_amount)&quot;>&lt;xsl:value-of select=&quot;v_use_amount&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/V_USE_AMOUNT>&lt;V_SALEBILL>&lt;xsl:choose>&lt;xsl:when test=&quot;exists(v_salebill)&quot;>&lt;xsl:value-of select=&quot;v_salebill&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/V_SALEBILL>&lt;V_BRAND>&lt;xsl:value-of select=&quot;v_brand&quot;/>&lt;/V_BRAND>&lt;V_SALEDATE>&lt;xsl:value-of select=&quot;v_saledate&quot;/>&lt;/V_SALEDATE>&lt;V_SHOPCODE>&lt;xsl:value-of select=&quot;v_shopcode&quot;/>&lt;/V_SHOPCODE>&lt;V_USERID>&lt;xsl:value-of select=&quot;v_userid&quot;/>&lt;/V_USERID>&lt;V_SEQ>&lt;xsl:value-of select=&quot;xsd:int(v_seq)&quot;/>&lt;/V_SEQ>&lt;/Record>&lt;/xsl:for-each>&lt;/tns15:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns15=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+c40fc0f2-ce69-410f-b4f0-36939239d75f+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tns=&quot;http://www.example.org/PDTA_HERO_ONL_0001&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;UPDATE_MERP-input&quot; match=&quot;/&quot;>&lt;tns15:jdbcUpdateActivityInput>&lt;V_SALEBILL>&lt;xsl:value-of select=&quot;$ParseJSON/tns:REQUEST/tns:VI_CD_SALEBILL&quot;/>&lt;/V_SALEBILL>&lt;/tns15:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                             </tibex:inputBindings>
                             <tibex:config>
                                 <bwext:BWActivity
@@ -3468,36 +3242,12 @@
                                     <activityConfig>
                                     <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCUpdateActivity"/>
-                                    <value batchUpdate="true"
+                                    <value
                                     sharedResourceProperty="jdbcProperty_MERP"
-                                    sqlStatement="UPDATE FNF.SALE_POSD&#xa;SET GET_POINT = ?&#xa;&#x9;, USE_POINT = ?&#xa;&#x9;, USE_AMOUNT = ?&#xa;&#x9;, EAI_STATUS = 'Y'&#xa;&#x9;, EAI_MESSAGE = 'SUCCESS'&#xa;&#x9;, STATUS = CASE WHEN TP_YN = 'N' THEN 'Y' ELSE 'N' END&#xa;WHERE SALEBILL = ?&#xa;AND BRAND = ?&#xa;AND SALEDATE = ?&#xa;AND SHOPCODE = ?&#xa;AND USERID = ?&#xa;AND SEQ = ?&#xa;AND STATUS = 'N'" xsi:type="jdbcPalette:JDBCUpdateActivity">
-                                    <PreparedParameters
-                                    DataType="2"
-                                    DataTypeDisplayValue="NUMERIC" ParameterName="V_GET_POINT"/>
-                                    <PreparedParameters
-                                    DataType="2"
-                                    DataTypeDisplayValue="NUMERIC" ParameterName="V_USE_POINT"/>
-                                    <PreparedParameters
-                                    DataType="2"
-                                    DataTypeDisplayValue="NUMERIC" ParameterName="V_USE_AMOUNT"/>
+                                    sqlStatement="UPDATE FNF.SALE_POSD&#xa;SET STATUS = CASE WHEN TP_YN = 'N' THEN 'Y' ELSE 'N' END&#xa;WHERE EAI_STATUS = 'N'&#xa;AND SALEBILL = ?" xsi:type="jdbcPalette:JDBCUpdateActivity">
                                     <PreparedParameters
                                     DataType="12"
                                     DataTypeDisplayValue="VARCHAR" ParameterName="V_SALEBILL"/>
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="V_BRAND"/>
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="V_SALEDATE"/>
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="V_SHOPCODE"/>
-                                    <PreparedParameters
-                                    DataType="12"
-                                    DataTypeDisplayValue="VARCHAR" ParameterName="V_USERID"/>
-                                    <PreparedParameters
-                                    DataType="2"
-                                    DataTypeDisplayValue="NUMERIC" ParameterName="V_SEQ"/>
                                     </value>
                                     </properties>
                                     </activityConfig>
@@ -3512,14 +3262,15 @@
                             outputVariable="DELETE_MERP"
                             tibex:xpdlId="75f94e3c-3dee-4809-bcb1-422d90518bbe" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                             <bpws:targets>
-                                <bpws:target linkName="UPD_LOG_QUERYToDELETE_MERP"/>
+                                <bpws:target linkName="INS_LOG_INSERTToDELETE_MERP"/>
+                                <bpws:target linkName="INSERT_HEROToDELETE_MERP"/>
                             </bpws:targets>
                             <bpws:sources>
                                 <bpws:source linkName="DELETE_MERPToDEL_LOG_QUERY"/>
                             </bpws:sources>
                             <tibex:inputBindings>
                                 <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+75f94e3c-3dee-4809-bcb1-422d90518bbe+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns1=&quot;http://www.example.org/PDTA_HERO_ONL_0001&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;DELETE_MERP-input&quot; match=&quot;/&quot;>&lt;tns10:jdbcUpdateActivityInput>&lt;Record>&lt;V_SALEBILL>&lt;xsl:value-of select=&quot;$ParseJSON/tns1:REQUEST/tns1:VI_CD_SALEBILL&quot;/>&lt;/V_SALEBILL>&lt;/Record>&lt;/tns10:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+75f94e3c-3dee-4809-bcb1-422d90518bbe+input&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns=&quot;http://www.example.org/PDTA_HERO_ONL_0001&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ParseJSON&quot;/>&#xa;    &lt;xsl:template name=&quot;DELETE_MERP-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns10:jdbcUpdateActivityInput>&#xa;            &lt;Record>&#xa;                &lt;V_SALEBILL>&#xa;                    &lt;xsl:value-of select=&quot;$ParseJSON/tns:REQUEST/tns:VI_CD_SALEBILL&quot;/>&#xa;                &lt;/V_SALEBILL>&#xa;            &lt;/Record>&#xa;        &lt;/tns10:jdbcUpdateActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                             </tibex:inputBindings>
                             <tibex:config>
                                 <bwext:BWActivity
@@ -3562,7 +3313,7 @@
                                 <tibex:inputBinding coercion=""
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;SELECT_MERP&quot;/>&lt;xsl:template name=&quot;SEL_LOG_QUERY-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'SELECT'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($SELECT_MERP)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($SELECT_MERP/Record))&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                             </tibex:inputBindings>
-                            <tibex:CallProcess spawn="false"
+                            <tibex:CallProcess
                                 subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                         </tibex:extActivity>
                     </bpws:extensionActivity>
@@ -3576,13 +3327,13 @@
                                 <bpws:target linkName="INSERT_HEROToCopy_1_SEL_LOG_QUERY"/>
                             </bpws:targets>
                             <bpws:sources>
-                                <bpws:source linkName="Copy_1_SEL_LOG_QUERYToSELECT_HERO"/>
+                                <bpws:source linkName="INS_LOG_INSERTToDELETE_MERP"/>
                             </bpws:sources>
                             <tibex:inputBindings>
                                 <tibex:inputBinding coercion=""
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;INSERT_HERO&quot;/>&lt;xsl:template name=&quot;INS_LOG_QUERY-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'INSERT'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($INSERT_HERO)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($INSERT_HERO/noOfUpdates))&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;INSERT_HERO&quot;/>&lt;xsl:param name=&quot;SELECT_MERP&quot;/>&lt;xsl:template name=&quot;INS_LOG_INSERT-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'INSERT'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($INSERT_HERO)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($SELECT_MERP/Record))&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                             </tibex:inputBindings>
-                            <tibex:CallProcess spawn="false"
+                            <tibex:CallProcess
                                 subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                         </tibex:extActivity>
                     </bpws:extensionActivity>
@@ -3596,13 +3347,13 @@
                                 <bpws:target linkName="UPDATE_MERPToUPD_LOG_QUERY"/>
                             </bpws:targets>
                             <bpws:sources>
-                                <bpws:source linkName="UPD_LOG_QUERYToDELETE_MERP"/>
+                                <bpws:source linkName="UPD_LOG_UPDATEToSELECT_MERP"/>
                             </bpws:sources>
                             <tibex:inputBindings>
                                 <tibex:inputBinding coercion=""
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;UPDATE_MERP&quot;/>&lt;xsl:template name=&quot;UPD_LOG_QUERY-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'UPDATE'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($UPDATE_MERP)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($UPDATE_MERP/noOfUpdates))&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;UPDATE_MERP&quot;/>&lt;xsl:template name=&quot;UPD_LOG_UPDATE-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'UPDATE'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($UPDATE_MERP)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($UPDATE_MERP/noOfUpdates))&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                             </tibex:inputBindings>
-                            <tibex:CallProcess spawn="false"
+                            <tibex:CallProcess
                                 subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                         </tibex:extActivity>
                     </bpws:extensionActivity>
@@ -3616,16 +3367,97 @@
                                 <bpws:target linkName="DELETE_MERPToDEL_LOG_QUERY"/>
                             </bpws:targets>
                             <bpws:sources>
-                                <bpws:source linkName="DEL_LOG_QUERYToGroupEnd"/>
+                                <bpws:source linkName="DEL_LOG_QUERYToGroupEnd">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                                </bpws:source>
+                                <bpws:source linkName="DEL_LOG_DELETEToThrow_INSERT_HERO">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="exists($_error_INSERT_HERO)=true()" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[exists($_error_INSERT_HERO)=true()]]></bpws:transitionCondition>
+                                </bpws:source>
                             </bpws:sources>
                             <tibex:inputBindings>
                                 <tibex:inputBinding coercion=""
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;DELETE_MERP&quot;/>&lt;xsl:template name=&quot;DEL_LOG_DELETE-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'DELETE'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($DELETE_MERP)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($DELETE_MERP/noOfUpdates))&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                             </tibex:inputBindings>
-                            <tibex:CallProcess spawn="false"
+                            <tibex:CallProcess
                                 subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                         </tibex:extActivity>
                     </bpws:extensionActivity>
+                    <bpws:throw faultName="ns28:DefaultFault"
+                        faultVariable="Throw_INSERT-input"
+                        name="Throw_INSERT" tibex:xpdlId="ce9f5fa5-1637-4815-9cfc-d0e012fbd267">
+                        <tibex:inputBindings>
+                            <tibex:partBinding
+                                expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;Throw_INSERT_HERO-input&quot; match=&quot;/&quot;>&lt;tns1:DefaultFault>&lt;xsl:if test=&quot;$_error/Msg&quot;>&lt;message>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/message>&lt;/xsl:if>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;msgCode>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/msgCode>&lt;/xsl:if>&lt;/tns1:DefaultFault>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                        </tibex:inputBindings>
+                        <bpws:targets>
+                            <bpws:target linkName="DEL_LOG_DELETEToThrow_INSERT_HERO"/>
+                        </bpws:targets>
+                        <bpws:sources/>
+                    </bpws:throw>
+                    <bpws:extensionActivity>
+                        <tibex:activityExtension
+                            inputVariable="JDBCUpdate-input"
+                            name="JDBCUpdate"
+                            outputVariable="JDBCUpdate"
+                            tibex:xpdlId="6f48d174-a094-493a-882e-c9e48d7cba01" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                            <bpws:targets>
+                                <bpws:target linkName="UPDATE_MERPToDELETE_MERP"/>
+                            </bpws:targets>
+                            <bpws:sources>
+                                <bpws:source
+                                    linkName="JDBCUpdateToThrow_MERP"
+                                    tibex:faultDetailsVar="JDBCUpdate" tibex:faultNameVar="FaultName">
+                                    <tibex:DesignExpression/>
+                                </bpws:source>
+                            </bpws:sources>
+                            <tibex:inputBindings>
+                                <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+6f48d174-a094-493a-882e-c9e48d7cba01+input&quot; xmlns:tns=&quot;http://www.example.org/PDTA_HERO_ONL_0001&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;JDBCUpdate-input&quot; match=&quot;/&quot;>&lt;tns2:jdbcUpdateActivityInput>&lt;V_SALEBILL>&lt;xsl:value-of select=&quot;$ParseJSON/tns:REQUEST/tns:VI_CD_SALEBILL&quot;/>&lt;/V_SALEBILL>&lt;/tns2:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            </tibex:inputBindings>
+                            <tibex:config>
+                                <bwext:BWActivity
+                                    activityTypeID="bw.jdbc.update"
+                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                                    xmlns:jdbcPalette="http://ns.tibco.com/bw/palette/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <attributeBindings
+                                    bindingType="moduleProperty"
+                                    eAttributeName="timeout" processProperty="SharedModule-DB_TIME_OUT"/>
+                                    <activityConfig>
+                                    <properties name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCUpdateActivity"/>
+                                    <value
+                                    sharedResourceProperty="jdbcProperty_MERP"
+                                    sqlStatement="DELETE FROM FNF.SALE_POSD&#xa;WHERE SALEBILL = ?&#xa;AND STATUS = 'N'&#xa;AND TP_YN  = 'N'&#xa;" xsi:type="jdbcPalette:JDBCUpdateActivity">
+                                    <PreparedParameters
+                                    DataType="12"
+                                    DataTypeDisplayValue="VARCHAR" ParameterName="V_SALEBILL"/>
+                                    </value>
+                                    </properties>
+                                    </activityConfig>
+                                </bwext:BWActivity>
+                            </tibex:config>
+                        </tibex:activityExtension>
+                    </bpws:extensionActivity>
+                    <bpws:throw faultName="ns28:DefaultFault"
+                        faultVariable="Throw_UPDATE-input"
+                        name="Throw_UPDATE" tibex:xpdlId="6fafbad4-c5be-484a-a699-424b0cb179db">
+                        <tibex:inputBindings>
+                            <tibex:partBinding
+                                expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;Throw_UPDATE-input&quot; match=&quot;/&quot;>&lt;tns1:DefaultFault>&lt;message>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/message>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;msgCode>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/msgCode>&lt;/xsl:if>&lt;/tns1:DefaultFault>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                        </tibex:inputBindings>
+                        <bpws:targets>
+                            <bpws:target linkName="JDBCUpdateToThrow_MERP"/>
+                        </bpws:targets>
+                    </bpws:throw>
                 </bpws:flow>
             </bpws:scope>
             <bpws:extensionActivity>
@@ -3643,7 +3475,7 @@
                         <tibex:inputBinding coercion=""
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;JDBCCallProcedure&quot;/>&lt;xsl:template name=&quot;LOG_QUERY-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'FUNCTION'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($JDBCCallProcedure)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($JDBCCallProcedure/outputSet))&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:CallProcess spawn="false"
+                    <tibex:CallProcess
                         subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
