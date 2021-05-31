@@ -1112,18 +1112,6 @@
     </scaext:binding>
     <scact:bindingAdjunct xmi:id="_16ObIIiKEeuCLLDR6SaZxw" bindingName="RestService101"/>
   </sca:service>
-  <sca:service xmi:id="_M8-sAYtzEeuTWOnHHUprNw" name="sap-procMergetData" promote="ComponentSAP_SHER_ONL/sap-procMergetData">
-    <sca:interface.wsdl xmi:id="_M8-sBYtzEeuTWOnHHUprNw" interface="http://xmlns.example.com/20210323100046PLT#wsdl.interface(sap-procMergetData)" scaext:wsdlLocation="../Processes/com/fnf/eai/sap/shpo/rest/SAP_SHER_ONL_0001.bwp"/>
-    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_M9BIQItzEeuTWOnHHUprNw" name="RestService102" path="/sap/procMergetData" docBasePath="http://localhost:7777/EAI_RestType1" docResourcePath="SAP_SHER_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.sap.shpo.rest.SAP_SHER_ONL_0001-SAP_SHER_ONL_0001.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
-      <operation xmi:id="_M-STkItzEeuTWOnHHUprNw" operationName="post" nickname="post-sap-procMergetData" httpMethod="POST" notes="postSAP_SHER_ONL_0001" responseStyle="element" outputPartName="item">
-        <clientFormat>json</clientFormat>
-        <clientRequestFormat>json</clientRequestFormat>
-      </operation>
-      <parameters xmi:id="_M-ThsItzEeuTWOnHHUprNw"/>
-      <advancedConfig xmi:id="_M9BIQYtzEeuTWOnHHUprNw" blockingQueueSize="2147483647"/>
-    </scaext:binding>
-    <scact:bindingAdjunct xmi:id="_M-STkYtzEeuTWOnHHUprNw" bindingName="RestService102"/>
-  </sca:service>
   <sca:service xmi:id="_CdYj8IxgEeujVoOfDFEdwg" name="OnFFOrderPayment" promote="ComponentOBO_HERO_ONL_2/OnFFOrderPayment">
     <sca:interface.wsdl xmi:id="_CdlYQIxgEeujVoOfDFEdwg" interface="http://xmlns.example.com/20210218160502PLT#wsdl.interface(OnFFOrderPayment)" scaext:wsdlLocation="../Processes/com/fnf/eai/obo/hero/db/OBO_HERO_ONL_2.bwp"/>
     <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_Cd6vcIxgEeujVoOfDFEdwg" name="RestService97" path="/OnFFOrderPayment" docBasePath="http://localhost:7777/EAI_RestType1" docResourcePath="OBO_HERO_ONL_2" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.obo.hero.db.OBO_HERO_ONL_2-OBO_HERO_ONL_2.json" policySets="com.fnf.eai.resources.policy.BasicAuthentication" scaext:policySetLocations="BWRestHttpServiceBinding">
@@ -1442,15 +1430,6 @@
   <sca:property xmi:id="_07GU4JwcEeuhuNcULp6IIw" name="/OBO_INFO/HTTP/authorization" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_GdTnYJwdEeuhuNcULp6IIw" name="/OBO_INFO/HTTP/password" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_5drIMJwcEeuhuNcULp6IIw" name="/OBO_INFO/HTTP/port" type="XMLSchema:int" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_sfs2cIt0EeuTWOnHHUprNw" name="/SHER_INFO/loginhostname" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_WiMggIt4Eeubae-_U3cyPQ" name="/SHER_INFO/hostname" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_zWtHgIuVEeubae-_U3cyPQ" name="/SHER_INFO/AppInfo/grant_type" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_0-rK4IuVEeubae-_U3cyPQ" name="/SHER_INFO/AppInfo/client_id" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_1Al2cIuVEeubae-_U3cyPQ" name="/SHER_INFO/AppInfo/client_secret" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_1Rq_YIuVEeubae-_U3cyPQ" name="/SHER_INFO/AppInfo/resource" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_Ze4_gIuWEeubae-_U3cyPQ" name="/SHER_INFO/AppInfo/resourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_gg4FcIufEeubae-_U3cyPQ" name="/SHER_INFO/TargetDrives/TFTMDT" type="XMLSchema:string" publicAccess="true" scalable="true"/>
-  <sca:property xmi:id="_So8P0IugEeubae-_U3cyPQ" name="/SHER_INFO/TargetDrives/resourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_e_GygJBGEeuKnK9Z6LFaEQ" name="/O3PL_INFO/hostname" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_GtOrAJwjEeuhuNcULp6IIw" name="/O3PL_INFO/HTTP/Authorization" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:property xmi:id="_KdR1MJwjEeuhuNcULp6IIw" name="/O3PL_INFO/HTTP/password" type="XMLSchema:string" publicAccess="true" scalable="true"/>
@@ -1859,9 +1838,6 @@
   </sca:component>
   <sca:component xmi:id="_M89d4ItzEeuTWOnHHUprNw" name="ComponentSAP_SHER_ONL" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_M89d4YtzEeuTWOnHHUprNw" processName="com.fnf.eai.sap.sher.rest.SAP_SHER_ONL"/>
-    <sca:service xmi:id="_M8-E8ItzEeuTWOnHHUprNw" name="sap-procMergetData">
-      <sca:interface.wsdl xmi:id="_M8-sAItzEeuTWOnHHUprNw" interface="http://xmlns.example.com/20210323100046PLT#wsdl.interface(sap-procMergetData)" scaext:wsdlLocation="../Processes/com/fnf/eai/sap/shpo/rest/SAP_SHER_ONL_0001.bwp"/>
-    </sca:service>
   </sca:component>
   <sca:component xmi:id="_AzwqAIx8Eeubae-_U3cyPQ" name="ComponentSAP_SHER_ONL_0001_Starter" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_AzwqAYx8Eeubae-_U3cyPQ" processName="com.fnf.eai.sap.sher.rest.SAP_SHER_ONL_0001_Starter"/>
