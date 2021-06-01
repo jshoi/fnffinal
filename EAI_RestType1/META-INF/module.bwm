@@ -1836,10 +1836,4 @@
       <sca:interface.wsdl xmi:id="_16JioYiKEeuCLLDR6SaZxw" interface="http://xmlns.example.com/20210319171226PLT#wsdl.interface(SendLeaveEmployeeUserInfo)" scaext:wsdlLocation="../Processes/com/fnf/eai/merp/obo/rest/MERP_OBO_ONL.bwp"/>
     </sca:service>
   </sca:component>
-  <sca:component xmi:id="_M89d4ItzEeuTWOnHHUprNw" name="ComponentSAP_SHER_ONL" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_M89d4YtzEeuTWOnHHUprNw" processName="com.fnf.eai.sap.sher.rest.SAP_SHER_ONL"/>
-  </sca:component>
-  <sca:component xmi:id="_AzwqAIx8Eeubae-_U3cyPQ" name="ComponentSAP_SHER_ONL_0001_Starter" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_AzwqAYx8Eeubae-_U3cyPQ" processName="com.fnf.eai.sap.sher.rest.SAP_SHER_ONL_0001_Starter"/>
-  </sca:component>
 </sca:composite>
