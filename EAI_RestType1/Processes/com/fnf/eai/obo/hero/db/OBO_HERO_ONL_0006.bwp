@@ -420,44 +420,6 @@
                 </complexType>
             </element>
         </schema>
-        <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+d85183af-be51-4497-8a8b-e8a5cbbf65c1+input"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+d85183af-be51-4497-8a8b-e8a5cbbf65c1+input">
-            <element name="jdbcQueryActivityInput">
-                <complexType>
-                    <sequence>
-                        <element maxOccurs="1" minOccurs="0"
-                            name="ServerTimeZone" type="string"/>
-                        <element maxOccurs="1" minOccurs="0"
-                            name="timeout" type="long"/>
-                        <element maxOccurs="1" minOccurs="0"
-                            name="maxRows" type="long"/>
-                    </sequence>
-                </complexType>
-            </element>
-        </schema>
-        <schema
-            targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+d85183af-be51-4497-8a8b-e8a5cbbf65c1+output"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/jdbc+d85183af-be51-4497-8a8b-e8a5cbbf65c1+output">
-            <element name="resultSet">
-                <complexType>
-                    <sequence>
-                        <element maxOccurs="unbounded" minOccurs="0" name="Record">
-                            <complexType>
-                                <sequence>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="cid" nillable="false" type="string"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="emp_yn" nillable="false" type="string"/>
-                                    <element maxOccurs="1" minOccurs="0"
-                                    name="emp_no" nillable="false" type="string"/>
-                                </sequence>
-                            </complexType>
-                        </element>
-                    </sequence>
-                </complexType>
-            </element>
-        </schema>
         <schema elementFormDefault="unqualified"
             targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonRender"
             xmlns="http://www.w3.org/2001/XMLSchema"
@@ -741,7 +703,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
-                                    <layoutConstraint x="486"
+                                    <layoutConstraint x="516"
                                     xsi:type="notation:Bounds" y="77"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.callprocess">
@@ -869,10 +831,10 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.9"/>
-                                    <layoutConstraint x="597"
+                                    <layoutConstraint x="738"
                                     xsi:type="notation:Bounds" y="77"/>
                                     </children>
-                                    <children type="4002">
+                                    <children type="4002 bw.generalactivities.callprocess">
                                     <children type="4017">
                                     <styles fontName="맑은 고딕"
                                     lineColor="0" xsi:type="notation:ShapeStyle"/>
@@ -900,27 +862,10 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.10"/>
-                                    <layoutConstraint x="713"
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="617"
                                     xsi:type="notation:Bounds" y="77"/>
-                                    </children>
-                                    <children
-                                    description="나중에 MERP로 DB 변경해야함"
-                                    fillColor="13369343"
-                                    fontName="맑은 고딕"
-                                    lineColor="6737151"
-                                    lineWidth="1"
-                                    transparency="0" type="Note" xsi:type="notation:Shape">
-                                    <children type="DiagramName" xsi:type="notation:BasicDecorationNode">
-                                    <element xsi:nil="true"/>
-                                    </children>
-                                    <children type="Description" xsi:type="notation:BasicDecorationNode">
-                                    <element xsi:nil="true"/>
-                                    </children>
-                                    <styles xsi:type="notation:TextStyle"/>
-                                    <styles xsi:type="notation:LineTypeStyle"/>
-                                    <element xsi:nil="true"/>
-                                    <layoutConstraint x="432"
-                                    xsi:type="notation:Bounds" y="178"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -934,7 +879,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="384"
+                                    <layoutConstraint height="291"
                                     width="1474" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -1240,7 +1185,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1251,7 +1196,7 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1259,26 +1204,6 @@
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.9"/>
             <bendpoints points="[25, 0, -91, 0]$[92, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges lineColor="0" lineWidth="1"
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.11"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5"
-            type="NoteAttachment" xsi:type="notation:Connector">
-            <styles xsi:type="notation:ArrowStyle"/>
-            <styles xsi:type="notation:LineTypeStyle"/>
-            <element xsi:nil="true"/>
-            <bendpoints points="[0, 0, -547, -101]$[523, 96, -24, -5]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
-            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
-            <bendpoints points="[25, 0, -101, 0]$[102, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.1/@children.0/@children.0/@children.1/@children.0/@children.0/@children.0"
@@ -1302,8 +1227,31 @@
             <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@links/@children.1"/>
             <bendpoints points="[25, -1, -100, 0]$[101, 0, -24, 1]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.10"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.10"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
-    <tibex:NamespaceRegistry enabled="true"/>
+    <tibex:NamespaceRegistry enabled="true">
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema-instance" prefix="xsi"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.org/OBO_HERO_ONL_0006_Response" prefix="tns"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.com/namespaces/tns/1610583409932" prefix="tns6"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem namespace="http://tns.tibco.com/bw/REST" prefix="tns9"/>
+    </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1610583409932"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/ErrSchema"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/ReqSchema"/>
@@ -1345,7 +1293,7 @@
             tibex:propertySource="/DB_INFO/MAX_ROW" type="xsd:int"/>
         <bpws:variable element="ns7:ActivityErrorData"
             name="_error_MERP_SELECT" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:JobTotal" name="LOG_QUERY-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:JobTotal" name="LOG_HERO-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns8:messageBody" name="End-input"
             sca-bpel:internal="true" tibex:parameter="out"/>
         <bpws:variable element="ns9:element"
@@ -1359,11 +1307,6 @@
         <bpws:variable element="ns12:resultSet" name="HERO_SELECT" sca-bpel:internal="true"/>
         <bpws:variable element="ns7:ActivityErrorData"
             name="_error_HERO_SELECT" sca-bpel:internal="true"/>
-        <bpws:variable element="ns13:jdbcQueryActivityInput"
-            name="UNION_ALL-input" sca-bpel:internal="true"/>
-        <bpws:variable element="ns14:resultSet" name="UNION_ALL" sca-bpel:internal="true"/>
-        <bpws:variable element="ns7:ActivityErrorData"
-            name="_error_UNION_ALL" sca-bpel:internal="true"/>
         <bpws:variable name="jdbcProperty_Target"
             sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
             sca-bpel:property="yes"
@@ -1383,6 +1326,7 @@
         <bpws:variable element="ns4:ActivityErrorData"
             name="_error_RenderJSON1" sca-bpel:internal="true"/>
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:JobTotal" name="LOG_MERP-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1418,7 +1362,7 @@
                                     <tibex:inputBinding coercion=""
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tns8=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:template name=&quot;LOG_ERROR-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'ERROR'&quot;/>&lt;/STEP>&lt;ERROR_MSG>&lt;xsl:value-of select=&quot;$FaultDetails/Msg&quot;/>&lt;/ERROR_MSG>&lt;ERROR_STACKTRACE>&lt;xsl:value-of select=&quot;$FaultDetails/StackTrace&quot;/>&lt;/ERROR_STACKTRACE>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;$Start/tns8:messageBody&quot;/>&lt;/DEBUG_DATA>&lt;ERROR_ACTIVITY>&lt;xsl:value-of select=&quot;$FaultDetails/ActivityName&quot;/>&lt;/ERROR_ACTIVITY>&lt;ERROR_CODE>&lt;xsl:value-of select=&quot;$FaultDetails/MsgCode&quot;/>&lt;/ERROR_CODE>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
-                                <tibex:CallProcess spawn="false"
+                                <tibex:CallProcess
                                     subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                             </tibex:extActivity>
                         </bpws:extensionActivity>
@@ -1443,7 +1387,7 @@
                                 </bpws:sources>
                                 <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/ErrSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;RenderJSON_catch-input&quot; match=&quot;/&quot;>&lt;tns:element>&lt;tns:RESPONSE_CD>&lt;xsl:value-of select=&quot;'500'&quot;/>&lt;/tns:RESPONSE_CD>&lt;tns:RESPONSE_MSG>&lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&lt;/tns:RESPONSE_MSG>&lt;tns:RESPONSE_DATA xsi:nil=&quot;true&quot;/>&lt;/tns:element>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.example.org/ErrSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;RenderJSON_catch-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:element>&#xa;            &lt;tns1:RESPONSE_CD>&#xa;                &lt;xsl:value-of select=&quot;'500'&quot;/>&#xa;            &lt;/tns1:RESPONSE_CD>&#xa;            &lt;tns1:RESPONSE_MSG>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/tns1:RESPONSE_MSG>&#xa;            &lt;tns1:RESPONSE_DATA xsi:nil=&quot;true&quot;/>&#xa;        &lt;/tns1:element>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:config>
                                     <bwext:BWActivity
@@ -1481,9 +1425,8 @@
                 <bpws:link name="LOG_ENDToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="LOG_STARTToCall_Function" tibex:linkType="SUCCESS"/>
                 <bpws:link name="Call_FunctionToCopy_1_Call_Function" tibex:linkType="SUCCESS"/>
-                <bpws:link
-                    name="Copy_1_Call_FunctionToCopy_2_Call_Function" tibex:linkType="SUCCESS"/>
-                <bpws:link name="UNIONToLOG_QUERY" tibex:linkType="SUCCESS"/>
+                <bpws:link name="HERO_SELECTToLOG_QUERY" tibex:linkType="SUCCESS"/>
+                <bpws:link name="CallProcessToHERO_SELECT" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1513,7 +1456,7 @@
                         <tibex:inputBinding coercion=""
                             expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;LOG_START-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'START'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($Start)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:CallProcess spawn="false"
+                    <tibex:CallProcess
                         subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
@@ -1561,9 +1504,9 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;UNION_ALL&quot;/>&lt;xsl:template name=&quot;LOG_END-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'END'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($UNION_ALL/Record))&quot;/>&lt;/DATA_CNT>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;MERP_SELECT&quot;/>&lt;xsl:param name=&quot;HERO_SELECT&quot;/>&lt;xsl:template name=&quot;LOG_END-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'END'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($MERP_SELECT/Record) + count($HERO_SELECT/Record))&quot;/>&lt;/DATA_CNT>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:CallProcess spawn="false"
+                    <tibex:CallProcess
                         subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
@@ -1580,7 +1523,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns=&quot;http://www.example.org/OBO_HERO_ONL_0006_Response&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;UNION_ALL&quot;/>&lt;xsl:template name=&quot;RenderJSON-input&quot; match=&quot;/&quot;>&lt;tns:element>&lt;tns:RESPONSE_CD>&lt;xsl:value-of select=&quot;'200'&quot;/>&lt;/tns:RESPONSE_CD>&lt;tns:RESPONSE_MSG>&lt;xsl:value-of select=&quot;'SUCCESS'&quot;/>&lt;/tns:RESPONSE_MSG>&lt;tns:RESPONSE_DATA>&lt;xsl:for-each select=&quot;$UNION_ALL/Record&quot;>&lt;tns:EMPLOYEE_MEMBER_LIST>&lt;tns:CID>&lt;xsl:choose>&lt;xsl:when test=&quot;exists(cid)&quot;>&lt;xsl:value-of select=&quot;cid&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns:CID>&lt;tns:EMP_YN>&lt;xsl:choose>&lt;xsl:when test=&quot;exists(emp_yn)&quot;>&lt;xsl:value-of select=&quot;emp_yn&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns:EMP_YN>&lt;tns:EMP_NO>&lt;xsl:choose>&lt;xsl:when test=&quot;exists(emp_no)&quot;>&lt;xsl:value-of select=&quot;emp_no&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns:EMP_NO>&lt;/tns:EMPLOYEE_MEMBER_LIST>&lt;/xsl:for-each>&lt;/tns:RESPONSE_DATA>&lt;/tns:element>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:tns=&quot;http://www.example.org/OBO_HERO_ONL_0006_Response&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;MERP_SELECT&quot;/>&#xa;    &lt;xsl:param name=&quot;HERO_SELECT&quot;/>&#xa;    &lt;xsl:template name=&quot;RenderJSON-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:element>&#xa;            &lt;tns:RESPONSE_CD>&#xa;                &lt;xsl:value-of select=&quot;'200'&quot;/>&#xa;            &lt;/tns:RESPONSE_CD>&#xa;            &lt;tns:RESPONSE_MSG>&#xa;                &lt;xsl:value-of select=&quot;'SUCCESS'&quot;/>&#xa;            &lt;/tns:RESPONSE_MSG>&#xa;            &lt;tns:RESPONSE_DATA>&#xa;                &lt;xsl:for-each select=&quot;$MERP_SELECT/Record&quot;>&#xa;                    &lt;tns:EMPLOYEE_MEMBER_LIST>&#xa;                        &lt;tns:CID>&#xa;                            &lt;xsl:choose>&#xa;                                &lt;xsl:when test=&quot;exists(CID)&quot;>&#xa;                                    &lt;xsl:value-of select=&quot;CID&quot;/>&#xa;                                &lt;/xsl:when>&#xa;                                &lt;xsl:otherwise>&#xa;                                    &lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&#xa;                                &lt;/xsl:otherwise>&#xa;                            &lt;/xsl:choose>&#xa;                        &lt;/tns:CID>&#xa;                        &lt;tns:EMP_YN>&#xa;                            &lt;xsl:choose>&#xa;                                &lt;xsl:when test=&quot;exists(EMP_YN)&quot;>&#xa;                                    &lt;xsl:value-of select=&quot;EMP_YN&quot;/>&#xa;                                &lt;/xsl:when>&#xa;                                &lt;xsl:otherwise>&#xa;                                    &lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&#xa;                                &lt;/xsl:otherwise>&#xa;                            &lt;/xsl:choose>&#xa;                        &lt;/tns:EMP_YN>&#xa;                        &lt;tns:EMP_NO>&#xa;                            &lt;xsl:value-of select=&quot;EMP_NO&quot;/>&#xa;                        &lt;/tns:EMP_NO>&#xa;                    &lt;/tns:EMPLOYEE_MEMBER_LIST>&#xa;                &lt;/xsl:for-each>&#xa;                &lt;xsl:for-each select=&quot;$HERO_SELECT/Record&quot;>&#xa;                    &lt;tns:EMPLOYEE_MEMBER_LIST>&#xa;                        &lt;tns:CID>&#xa;                            &lt;xsl:choose>&#xa;                                &lt;xsl:when test=&quot;exists(cid)&quot;>&#xa;                                    &lt;xsl:value-of select=&quot;cid&quot;/>&#xa;                                &lt;/xsl:when>&#xa;                                &lt;xsl:otherwise>&#xa;                                    &lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&#xa;                                &lt;/xsl:otherwise>&#xa;                            &lt;/xsl:choose>&#xa;                        &lt;/tns:CID>&#xa;                        &lt;tns:EMP_YN>&#xa;                            &lt;xsl:choose>&#xa;                                &lt;xsl:when test=&quot;exists(emp_yn)&quot;>&#xa;                                    &lt;xsl:value-of select=&quot;emp_yn&quot;/>&#xa;                                &lt;/xsl:when>&#xa;                                &lt;xsl:otherwise>&#xa;                                    &lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&#xa;                                &lt;/xsl:otherwise>&#xa;                            &lt;/xsl:choose>&#xa;                        &lt;/tns:EMP_YN>&#xa;                        &lt;tns:EMP_NO>&#xa;                            &lt;xsl:choose>&#xa;                                &lt;xsl:when test=&quot;exists(emp_no)&quot;>&#xa;                                    &lt;xsl:value-of select=&quot;emp_no&quot;/>&#xa;                                &lt;/xsl:when>&#xa;                                &lt;xsl:otherwise>&#xa;                                    &lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&#xa;                                &lt;/xsl:otherwise>&#xa;                            &lt;/xsl:choose>&#xa;                        &lt;/tns:EMP_NO>&#xa;                    &lt;/tns:EMPLOYEE_MEMBER_LIST>&#xa;                &lt;/xsl:for-each>&#xa;            &lt;/tns:RESPONSE_DATA>&#xa;        &lt;/tns:element>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1657,20 +1600,20 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:extActivity inputVariable="LOG_QUERY-input"
-                    name="LOG_QUERY"
+                <tibex:extActivity inputVariable="LOG_HERO-input"
+                    name="LOG_HERO"
                     tibex:xpdlId="cb44917f-f496-4ebf-b64d-4ba665a03d8b"
                     type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="UNIONToLOG_QUERY"/>
+                        <bpws:target linkName="HERO_SELECTToLOG_QUERY"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="LOG_count0">
                             <tibex:DesignExpression>
                                 <tibex:expression
-                                    expression="count($UNION_ALL/Record) >0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    expression="count($MERP_SELECT/Record)>0 or count($HERO_SELECT/Record)>0" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>
-                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[count($UNION_ALL/Record) >0]]></bpws:transitionCondition>
+                            <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[count($MERP_SELECT/Record)>0 or count($HERO_SELECT/Record)>0]]></bpws:transitionCondition>
                         </bpws:source>
                         <bpws:source linkName="LOG_QUERYToRenderJSON_otherwise">
                             <tibex:DesignExpression>
@@ -1682,9 +1625,9 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;MERP_SELECT&quot;/>&lt;xsl:param name=&quot;UNION_ALL&quot;/>&lt;xsl:template name=&quot;LOG_QUERY-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'FUNCTION'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($MERP_SELECT)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($UNION_ALL/Record))&quot;/>&lt;/DATA_CNT>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;HERO_SELECT&quot;/>&lt;xsl:template name=&quot;LOG_HERO-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;2&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'SELECT'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($HERO_SELECT)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($HERO_SELECT/Record))&quot;/>&lt;/DATA_CNT>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:CallProcess spawn="false"
+                    <tibex:CallProcess
                         subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
@@ -1697,7 +1640,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RenderJSON_nodata&quot;/>&lt;xsl:param name=&quot;RenderJSON&quot;/>&lt;xsl:param name=&quot;UNION_ALL&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;xsl:choose>&lt;xsl:when test=&quot;count($UNION_ALL/Record) >0&quot;>&lt;tns9:messageBody>&lt;xsl:value-of select=&quot;$RenderJSON/jsonString&quot;/>&lt;/tns9:messageBody>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns9:messageBody>&lt;xsl:value-of select=&quot;$RenderJSON_nodata/jsonString&quot;/>&lt;/tns9:messageBody>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;RenderJSON_nodata&quot;/>&lt;xsl:param name=&quot;RenderJSON&quot;/>&lt;xsl:param name=&quot;MERP_SELECT&quot;/>&lt;xsl:param name=&quot;HERO_SELECT&quot;/>&lt;xsl:template name=&quot;End-input&quot; match=&quot;/&quot;>&lt;xsl:choose>&lt;xsl:when test=&quot;count($MERP_SELECT/Record)>0 or count($HERO_SELECT/Record)>0&quot;>&lt;tns9:messageBody>&lt;xsl:value-of select=&quot;$RenderJSON/jsonString&quot;/>&lt;/tns9:messageBody>&lt;/xsl:when>&lt;xsl:otherwise>&lt;tns9:messageBody>&lt;xsl:value-of select=&quot;$RenderJSON_nodata/jsonString&quot;/>&lt;/tns9:messageBody>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1756,10 +1699,10 @@
                     outputVariable="HERO_SELECT"
                     tibex:xpdlId="552fbf4c-7bd4-47d1-baa2-1ccc93abc5e3" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="Call_FunctionToCopy_1_Call_Function"/>
+                        <bpws:target linkName="CallProcessToHERO_SELECT"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="Copy_1_Call_FunctionToCopy_2_Call_Function"/>
+                        <bpws:source linkName="HERO_SELECTToLOG_QUERY"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
@@ -1807,55 +1750,23 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="UNION_ALL-input"
-                    name="UNION_ALL" outputVariable="UNION_ALL"
-                    tibex:xpdlId="d85183af-be51-4497-8a8b-e8a5cbbf65c1" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                <tibex:extActivity inputVariable="LOG_MERP-input"
+                    name="LOG_MERP"
+                    tibex:xpdlId="4bfda0cc-de57-4228-907b-1fefdd6bae3b"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="Copy_1_Call_FunctionToCopy_2_Call_Function"/>
+                        <bpws:target linkName="Call_FunctionToCopy_1_Call_Function"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="UNIONToLOG_QUERY"/>
+                        <bpws:source linkName="CallProcessToHERO_SELECT"/>
                     </bpws:sources>
                     <tibex:inputBindings>
-                        <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.example.org/OBO_HERO_ONL_0009_Request&quot; xmlns:tns13=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+d85183af-be51-4497-8a8b-e8a5cbbf65c1+input&quot; version=&quot;2.0&quot;>&lt;xsl:template name=&quot;UNION_ALL-input&quot; match=&quot;/&quot;>&lt;tns13:jdbcQueryActivityInput/>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns6=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;MERP_SELECT&quot;/>&lt;xsl:template name=&quot;LOG_MERP-input&quot; match=&quot;/&quot;>&lt;tns6:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns6:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'SELECT'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($MERP_SELECT)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;xsd:int(count($MERP_SELECT/Record))&quot;/>&lt;/DATA_CNT>&lt;/tns6:TxInfo>&lt;/tns6:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:config>
-                        <bwext:BWActivity
-                            activityTypeID="bw.jdbc.JDBCQuery"
-                            xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
-                            xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
-                            xmlns:jdbcPalette="http://ns.tibco.com/bw/palette/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                            <attributeBindings
-                                bindingType="moduleProperty"
-                                eAttributeName="timeout" processProperty="SharedModule-DB_TIME_OUT"/>
-                            <attributeBindings
-                                bindingType="moduleProperty"
-                                eAttributeName="maxRows" processProperty="SharedModule-MAX_ROW"/>
-                            <activityConfig>
-                                <properties name="config" xsi:type="activityconfig:EMFProperty">
-                                    <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
-                                    <value
-                                    sharedResourceProperty="jdbcProperty_Target"
-                                    sqlStatement="SELECT B.CID,&#xa;          B.EMP_YN,&#xa;        B.EMP_NO&#xa;   FROM (SELECT A.CID,&#xa;                  A.EMP_YN,&#xa;                  A.EMP_NO,&#xa;                  A.ORDERBY&#xa;             FROM (SELECT A.CID,&#xa;                            (case when B.ORDER_TYPE = 'ENTER' then 'Y' else 'N' end) AS EMP_YN,&#xa;                          A.EMP_NO,&#xa;                          (case when B.ORDER_TYPE = 'ENTER' then 1 else 2 end) AS ORDERBY&#xa;                     FROM fnf.HR_PERSON A,&#xa;                          fnf.VIEW_HR_ORDER_NOW B&#xa;                    WHERE A.EMP_NO = B.EMP_NO&#xa;                      AND A.CID IS NOT NULL&#xa;                      AND B.ORDER_TYPE IN ('ENTER', 'RET')&#xa;                      AND B.ORDER_DATE >= TO_CHAR((current_timestamp + '-1 month'), 'YYYY-MM-DD')&#xa;                      )A&#xa;                   UNION ALL&#xa;                   select cid, emp_yn, emp_no, orderby&#xa;                    from fnf.v_cust_member_ext_emp&#xa;                    order by orderby&#xa;        )B" xsi:type="jdbcPalette:JDBCQueryActivity">
-                                    <columnMetadata columnIndex="1"
-                                    columnName="cid"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="varchar"/>
-                                    <columnMetadata columnIndex="2"
-                                    columnName="emp_yn"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="text"/>
-                                    <columnMetadata columnIndex="3"
-                                    columnName="emp_no"
-                                    dataType="12"
-                                    status="OptionalElement" typeName="varchar"/>
-                                    </value>
-                                </properties>
-                            </activityConfig>
-                        </bwext:BWActivity>
-                    </tibex:config>
-                </tibex:activityExtension>
+                    <tibex:CallProcess
+                        subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>
