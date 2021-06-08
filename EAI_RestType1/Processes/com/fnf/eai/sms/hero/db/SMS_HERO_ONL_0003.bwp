@@ -1455,20 +1455,6 @@
             <element href="//0/@process"/>
             <layoutConstraint height="557" width="1890" xsi:type="notation:Bounds"/>
         </children>
-        <children description="subsetsize 변경" fillColor="13369343"
-            fontName="맑은 고딕" lineColor="6737151" lineWidth="1"
-            transparency="0" type="Note" xsi:type="notation:Shape">
-            <children type="DiagramName" xsi:type="notation:BasicDecorationNode">
-                <element xsi:nil="true"/>
-            </children>
-            <children type="Description" xsi:type="notation:BasicDecorationNode">
-                <element xsi:nil="true"/>
-            </children>
-            <styles xsi:type="notation:TextStyle"/>
-            <styles xsi:type="notation:LineTypeStyle"/>
-            <element xsi:nil="true"/>
-            <layoutConstraint x="967" xsi:type="notation:Bounds" y="-61"/>
-        </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
         <edges
@@ -1658,13 +1644,6 @@
             <element href="//0/@process/@activity/@activity/@activities.9/@activity/@activities.1/@activity/@links/@children.4"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
-        <edges lineColor="0" lineWidth="1" source="//@children.1"
-            target="//@children.0" type="NoteAttachment" xsi:type="notation:Connector">
-            <styles xsi:type="notation:ArrowStyle"/>
-            <styles xsi:type="notation:LineTypeStyle"/>
-            <element xsi:nil="true"/>
-            <bendpoints points="[0, 0, -945, -278]$[0, 0, -945, -278]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1750,11 +1729,8 @@
         <bpws:variable element="ns6:datas" name="Mapper-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns6:datas" name="Mapper" sca-bpel:internal="true"/>
         <bpws:variable name="subsetsize" sca-bpel:hotUpdate="false"
-            sca-bpel:privateProperty="true" sca-bpel:property="yes" type="xsd:int">
-            <bpws:from>
-                <bpws:literal>10</bpws:literal>
-            </bpws:from>
-        </bpws:variable>
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/DB_INFO/SUBSET_SIZE" type="xsd:int"/>
         <bpws:variable name="MAX_ROW_LONG" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             tibex:propertySource="/DB_INFO/MAX_ROW_LONG" type="xsd:int"/>
