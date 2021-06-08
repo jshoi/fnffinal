@@ -1420,6 +1420,20 @@
             <element href="//0/@process"/>
             <layoutConstraint height="582" width="1978" xsi:type="notation:Bounds"/>
         </children>
+        <children description="susbset 변경" fillColor="13369343"
+            fontName="맑은 고딕" lineColor="6737151" lineWidth="1"
+            transparency="0" type="Note" xsi:type="notation:Shape">
+            <children type="DiagramName" xsi:type="notation:BasicDecorationNode">
+                <element xsi:nil="true"/>
+            </children>
+            <children type="Description" xsi:type="notation:BasicDecorationNode">
+                <element xsi:nil="true"/>
+            </children>
+            <styles xsi:type="notation:TextStyle"/>
+            <styles xsi:type="notation:LineTypeStyle"/>
+            <element xsi:nil="true"/>
+            <layoutConstraint x="999" xsi:type="notation:Bounds" y="-72"/>
+        </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
         <edges
@@ -1608,6 +1622,13 @@
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.9/@activity/@activities.1/@activity/@links/@children.4"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges lineColor="0" lineWidth="1" source="//@children.1"
+            target="//@children.0" type="NoteAttachment" xsi:type="notation:Connector">
+            <styles xsi:type="notation:ArrowStyle"/>
+            <styles xsi:type="notation:LineTypeStyle"/>
+            <element xsi:nil="true"/>
+            <bendpoints points="[0, 0, -989, -291]$[0, 0, -989, -291]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
