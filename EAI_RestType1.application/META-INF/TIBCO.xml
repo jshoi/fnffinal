@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <packaging:packageUnit xmlns:packaging="http://schemas.tibco.com/tra/model/core/PackagingModel" xmlns:property="http://ns.tibco.com/bw/property" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <packaging:description>[2.4.0] topic-2.3.1 SharePoint 패키지 삭제 및 MAX_ROW 변경</packaging:description>
+  <packaging:description>[2.4.2] topic-2.4.2 변경관리 2, 8-12</packaging:description>
   <packaging:properties>
     <packaging:property>
       <packaging:name>//EAI_RestType1//BW.DEPLOYMENTUNIT.TYPE</packaging:name>
