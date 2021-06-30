@@ -188,6 +188,9 @@
             <plnk:partnerLinkType name="partnerLinkType1">
                 <plnk:role name="use" portType="tns:UseCoupon"/>
             </plnk:partnerLinkType>
+            <plnk:partnerLinkType name="partnerLinkType2">
+                <plnk:role name="use" portType="tns:ZlistCustMemberList"/>
+            </plnk:partnerLinkType>
             <wsdl:import namespace="http://tns.tibco.com/bw/REST"/>
             <wsdl:message name="postRequest">
                 <wsdl:part name="item"
@@ -221,6 +224,22 @@
             <wsdl:message name="post5XXFaultMessage1">
                 <wsdl:part element="extns:server5XXError" name="serverError"/>
             </wsdl:message>
+            <wsdl:message name="postRequest2">
+                <wsdl:part name="item"
+                    tibex:hasMultipleNamespaces="false" type="xsd:string"/>
+                <wsdl:part element="extns:httpHeaders"
+                    name="httpHeaders" tibex:source="bw.rest"/>
+            </wsdl:message>
+            <wsdl:message name="postResponse2">
+                <wsdl:part name="item"
+                    tibex:hasMultipleNamespaces="false" type="xsd:string"/>
+            </wsdl:message>
+            <wsdl:message name="post4XXFaultMessage2">
+                <wsdl:part element="extns:client4XXError" name="clientError"/>
+            </wsdl:message>
+            <wsdl:message name="post5XXFaultMessage2">
+                <wsdl:part element="extns:server5XXError" name="serverError"/>
+            </wsdl:message>
             <wsdl:portType name="CouponFullDetail"
                 tibex:bw.rest.apipath="/CouponFullDetail"
                 tibex:bw.rest.basepath="POSP_HERO_ONL_2"
@@ -247,6 +266,20 @@
                     <wsdl:output message="tns:postResponse1" name="postOutput"/>
                     <wsdl:fault message="tns:post4XXFaultMessage1" name="clientFault"/>
                     <wsdl:fault message="tns:post5XXFaultMessage1" name="serverFault"/>
+                </wsdl:operation>
+            </wsdl:portType>
+            <wsdl:portType name="ZlistCustMemberList"
+                tibex:bw.rest.apipath="/ZlistCustMemberList"
+                tibex:bw.rest.basepath="POSP_HERO_ONL_2"
+                tibex:bw.rest.resource="Service Descriptors/com.fnf.eai.posp.hero.rest.POSP_HERO_ONL_2-POSP_HERO_ONL_2.json"
+                tibex:bw.rest.resource.source="generated" tibex:source="bw.rest.service">
+                <wsdl:documentation>POSP_HERO_ONL_2 service</wsdl:documentation>
+                <wsdl:operation name="post">
+                    <wsdl:documentation>postPOSP_HERO_ONL_2</wsdl:documentation>
+                    <wsdl:input message="tns:postRequest2" name="postInput"/>
+                    <wsdl:output message="tns:postResponse2" name="postOutput"/>
+                    <wsdl:fault message="tns:post4XXFaultMessage2" name="clientFault"/>
+                    <wsdl:fault message="tns:post5XXFaultMessage2" name="serverFault"/>
                 </wsdl:operation>
             </wsdl:portType>
         </wsdl:definitions>
@@ -1211,6 +1244,445 @@
                                     x="2"
                                     xsi:type="notation:Bounds" y="348"/>
                                     </children>
+                                    <children type="4011">
+                                    <children type="3012">
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint
+                                    xsi:type="notation:Bounds" y="40"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <children type="3013">
+                                    <children type="4018">
+                                    <children type="3018">
+
+                                    <children type="4020">
+
+                                    <children type="3020">
+
+                                    <children type="4005">
+
+                                    <children type="3007">
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@activities.2"/>
+
+                                    <layoutConstraint
+                                    x="292"
+                                    xsi:type="notation:Bounds" y="14"/>
+                                    </children>
+
+                                    <children type="4002 bw.generalactivities.callprocess">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="72"
+                                    xsi:type="notation:Bounds" y="14"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:DrawerStyle"/>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity"/>
+
+                                    <layoutConstraint
+                                    height="99"
+                                    width="681" xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity"/>
+
+                                    <layoutConstraint
+                                    height="87"
+                                    width="684"
+                                    x="15" xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4022">
+
+                                    <children type="3022">
+
+                                    <children type="4029">
+
+                                    <children type="3031">
+
+                                    <children type="4033">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@faultHandlers/@catchAll"/>
+
+                                    <layoutConstraint
+                                    height="34"
+                                    width="34"
+                                    xsi:type="notation:Bounds" y="68"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <children type="3032">
+
+                                    <children type="4005">
+
+                                    <children type="3007">
+
+                                    <eAnnotations source="Pixel"/>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@faultHandlers/@catchAll/@activity/@activity/@activities.0"/>
+
+                                    <layoutConstraint
+                                    x="153"
+                                    xsi:type="notation:Bounds" y="37"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:DrawerStyle"/>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@faultHandlers/@catchAll/@activity/@activity"/>
+
+                                    <layoutConstraint
+                                    height="168"
+                                    width="603" xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@faultHandlers/@catchAll"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles xsi:type="notation:SortingStyle"/>
+
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@faultHandlers"/>
+
+                                    <layoutConstraint
+                                    height="200"
+                                    width="-96" xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity"/>
+
+                                    <layoutConstraint
+                                    height="323"
+                                    width="724" xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <children type="3016">
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@activities.1"/>
+
+                                    <layoutConstraint
+                                    xsi:type="notation:Bounds" y="40"/>
+                                    </children>
+                                    <styles xsi:type="notation:SortingStyle"/>
+                                    <styles xsi:type="notation:FilteringStyle"/>
+                                    </children>
+                                    <styles
+                                    fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles xsi:type="bwnotation:BackgroundStyle"/>
+                                    <styles xsi:type="bwnotation:ResizingStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2"/>
+                                    <layoutConstraint
+                                    height="342"
+                                    width="786"
+                                    x="2"
+                                    xsi:type="notation:Bounds" y="693"/>
+                                    </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
@@ -1221,7 +1693,8 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    height="725" width="792" xsi:type="notation:Bounds"/>
+                                    height="1067"
+                                    width="792" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1235,7 +1708,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="735"
+                                    <layoutConstraint height="1077"
                                     width="815" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -1245,7 +1718,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="735" width="818" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="1077" width="818" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -1255,7 +1728,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="759" width="818" x="1"
+                    <layoutConstraint height="1101" width="818" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1264,7 +1737,7 @@
             </children>
             <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="811" width="1160" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="1153" width="1160" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1290,6 +1763,17 @@
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.1/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[25, -1, -178, 0]$[179, 0, -24, 1]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@links/@children.0"/>
+            <bendpoints points="[25, -1, -260, 14]$[261, -14, -24, 1]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem namespace="http://tns.tibco.com/bw/REST" prefix="tns"/>
@@ -1306,6 +1790,9 @@
         <bpws:partnerLink myRole="use" name="UseCoupon"
             partnerLinkType="ns:partnerLinkType1"
             sca-bpel:ignore="false" sca-bpel:service="UseCoupon"/>
+        <bpws:partnerLink myRole="use" name="ZlistCustMemberList"
+            partnerLinkType="ns:partnerLinkType2"
+            sca-bpel:ignore="false" sca-bpel:service="ZlistCustMemberList"/>
     </bpws:partnerLinks>
     <bpws:variables>
         <bpws:variable element="ns0:ProcessContext"
@@ -1332,6 +1819,17 @@
         <bpws:variable element="ns0:FaultDetail" name="FaultDetails1" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns:postResponse1"
             name="Err_postOut1-input" sca-bpel:internal="true"/>
+        <bpws:variable messageType="ns:postRequest2" name="post2" sca-bpel:internal="true"/>
+        <bpws:variable messageType="ns:postResponse2"
+            name="postOut2-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns2:post"
+            name="POSP_HERO_ONL_0030-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:messageBody"
+            name="POSP_HERO_ONL_0030" sca-bpel:internal="true"/>
+        <bpws:variable name="FaultName2" sca-bpel:internal="true" type="xsd:string"/>
+        <bpws:variable element="ns0:FaultDetail" name="FaultDetails2" sca-bpel:internal="true"/>
+        <bpws:variable messageType="ns:postResponse2"
+            name="Err_postOut2-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1442,6 +1940,7 @@
                                     <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns1="http://xmlns.example.com/20210209184958PLT" version="2.0"&gt;&lt;xsl:param name="FaultDetails1"/&gt;&lt;xsl:template name="Err_postOut1-input" match="/"&gt;&lt;tns1:postResponse1&gt;&lt;item&gt;&lt;xsl:value-of select="$FaultDetails1/Msg"/&gt;&lt;/item&gt;&lt;/tns1:postResponse1&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                     <bpws:targets/>
+                                    <bpws:correlations/>
                                     </bpws:reply>
                                     </bpws:flow>
                                 </bpws:scope>
@@ -1487,6 +1986,80 @@
                                     </tibex:inputBindings>
                                     <tibex:CallProcess
                                     subProcessName="com.fnf.eai.posp.hero.rest.POSP_HERO_ONL_0022" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                                </tibex:extActivity>
+                            </bpws:extensionActivity>
+                        </bpws:flow>
+                    </bpws:scope>
+                </bpws:onMessage>
+                <bpws:onMessage operation="post"
+                    partnerLink="ZlistCustMemberList"
+                    portType="ns:ZlistCustMemberList"
+                    tibex:xpdlId="90f75db1-9ccd-4efc-a58e-2b3000340282" variable="post2">
+                    <bpws:scope name="scope5">
+                        <bpws:faultHandlers>
+                            <bpws:catchAll
+                                tibex:faultDetailsVar="FaultDetails2"
+                                tibex:faultNameVar="FaultName2" tibex:xpdlId="5e709b9b-33d1-4830-b4c4-bd8d1a84b951">
+                                <bpws:scope name="scope6">
+                                    <bpws:flow name="flow6">
+                                    <bpws:links/>
+                                    <bpws:reply name="Err_postOut2"
+                                    operation="post"
+                                    partnerLink="ZlistCustMemberList"
+                                    portType="ns:ZlistCustMemberList"
+                                    tibex:xpdlId="10f05690-d97f-4e62-8a1c-e598a7b7011d" variable="Err_postOut2-input">
+                                    <tibex:inputBindings>
+                                    <tibex:partBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://xmlns.example.com/20210209184958PLT&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;FaultDetails2&quot;/>&#xa;    &lt;xsl:template name=&quot;Err_postOut2-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;$FaultDetails2/Msg&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns1="http://xmlns.example.com/20210209184958PLT" version="2.0"&gt;&lt;xsl:param name="FaultDetails2"/&gt;&lt;xsl:template name="Err_postOut2-input" match="/"&gt;&lt;tns1:postResponse2&gt;&lt;item&gt;&lt;xsl:value-of select="$FaultDetails2/Msg"/&gt;&lt;/item&gt;&lt;/tns1:postResponse2&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+                                    <bpws:targets/>
+                                    </bpws:reply>
+                                    </bpws:flow>
+                                </bpws:scope>
+                            </bpws:catchAll>
+                        </bpws:faultHandlers>
+                        <bpws:flow name="flow5">
+                            <bpws:links>
+                                <bpws:link name="CallProcessTopostOut2" tibex:linkType="SUCCESS"/>
+                            </bpws:links>
+                            <bpws:empty name="OnMessageStart2"
+                                tibex:constructor="onMessageStart" tibex:xpdlId="aef75b61-f799-4e3d-a63f-468d56d8b4b0"/>
+                            <bpws:empty name="OnMessageEnd2"
+                                tibex:constructor="onMessageEnd" tibex:xpdlId="b9d9f2b7-4100-43a7-b9d6-a79f00f5f4f4"/>
+                            <bpws:reply name="postOut2" operation="post"
+                                partnerLink="ZlistCustMemberList"
+                                portType="ns:ZlistCustMemberList"
+                                tibex:xpdlId="ac64644f-9fe0-4318-9ad9-b24e9761127f" variable="postOut2-input">
+                                <tibex:inputBindings>
+                                    <tibex:partBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://xmlns.example.com/20210209184958PLT&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;POSP_HERO_ONL_0030&quot;/>&#xa;    &lt;xsl:template name=&quot;postOut2-input&quot; match=&quot;/&quot;>&#xa;        &lt;item>&#xa;            &lt;xsl:value-of select=&quot;$POSP_HERO_ONL_0030&quot;/>&#xa;        &lt;/item>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                </tibex:inputBindings>
+                                <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns1="http://xmlns.example.com/20210209184958PLT" version="2.0"&gt;&lt;xsl:param name="POSP_HERO_ONL_0030"/&gt;&lt;xsl:template name="postOut2-input" match="/"&gt;&lt;tns1:postResponse2&gt;&lt;item&gt;&lt;xsl:value-of select="$POSP_HERO_ONL_0030"/&gt;&lt;/item&gt;&lt;/tns1:postResponse2&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+                                <bpws:targets>
+                                    <bpws:target linkName="CallProcessTopostOut2"/>
+                                </bpws:targets>
+                            </bpws:reply>
+                            <bpws:extensionActivity>
+                                <tibex:extActivity
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns2=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;post2&quot;/>&lt;xsl:template name=&quot;POSP_HERO_ONL_0030-input&quot; match=&quot;/&quot;>&lt;tns2:post>&lt;tns2:httpHeaders>&lt;xsl:if test=&quot;$post2/httpHeaders/tns:httpHeaders/Accept&quot;>&lt;Accept>&lt;xsl:value-of select=&quot;$post2/httpHeaders/tns:httpHeaders/Accept&quot;/>&lt;/Accept>&lt;/xsl:if>&lt;xsl:if test=&quot;$post2/httpHeaders/tns:httpHeaders/Accept-Charset&quot;>&lt;Accept-Charset>&lt;xsl:value-of select=&quot;$post2/httpHeaders/tns:httpHeaders/Accept-Charset&quot;/>&lt;/Accept-Charset>&lt;/xsl:if>&lt;xsl:if test=&quot;$post2/httpHeaders/tns:httpHeaders/Accept-Encoding&quot;>&lt;Accept-Encoding>&lt;xsl:value-of select=&quot;$post2/httpHeaders/tns:httpHeaders/Accept-Encoding&quot;/>&lt;/Accept-Encoding>&lt;/xsl:if>&lt;xsl:if test=&quot;$post2/httpHeaders/tns:httpHeaders/Content-Type&quot;>&lt;Content-Type>&lt;xsl:value-of select=&quot;$post2/httpHeaders/tns:httpHeaders/Content-Type&quot;/>&lt;/Content-Type>&lt;/xsl:if>&lt;xsl:if test=&quot;$post2/httpHeaders/tns:httpHeaders/Content-Length&quot;>&lt;Content-Length>&lt;xsl:value-of select=&quot;$post2/httpHeaders/tns:httpHeaders/Content-Length&quot;/>&lt;/Content-Length>&lt;/xsl:if>&lt;xsl:if test=&quot;$post2/httpHeaders/tns:httpHeaders/Connection&quot;>&lt;Connection>&lt;xsl:value-of select=&quot;$post2/httpHeaders/tns:httpHeaders/Connection&quot;/>&lt;/Connection>&lt;/xsl:if>&lt;xsl:if test=&quot;$post2/httpHeaders/tns:httpHeaders/Cookie&quot;>&lt;Cookie>&lt;xsl:value-of select=&quot;$post2/httpHeaders/tns:httpHeaders/Cookie&quot;/>&lt;/Cookie>&lt;/xsl:if>&lt;xsl:if test=&quot;$post2/httpHeaders/tns:httpHeaders/Pragma&quot;>&lt;Pragma>&lt;xsl:value-of select=&quot;$post2/httpHeaders/tns:httpHeaders/Pragma&quot;/>&lt;/Pragma>&lt;/xsl:if>&lt;xsl:if test=&quot;$post2/httpHeaders/tns:httpHeaders/Authorization&quot;>&lt;Authorization>&lt;xsl:value-of select=&quot;$post2/httpHeaders/tns:httpHeaders/Authorization&quot;/>&lt;/Authorization>&lt;/xsl:if>&lt;tns2:DynamicHeaders>&lt;xsl:copy-of select=&quot;$post2/httpHeaders/tns:httpHeaders/DynamicHeaders/ancestor-or-self::*/namespace::node()&quot;/>&lt;xsl:copy-of select=&quot;$post2/httpHeaders/tns:httpHeaders/DynamicHeaders/@*&quot;/>&lt;xsl:copy-of select=&quot;$post2/httpHeaders/tns:httpHeaders/DynamicHeaders/node()&quot;/>&lt;/tns2:DynamicHeaders>&lt;/tns2:httpHeaders>&lt;tns2:messageBody>&lt;xsl:value-of select=&quot;$post2/item&quot;/>&lt;/tns2:messageBody>&lt;/tns2:post>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
+                                    inputVariable="POSP_HERO_ONL_0030-input"
+                                    name="POSP_HERO_ONL_0030"
+                                    outputVariable="POSP_HERO_ONL_0030"
+                                    tibex:xpdlId="6cfb7a32-73c7-406e-ab55-a1169570ae24"
+                                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:sources>
+                                    <bpws:source linkName="CallProcessTopostOut2"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding coercion=""
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns2=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;post2.item&quot;/>&#xa;    &lt;xsl:param name=&quot;post2.httpHeaders&quot;/>&#xa;    &lt;xsl:template name=&quot;POSP_HERO_ONL_0030-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:post>&#xa;            &lt;tns2:httpHeaders>&#xa;                &lt;xsl:if test=&quot;$post2.httpHeaders/Accept&quot;>&#xa;                    &lt;Accept>&#xa;                        &lt;xsl:value-of select=&quot;$post2.httpHeaders/Accept&quot;/>&#xa;                    &lt;/Accept>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post2.httpHeaders/Accept-Charset&quot;>&#xa;                    &lt;Accept-Charset>&#xa;                        &lt;xsl:value-of select=&quot;$post2.httpHeaders/Accept-Charset&quot;/>&#xa;                    &lt;/Accept-Charset>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post2.httpHeaders/Accept-Encoding&quot;>&#xa;                    &lt;Accept-Encoding>&#xa;                        &lt;xsl:value-of select=&quot;$post2.httpHeaders/Accept-Encoding&quot;/>&#xa;                    &lt;/Accept-Encoding>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post2.httpHeaders/Content-Type&quot;>&#xa;                    &lt;Content-Type>&#xa;                        &lt;xsl:value-of select=&quot;$post2.httpHeaders/Content-Type&quot;/>&#xa;                    &lt;/Content-Type>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post2.httpHeaders/Content-Length&quot;>&#xa;                    &lt;Content-Length>&#xa;                        &lt;xsl:value-of select=&quot;$post2.httpHeaders/Content-Length&quot;/>&#xa;                    &lt;/Content-Length>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post2.httpHeaders/Connection&quot;>&#xa;                    &lt;Connection>&#xa;                        &lt;xsl:value-of select=&quot;$post2.httpHeaders/Connection&quot;/>&#xa;                    &lt;/Connection>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post2.httpHeaders/Cookie&quot;>&#xa;                    &lt;Cookie>&#xa;                        &lt;xsl:value-of select=&quot;$post2.httpHeaders/Cookie&quot;/>&#xa;                    &lt;/Cookie>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post2.httpHeaders/Pragma&quot;>&#xa;                    &lt;Pragma>&#xa;                        &lt;xsl:value-of select=&quot;$post2.httpHeaders/Pragma&quot;/>&#xa;                    &lt;/Pragma>&#xa;                &lt;/xsl:if>&#xa;                &lt;xsl:if test=&quot;$post2.httpHeaders/Authorization&quot;>&#xa;                    &lt;Authorization>&#xa;                        &lt;xsl:value-of select=&quot;$post2.httpHeaders/Authorization&quot;/>&#xa;                    &lt;/Authorization>&#xa;                &lt;/xsl:if>&#xa;                &lt;tns2:DynamicHeaders>&#xa;                    &lt;xsl:copy-of select=&quot;$post2.httpHeaders/DynamicHeaders/ancestor-or-self::*/namespace::node()&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;$post2.httpHeaders/DynamicHeaders/@*&quot;/>&#xa;                    &lt;xsl:copy-of select=&quot;$post2.httpHeaders/DynamicHeaders/node()&quot;/>&#xa;                &lt;/tns2:DynamicHeaders>&#xa;            &lt;/tns2:httpHeaders>&#xa;            &lt;tns2:messageBody>&#xa;                &lt;xsl:value-of select=&quot;$post2.item&quot;/>&#xa;            &lt;/tns2:messageBody>&#xa;        &lt;/tns2:post>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:CallProcess
+                                    subProcessName="com.fnf.eai.posp.hero.rest.POSP_HERO_ONL_0030" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                                 </tibex:extActivity>
                             </bpws:extensionActivity>
                         </bpws:flow>
