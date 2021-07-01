@@ -758,6 +758,8 @@
                                     nillable="true" type="string"/>
                                     <element maxOccurs="1" minOccurs="1"
                                     name="PREYN" nillable="true" type="string"/>
+                                    <element maxOccurs="1" minOccurs="1"
+                                    name="CLM_TYPE" nillable="true" type="string"/>
                                 </sequence>
                             </complexType>
                         </element>
@@ -1272,7 +1274,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="480" width="1597" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="408" width="1597" xsi:type="notation:Bounds"/>
                         </children>
                         <children type="4022">
                             <children type="3022">
@@ -1465,7 +1467,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="681" width="1597" x="1"
+                    <layoutConstraint height="609" width="1597" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1474,7 +1476,7 @@
             </children>
             <styles fontName="맑은 고딕" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="733" width="1939" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="661" width="1939" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -2156,7 +2158,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9901507a-9487-44e1-86bd-ae85e99aa0f3+input&quot; xmlns:tns1=&quot;http://www.example.org/OBO_HERO_ONL_0018_Request&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;INSERT_MERP-input&quot; match=&quot;/&quot;>&lt;tns:jdbcUpdateActivityInput>&lt;xsl:for-each select=&quot;$ParseJSON/tns1:REQUEST/tns1:ORD_LIST&quot;>&lt;Record>&lt;BRAND>&lt;xsl:value-of select=&quot;tns1:BRAND&quot;/>&lt;/BRAND>&lt;SALEDATE>&lt;xsl:value-of select=&quot;tns1:SALEDATE&quot;/>&lt;/SALEDATE>&lt;SHOPCODE>&lt;xsl:value-of select=&quot;tns1:SHOPCODE&quot;/>&lt;/SHOPCODE>&lt;SEASON>&lt;xsl:value-of select=&quot;tns1:SEASON&quot;/>&lt;/SEASON>&lt;PARTCODE>&lt;xsl:value-of select=&quot;tns1:PARTCODE&quot;/>&lt;/PARTCODE>&lt;COLOR>&lt;xsl:value-of select=&quot;tns1:COLOR&quot;/>&lt;/COLOR>&lt;SIZ_TYPE>&lt;xsl:value-of select=&quot;tns1:SIZ&quot;/>&lt;/SIZ_TYPE>&lt;SALETYPE>&lt;xsl:value-of select=&quot;tns1:SALETYPE&quot;/>&lt;/SALETYPE>&lt;SALETRTYPE>&lt;xsl:value-of select=&quot;tns1:SALETRTYPE&quot;/>&lt;/SALETRTYPE>&lt;TAGPRICE>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:TAGPRICE)&quot;/>&lt;/TAGPRICE>&lt;SELLPRICE>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:SELLPRICE)&quot;/>&lt;/SELLPRICE>&lt;QTY>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:QTY)&quot;/>&lt;/QTY>&lt;ACTUALAMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:ACTUALAMT)&quot;/>&lt;/ACTUALAMT>&lt;CARD_AMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:CARD_AMT)&quot;/>&lt;/CARD_AMT>&lt;CASH_AMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:CASH_AMT)&quot;/>&lt;/CASH_AMT>&lt;SALEDIS_AMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:SALEDIS_AMT)&quot;/>&lt;/SALEDIS_AMT>&lt;USE_POINT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:USE_POINT)&quot;/>&lt;/USE_POINT>&lt;ISSUENO>&lt;xsl:copy-of select=&quot;tns1:ISSUENO/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns1:ISSUENO&quot;/>&lt;/ISSUENO>&lt;ISSUENO_AMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:ISSUENO_AMT)&quot;/>&lt;/ISSUENO_AMT>&lt;ETCDIS_AMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:ETCDIS_AMT)&quot;/>&lt;/ETCDIS_AMT>&lt;CID>&lt;xsl:value-of select=&quot;tns1:CID&quot;/>&lt;/CID>&lt;GET_POINT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:GET_POINT)&quot;/>&lt;/GET_POINT>&lt;REGDATE>&lt;xsl:value-of select=&quot;tns1:REGDATE&quot;/>&lt;/REGDATE>&lt;C_ORD_SEQ>&lt;xsl:value-of select=&quot;tns1:ORD_NO&quot;/>&lt;/C_ORD_SEQ>&lt;C_DETAIL_SEQ>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:ORD_DTL_NO)&quot;/>&lt;/C_DETAIL_SEQ>&lt;O2OP_SHOPCODE>&lt;xsl:copy-of select=&quot;tns1:DELI_SHOPCODE/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns1:DELI_SHOPCODE&quot;/>&lt;/O2OP_SHOPCODE>&lt;QUANTITY_TYPE>&lt;xsl:copy-of select=&quot;tns1:QUANTITY_TYPE/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns1:QUANTITY_TYPE&quot;/>&lt;/QUANTITY_TYPE>&lt;REAL_MILE_YN>&lt;xsl:value-of select=&quot;tns1:REAL_MILE_YN&quot;/>&lt;/REAL_MILE_YN>&lt;PREYN>&lt;xsl:copy-of select=&quot;tns1:PREYN/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns1:PREYN&quot;/>&lt;/PREYN>&lt;/Record>&lt;/xsl:for-each>&lt;/tns:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9901507a-9487-44e1-86bd-ae85e99aa0f3+input&quot; xmlns:tns1=&quot;http://www.example.org/OBO_HERO_ONL_0018_Request&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;INSERT_MERP-input&quot; match=&quot;/&quot;>&lt;tns:jdbcUpdateActivityInput>&lt;xsl:for-each select=&quot;$ParseJSON/tns1:REQUEST/tns1:ORD_LIST&quot;>&lt;Record>&lt;BRAND>&lt;xsl:value-of select=&quot;tns1:BRAND&quot;/>&lt;/BRAND>&lt;SALEDATE>&lt;xsl:value-of select=&quot;tns1:SALEDATE&quot;/>&lt;/SALEDATE>&lt;SHOPCODE>&lt;xsl:value-of select=&quot;tns1:SHOPCODE&quot;/>&lt;/SHOPCODE>&lt;SEASON>&lt;xsl:value-of select=&quot;tns1:SEASON&quot;/>&lt;/SEASON>&lt;PARTCODE>&lt;xsl:value-of select=&quot;tns1:PARTCODE&quot;/>&lt;/PARTCODE>&lt;COLOR>&lt;xsl:value-of select=&quot;tns1:COLOR&quot;/>&lt;/COLOR>&lt;SIZ_TYPE>&lt;xsl:value-of select=&quot;tns1:SIZ&quot;/>&lt;/SIZ_TYPE>&lt;SALETYPE>&lt;xsl:value-of select=&quot;tns1:SALETYPE&quot;/>&lt;/SALETYPE>&lt;SALETRTYPE>&lt;xsl:value-of select=&quot;tns1:SALETRTYPE&quot;/>&lt;/SALETRTYPE>&lt;TAGPRICE>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:TAGPRICE)&quot;/>&lt;/TAGPRICE>&lt;SELLPRICE>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:SELLPRICE)&quot;/>&lt;/SELLPRICE>&lt;QTY>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:QTY)&quot;/>&lt;/QTY>&lt;ACTUALAMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:ACTUALAMT)&quot;/>&lt;/ACTUALAMT>&lt;CARD_AMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:CARD_AMT)&quot;/>&lt;/CARD_AMT>&lt;CASH_AMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:CASH_AMT)&quot;/>&lt;/CASH_AMT>&lt;SALEDIS_AMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:SALEDIS_AMT)&quot;/>&lt;/SALEDIS_AMT>&lt;USE_POINT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:USE_POINT)&quot;/>&lt;/USE_POINT>&lt;ISSUENO>&lt;xsl:copy-of select=&quot;tns1:ISSUENO/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns1:ISSUENO&quot;/>&lt;/ISSUENO>&lt;ISSUENO_AMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:ISSUENO_AMT)&quot;/>&lt;/ISSUENO_AMT>&lt;ETCDIS_AMT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:ETCDIS_AMT)&quot;/>&lt;/ETCDIS_AMT>&lt;CID>&lt;xsl:value-of select=&quot;tns1:CID&quot;/>&lt;/CID>&lt;GET_POINT>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:GET_POINT)&quot;/>&lt;/GET_POINT>&lt;REGDATE>&lt;xsl:value-of select=&quot;tns1:REGDATE&quot;/>&lt;/REGDATE>&lt;C_ORD_SEQ>&lt;xsl:value-of select=&quot;tns1:ORD_NO&quot;/>&lt;/C_ORD_SEQ>&lt;C_DETAIL_SEQ>&lt;xsl:value-of select=&quot;xsd:decimal(tns1:ORD_DTL_NO)&quot;/>&lt;/C_DETAIL_SEQ>&lt;O2OP_SHOPCODE>&lt;xsl:copy-of select=&quot;tns1:DELI_SHOPCODE/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns1:DELI_SHOPCODE&quot;/>&lt;/O2OP_SHOPCODE>&lt;QUANTITY_TYPE>&lt;xsl:copy-of select=&quot;tns1:QUANTITY_TYPE/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns1:QUANTITY_TYPE&quot;/>&lt;/QUANTITY_TYPE>&lt;REAL_MILE_YN>&lt;xsl:value-of select=&quot;tns1:REAL_MILE_YN&quot;/>&lt;/REAL_MILE_YN>&lt;PREYN>&lt;xsl:copy-of select=&quot;tns1:PREYN/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns1:PREYN&quot;/>&lt;/PREYN>&lt;CLM_TYPE>&lt;xsl:copy-of select=&quot;tns1:CLM_TYPE/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns1:CLM_TYPE&quot;/>&lt;/CLM_TYPE>&lt;/Record>&lt;/xsl:for-each>&lt;/tns:jdbcUpdateActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2172,7 +2174,7 @@
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCUpdateActivity"/>
                                     <value batchUpdate="true"
                                     sharedResourceProperty="jdbcProperty_MERP"
-                                    sqlStatement="INSERT INTO FNF.ONLINE_SALE_EAI (&#xa;BRAND&#xa;,SALEDATE&#xa;,SHOPCODE&#xa;,SEASON&#xa;,PARTCODE&#xa;,COLOR&#xa;,SIZ_TYPE&#xa;,SALETYPE&#xa;,SALETRTYPE&#xa;,TAGPRICE&#xa;,SELLPRICE&#xa;,QTY&#xa;,ACTUALAMT&#xa;,CARD_AMT&#xa;,CASH_AMT&#xa;,SALEDIS_AMT&#xa;,USE_POINT&#xa;,ISSUENO&#xa;,ISSUENO_AMT&#xa;,ETCDIS_AMT&#xa;,CID&#xa;,GET_POINT&#xa;,REGDATE&#xa;,C_ORD_SEQ&#xa;,C_DETAIL_SEQ&#xa;,GROUP_KEY&#xa;,O2OP_STATUS&#xa;,O2OP_SHOPCODE&#xa;,O2OP_DATE&#xa;,QUANTITY_TYPE&#xa;,REAL_MILE_YN&#xa;,PREYN&#xa;)&#xa;VALUES (&#xa;?,?,?,?,?,?,?,?,?,?,?,&#xa;?,?,?,?,?,?,?,?,?,?,?,&#xa;TO_DATE(?,'YYYY-MM-DD HH24:MI:SS'),?,?,0,null,?,null,?,?,?&#xa;)" xsi:type="jdbcPalette:JDBCUpdateActivity">
+                                    sqlStatement="INSERT INTO FNF.ONLINE_SALE_EAI (&#xa;BRAND&#xa;,SALEDATE&#xa;,SHOPCODE&#xa;,SEASON&#xa;,PARTCODE&#xa;,COLOR&#xa;,SIZ_TYPE&#xa;,SALETYPE&#xa;,SALETRTYPE&#xa;,TAGPRICE&#xa;,SELLPRICE&#xa;,QTY&#xa;,ACTUALAMT&#xa;,CARD_AMT&#xa;,CASH_AMT&#xa;,SALEDIS_AMT&#xa;,USE_POINT&#xa;,ISSUENO&#xa;,ISSUENO_AMT&#xa;,ETCDIS_AMT&#xa;,CID&#xa;,GET_POINT&#xa;,REGDATE&#xa;,C_ORD_SEQ&#xa;,C_DETAIL_SEQ&#xa;,GROUP_KEY&#xa;,O2OP_STATUS&#xa;,O2OP_SHOPCODE&#xa;,O2OP_DATE&#xa;,QUANTITY_TYPE&#xa;,REAL_MILE_YN&#xa;,PREYN&#xa;,CLM_TYPE&#xa;)&#xa;VALUES (&#xa;?,?,?,?,?,?,?,?,?,?,?,&#xa;?,?,?,?,?,?,?,?,?,?,?,&#xa;TO_DATE(?,'YYYY-MM-DD HH24:MI:SS'),?,?,0,null,?,null,?,?,?,?&#xa;)" xsi:type="jdbcPalette:JDBCUpdateActivity">
                                     <PreparedParameters
                                     DataType="12"
                                     DataTypeDisplayValue="VARCHAR" ParameterName="BRAND"/>
@@ -2247,6 +2249,9 @@
                                     <PreparedParameters
                                     DataType="12"
                                     DataTypeDisplayValue="VARCHAR" ParameterName="PREYN"/>
+                                    <PreparedParameters
+                                    DataType="12"
+                                    DataTypeDisplayValue="VARCHAR" ParameterName="CLM_TYPE"/>
                                     </value>
                                 </properties>
                             </activityConfig>
