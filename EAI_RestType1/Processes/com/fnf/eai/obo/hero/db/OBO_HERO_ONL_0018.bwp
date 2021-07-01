@@ -1633,7 +1633,7 @@
             <styles fontColor="255" fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.11"/>
             <bendpoints
-                points="[-11, 25, -458, 25]$[-11, 120, -458, 120]$[459, 120, 12, 120]$[459, 25, 12, 25]" xsi:type="notation:RelativeBendpoints"/>
+                points="[-11, 25, -458, 25]$[-11, 111, -458, 111]$[459, 111, 12, 111]$[459, 25, 12, 25]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.11"
