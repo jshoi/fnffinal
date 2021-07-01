@@ -113,6 +113,32 @@
         }
       }
     },
+    "/ZlistCustMemberList" : {
+      "post" : {
+        "summary" : "postPOSP_HERO_ONL",
+        "description" : "postPOSP_HERO_ONL",
+        "operationId" : "post-ZlistCustMemberList",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "string"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a string to be returned",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
     "/CouponCheck" : {
       "post" : {
         "summary" : "postPOSP_HERO_ONL",

@@ -1380,6 +1380,18 @@
     </scaext:binding>
     <scact:bindingAdjunct xmi:id="_ZUycELFYEeuLkNOzDaj4Hw" bindingName="RestService31"/>
   </sca:service>
+  <sca:service xmi:id="_xJpUQNocEeudtuyEfByd_A" name="ZlistCustMemberList" promote="ComponentPOSP_HERO_ONL/ZlistCustMemberList">
+    <sca:interface.wsdl xmi:id="_xJwpANocEeudtuyEfByd_A" interface="http://xmlns.example.com/20210203180932PLT#wsdl.interface(ZlistCustMemberList)" scaext:wsdlLocation="../Processes/com/fnf/eai/posp/hero/db/POSP_HERO_ONL.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_xMEWINocEeudtuyEfByd_A" name="RestService16" path="/ZlistCustMemberList" docBasePath="http://localhost:7777/EAI_RestType1" docResourcePath="POSP_HERO_ONL" basePath="/" connector="com.fnf.eai.resources.http.server.eai.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.fnf.eai.posp.hero.db.POSP_HERO_ONL-POSP_HERO_ONL.json">
+      <operation xmi:id="_xNocYNocEeudtuyEfByd_A" operationName="post" nickname="post-ZlistCustMemberList" httpMethod="POST" notes="postPOSP_HERO_ONL" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_xNzbgNocEeudtuyEfByd_A"/>
+      <advancedConfig xmi:id="_xMEWIdocEeudtuyEfByd_A" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_xNocYdocEeudtuyEfByd_A" bindingName="RestService16"/>
+  </sca:service>
   <sca:property xmi:id="_VyyrcGXqEeuhFpGsQLsBaA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_Vy2V0GXqEeuhFpGsQLsBaA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_Vy284GXqEeuhFpGsQLsBaA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
@@ -1531,6 +1543,9 @@
     </sca:service>
     <sca:service xmi:id="_t4MWsHZoEeuy0fjFzLYmng" name="CustMemberPos">
       <sca:interface.wsdl xmi:id="_t4Oy8HZoEeuy0fjFzLYmng" interface="http://xmlns.example.com/20210203180932PLT#wsdl.interface(CustMemberPos)" scaext:wsdlLocation="../Processes/com/fnf/eai/posp/hero/db/POSP_HERO_ONL.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_xJlp4NocEeudtuyEfByd_A" name="ZlistCustMemberList">
+      <sca:interface.wsdl xmi:id="_xJlp4docEeudtuyEfByd_A" interface="http://xmlns.example.com/20210203180932PLT#wsdl.interface(ZlistCustMemberList)" scaext:wsdlLocation="../Processes/com/fnf/eai/posp/hero/db/POSP_HERO_ONL.bwp"/>
     </sca:service>
   </sca:component>
   <sca:component xmi:id="_fplgcGalEeuhFpGsQLsBaA" name="ComponentOBA_HERO_ONL" compositeext:version="1.0.0.qualifier">
