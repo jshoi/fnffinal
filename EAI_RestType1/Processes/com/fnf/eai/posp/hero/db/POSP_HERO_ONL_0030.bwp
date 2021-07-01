@@ -836,8 +836,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.8"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="903"
-                                    xsi:type="notation:Bounds" y="195"/>
+                                    x="910"
+                                    xsi:type="notation:Bounds" y="178"/>
                                     </children>
                                     <children type="4002">
                                     <children type="4017">
