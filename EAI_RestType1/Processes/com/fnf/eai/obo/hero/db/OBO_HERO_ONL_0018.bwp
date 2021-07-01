@@ -921,7 +921,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.2"/>
-                                    <layoutConstraint x="1287"
+                                    <layoutConstraint x="1335"
                                     xsi:type="notation:Bounds" y="117"/>
                                     </children>
                                     <children type="4002 bw.restjson.JsonParser">
