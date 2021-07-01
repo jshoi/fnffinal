@@ -867,7 +867,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.9"/>
-                                    <layoutConstraint x="1109"
+                                    <layoutConstraint x="1129"
                                     xsi:type="notation:Bounds" y="93"/>
                                     </children>
                                     <children type="4002 bw.jdbc.SQLDirect">
@@ -915,7 +915,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="384"
+                                    <layoutConstraint height="288"
                                     width="1274" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
