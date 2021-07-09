@@ -584,7 +584,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="1009"
+                                    <layoutConstraint x="1067"
                                     xsi:type="notation:Bounds" y="95"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.callprocess">
@@ -683,7 +683,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.4"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="897"
+                                    x="955"
                                     xsi:type="notation:Bounds" y="95"/>
                                     </children>
                                     <children type="4018">
@@ -929,7 +929,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.5"/>
                                     <layoutConstraint
                                     height="167" width="334"
-                                    x="469"
+                                    x="527"
                                     xsi:type="notation:Bounds" y="32"/>
                                     </children>
                                     <children type="4002 bw.restjson.JsonParser">
@@ -962,7 +962,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.6"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="324"
+                                    x="334"
                                     xsi:type="notation:Bounds" y="84"/>
                                     </children>
                                     <children type="4002 bw.restjson.JsonRender">
@@ -995,8 +995,41 @@
                                     <element href="//0/@process/@activity/@activity/@activities.7"/>
                                     <layoutConstraint
                                     height="40" width="40"
-                                    x="806"
+                                    x="864"
                                     xsi:type="notation:Bounds" y="95"/>
+                                    </children>
+                                    <children type="4002 bw.generalactivities.callprocess">
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="맑은 고딕"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.8"/>
+                                    <layoutConstraint
+                                    height="40" width="40"
+                                    x="423"
+                                    xsi:type="notation:Bounds" y="84"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -1261,14 +1294,15 @@
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.6"
-            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.5"/>
-            <bendpoints points="[25, -4, -351, 58]$[69, -11, -307, 51]" xsi:type="notation:RelativeBendpoints"/>
+            <bendpoints
+                points="[25, 0, -64, 0]$[45, 0, -44, 0]$[65, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
         <edges
             source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
@@ -1303,6 +1337,17 @@
             <element href="//0/@process/@activity/@faultHandlers/@catchAll/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[25, -4, -102, 0]$[103, 0, -24, 4]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
+        <edges
+            source="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
+            target="//@children.0/@children.3/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="맑은 고딕" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.7"/>
+            <bendpoints points="[25, 0, -192, 0]$[68, 0, -149, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
         <tibex:namespaceItem
@@ -1311,6 +1356,10 @@
             namespace="http://www.example.com/namespaces/tns/1610583409932" prefix="tns5"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco.com/bw/xpath/bw-custom-functions" prefix="bw"/>
+        <tibex:namespaceItem
+            namespace="http://www.example.org/ReqSchema" prefix="tns13"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1610583409932"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
@@ -1373,6 +1422,8 @@
         <bpws:variable element="ns32:AccumulatedOutput"
             name="Accumulate" sca-bpel:internal="true"/>
         <bpws:variable name="index" type="xsd:int"/>
+        <bpws:variable element="ns7:JobInfo" name="JobInfo1"/>
+        <bpws:variable element="ns7:JobTotal" name="LOG_Parse-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1404,7 +1455,7 @@
                                     <tibex:inputBinding coercion=""
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;FaultDetails&quot;/>&lt;xsl:template name=&quot;LOG_ERROR-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'ERROR'&quot;/>&lt;/STEP>&lt;ERROR_MSG>&lt;xsl:value-of select=&quot;$FaultDetails/Msg&quot;/>&lt;/ERROR_MSG>&lt;ERROR_STACKTRACE>&lt;xsl:value-of select=&quot;$FaultDetails/StackTrace&quot;/>&lt;/ERROR_STACKTRACE>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;ERROR_ACTIVITY>&lt;xsl:value-of select=&quot;$FaultDetails/ActivityName&quot;/>&lt;/ERROR_ACTIVITY>&lt;ERROR_CODE>&lt;xsl:value-of select=&quot;$FaultDetails/MsgCode&quot;/>&lt;/ERROR_CODE>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
-                                <tibex:CallProcess spawn="false"
+                                <tibex:CallProcess
                                     subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                             </tibex:extActivity>
                         </bpws:extensionActivity>
@@ -1429,8 +1480,9 @@
                 <bpws:link name="LOG_ENDToEnd" tibex:linkType="SUCCESS"/>
                 <bpws:link name="LOG_STARTToParseJSON" tibex:linkType="SUCCESS"/>
                 <bpws:link name="IterateToRenderJSON" tibex:linkType="SUCCESS"/>
-                <bpws:link name="ParseJSONToIterate" tibex:linkType="SUCCESS"/>
+                <bpws:link name="ParseJSONToLOG_Parse" tibex:linkType="SUCCESS"/>
                 <bpws:link name="RenderJSONToLOG_END" tibex:linkType="SUCCESS"/>
+                <bpws:link name="LOG_ParseToForEach" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -1485,9 +1537,9 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;LOG_START-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'START'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;$Start&quot;/>&lt;/DEBUG_DATA>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;LOG_START-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'START'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($Start)&quot;/>&lt;/DEBUG_DATA>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:CallProcess spawn="false"
+                    <tibex:CallProcess
                         subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
@@ -1503,7 +1555,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_processContext&quot;/>&#xa;    &lt;xsl:template name=&quot;JobInfo&quot; match=&quot;/&quot;>&#xa;        &lt;tns5:JobInfo>&#xa;            &lt;xsl:variable name=&quot;IF_ID&quot; select=&quot;substring(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;), tib:last-index-of(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;), '.')+1)&quot;/>&#xa;            &lt;xsl:variable name=&quot;CURR_TM&quot; select=&quot;format-dateTime(current-dateTime(), '[Y0001][M01][D01][H01][m01][s01][f001]')&quot;/>&#xa;            &lt;IF_ID>&#xa;                &lt;xsl:value-of select=&quot;$IF_ID&quot;/>&#xa;            &lt;/IF_ID>&#xa;            &lt;TR_ID>&#xa;                &lt;xsl:value-of select=&quot;concat($IF_ID, '', $CURR_TM, '', $_processContext/JobId)&quot;/>&#xa;            &lt;/TR_ID>&#xa;        &lt;/tns5:JobInfo>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tns13=&quot;http://www.example.org/ReqSchema&quot; xmlns:bw=&quot;http://www.tibco.com/bw/xpath/bw-custom-functions&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;_processContext&quot;/>&lt;xsl:param name=&quot;Start&quot;/>&lt;xsl:template name=&quot;JobInfo&quot; match=&quot;/&quot;>&lt;tns5:JobInfo>&lt;xsl:variable name=&quot;IF_ID&quot; select=&quot;substring(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;), tib:last-index-of(bw:getModuleProperty(&amp;quot;BW.PROCESS.NAME&amp;quot;), '.')+1)&quot;/>&lt;xsl:variable name=&quot;CURR_TM&quot; select=&quot;format-dateTime(current-dateTime(), '[Y0001][M01][D01][H01][m01][s01][f001]')&quot;/>&lt;IF_ID>&lt;xsl:value-of select=&quot;$IF_ID&quot;/>&lt;/IF_ID>&lt;TR_ID>&lt;xsl:value-of select=&quot;concat($IF_ID, '', $CURR_TM, '', $_processContext/JobId)&quot;/>&lt;/TR_ID>&lt;xsl:if test=&quot;$Start/tns13:httpHeaders/tns13:DynamicHeaders/Header[Name='X-Forwarded-For']/Value&quot;>&lt;CLIENT_IP>&lt;xsl:value-of select=&quot;$Start/tns13:httpHeaders/tns13:DynamicHeaders/Header[Name='X-Forwarded-For']/Value&quot;/>&lt;/CLIENT_IP>&lt;/xsl:if>&lt;xsl:if test=&quot;$Start/tns13:httpHeaders/tns13:DynamicHeaders/Header[Name='X-Forwarded-Port']/Value&quot;>&lt;CLIENT_PORT>&lt;xsl:value-of select=&quot;$Start/tns13:httpHeaders/tns13:DynamicHeaders/Header[Name='X-Forwarded-Port']/Value&quot;/>&lt;/CLIENT_PORT>&lt;/xsl:if>&lt;/tns5:JobInfo>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1534,17 +1586,15 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding coercion=""
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:template name=&quot;LOG_END-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'END'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;$index&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:param name=&quot;RenderJSON&quot;/>&lt;xsl:template name=&quot;LOG_END-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'END'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;$RenderJSON/jsonString&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;$index&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
-                    <tibex:CallProcess spawn="false"
+                    <tibex:CallProcess
                         subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
-            <bpws:scope name="ForEach" tibex:group="foreach"
-                tibex:indexOriginalName="index"
-                tibex:indexToGlobal="true" tibex:xpdlId="d872e2da-9d8e-49b6-bcb9-209b43016bda">
+            <bpws:scope name="ForEach" tibex:group="foreach" tibex:xpdlId="d872e2da-9d8e-49b6-bcb9-209b43016bda">
                 <bpws:targets>
-                    <bpws:target linkName="ParseJSONToIterate"/>
+                    <bpws:target linkName="LOG_ParseToForEach"/>
                 </bpws:targets>
                 <bpws:sources>
                     <bpws:source linkName="IterateToRenderJSON"/>
@@ -1626,7 +1676,7 @@
                                     coercion=""
                                     expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;Call_Function&quot;/>&lt;xsl:param name=&quot;index&quot;/>&lt;xsl:template name=&quot;LOG_QUERY-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;$index&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'FUNCTION'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($Call_Function)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
-                                    <tibex:CallProcess spawn="false"
+                                    <tibex:CallProcess
                                     subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                                     </tibex:extActivity>
                                 </bpws:extensionActivity>
@@ -1741,11 +1791,11 @@
                         <bpws:target linkName="LOG_STARTToParseJSON"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="ParseJSONToIterate"/>
+                        <bpws:source linkName="ParseJSONToLOG_Parse"/>
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;activity.jsonParser.input+64a300f7-3b0b-4709-bd09-4bfa281f95e2+ActivityInputType&quot; xmlns:tns2=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;ParseJSON-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:ActivityInputClass>&#xa;            &lt;jsonString>&#xa;                &lt;xsl:value-of select=&quot;$Start/tns2:messageBody&quot;/>&#xa;            &lt;/jsonString>&#xa;        &lt;/tns1:ActivityInputClass>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;activity.jsonParser.input+64a300f7-3b0b-4709-bd09-4bfa281f95e2+ActivityInputType&quot; xmlns:tns13=&quot;http://www.example.org/ReqSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Start&quot;/>&#xa;    &lt;xsl:template name=&quot;ParseJSON-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:ActivityInputClass>&#xa;            &lt;jsonString>&#xa;                &lt;xsl:value-of select=&quot;$Start/tns13:messageBody&quot;/>&#xa;            &lt;/jsonString>&#xa;        &lt;/tns1:ActivityInputClass>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1779,7 +1829,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/OMS_MERP_ONL_0002_Request&quot; xmlns:tns13=&quot;http://www.example.org/OMS_MERP_ONL_0002_Response&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tns9=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+51be4a09-7b1e-49aa-aa79-bfe8ce8f9f33+output&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:param name=&quot;Accumulate&quot;/>&lt;xsl:template name=&quot;RenderJSON-input&quot; match=&quot;/&quot;>&lt;tns13:FNFItemPriceList>&lt;xsl:for-each select=&quot;$ParseJSON/tns:FNFItemPriceList/tns:FNFItemPrice&quot;>&lt;xsl:variable name=&quot;var&quot; select=&quot;position()&quot;/>&lt;tns13:FNFItemPrice>&lt;tns13:OrganizationCode>&lt;xsl:copy-of select=&quot;tns:OrganizationCode/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:OrganizationCode&quot;/>&lt;/tns13:OrganizationCode>&lt;tns13:Brand>&lt;xsl:copy-of select=&quot;tns:Brand/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:Brand&quot;/>&lt;/tns13:Brand>&lt;tns13:YearSeasonCode>&lt;xsl:copy-of select=&quot;tns:YearSeasonCode/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:YearSeasonCode&quot;/>&lt;/tns13:YearSeasonCode>&lt;tns13:StyleCode>&lt;xsl:copy-of select=&quot;tns:StyleCode/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:StyleCode&quot;/>&lt;/tns13:StyleCode>&lt;tns13:InvoicingCountry>&lt;xsl:copy-of select=&quot;tns:InvoicingCountry/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:InvoicingCountry&quot;/>&lt;/tns13:InvoicingCountry>&lt;xsl:if test=&quot;tns:FxRate&quot;>&lt;tns13:FxRate>&lt;xsl:copy-of select=&quot;tns:FxRate/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:FxRate&quot;/>&lt;/tns13:FxRate>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:StoreCode&quot;>&lt;tns13:StoreCode>&lt;xsl:copy-of select=&quot;tns:StoreCode/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:StoreCode&quot;/>&lt;/tns13:StoreCode>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:Currency&quot;>&lt;tns13:Currency>&lt;xsl:copy-of select=&quot;tns:Currency/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:Currency&quot;/>&lt;/tns13:Currency>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:InvoiceConfirmedDate&quot;>&lt;tns13:InvoiceConfirmedDate>&lt;xsl:copy-of select=&quot;tns:InvoiceConfirmedDate/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:InvoiceConfirmedDate&quot;/>&lt;/tns13:InvoiceConfirmedDate>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:VATFlag&quot;>&lt;tns13:VATFlag>&lt;xsl:copy-of select=&quot;tns:VATFlag/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:VATFlag&quot;/>&lt;/tns13:VATFlag>&lt;/xsl:if>&lt;xsl:if test=&quot;tns:InvoiceQty&quot;>&lt;tns13:InvoiceQty>&lt;xsl:copy-of select=&quot;tns:InvoiceQty/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;tns:InvoiceQty&quot;/>&lt;/tns13:InvoiceQty>&lt;/xsl:if>&lt;tns13:InvoicedSellInPrice>&lt;xsl:value-of select=&quot;xsd:decimal($Accumulate/tns9:resultSet[$var]/outputSet/RETURN_VALUE)&quot;/>&lt;/tns13:InvoicedSellInPrice>&lt;/tns13:FNFItemPrice>&lt;/xsl:for-each>&lt;/tns13:FNFItemPriceList>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.org/OMS_MERP_ONL_0002_Request&quot; xmlns:tns14=&quot;http://www.example.org/OMS_MERP_ONL_0002_Response&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:tns9=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+51be4a09-7b1e-49aa-aa79-bfe8ce8f9f33+output&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ParseJSON&quot;/>&#xa;    &lt;xsl:param name=&quot;Accumulate&quot;/>&#xa;    &lt;xsl:template name=&quot;RenderJSON-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns14:FNFItemPriceList>&#xa;            &lt;xsl:for-each select=&quot;$ParseJSON/tns:FNFItemPriceList/tns:FNFItemPrice&quot;>&#xa;                &lt;xsl:variable name=&quot;var&quot; select=&quot;position()&quot;/>&#xa;                &lt;tns14:FNFItemPrice>&#xa;                    &lt;tns14:OrganizationCode>&#xa;                        &lt;xsl:copy-of select=&quot;tns:OrganizationCode/@xsi:nil&quot;/>&#xa;                        &lt;xsl:value-of select=&quot;tns:OrganizationCode&quot;/>&#xa;                    &lt;/tns14:OrganizationCode>&#xa;                    &lt;tns14:Brand>&#xa;                        &lt;xsl:copy-of select=&quot;tns:Brand/@xsi:nil&quot;/>&#xa;                        &lt;xsl:value-of select=&quot;tns:Brand&quot;/>&#xa;                    &lt;/tns14:Brand>&#xa;                    &lt;tns14:YearSeasonCode>&#xa;                        &lt;xsl:copy-of select=&quot;tns:YearSeasonCode/@xsi:nil&quot;/>&#xa;                        &lt;xsl:value-of select=&quot;tns:YearSeasonCode&quot;/>&#xa;                    &lt;/tns14:YearSeasonCode>&#xa;                    &lt;tns14:StyleCode>&#xa;                        &lt;xsl:copy-of select=&quot;tns:StyleCode/@xsi:nil&quot;/>&#xa;                        &lt;xsl:value-of select=&quot;tns:StyleCode&quot;/>&#xa;                    &lt;/tns14:StyleCode>&#xa;                    &lt;tns14:InvoicingCountry>&#xa;                        &lt;xsl:copy-of select=&quot;tns:InvoicingCountry/@xsi:nil&quot;/>&#xa;                        &lt;xsl:value-of select=&quot;tns:InvoicingCountry&quot;/>&#xa;                    &lt;/tns14:InvoicingCountry>&#xa;                    &lt;xsl:if test=&quot;tns:FxRate&quot;>&#xa;                        &lt;tns14:FxRate>&#xa;                            &lt;xsl:copy-of select=&quot;tns:FxRate/@xsi:nil&quot;/>&#xa;                            &lt;xsl:value-of select=&quot;tns:FxRate&quot;/>&#xa;                        &lt;/tns14:FxRate>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;tns:StoreCode&quot;>&#xa;                        &lt;tns14:StoreCode>&#xa;                            &lt;xsl:copy-of select=&quot;tns:StoreCode/@xsi:nil&quot;/>&#xa;                            &lt;xsl:value-of select=&quot;tns:StoreCode&quot;/>&#xa;                        &lt;/tns14:StoreCode>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;tns:Currency&quot;>&#xa;                        &lt;tns14:Currency>&#xa;                            &lt;xsl:copy-of select=&quot;tns:Currency/@xsi:nil&quot;/>&#xa;                            &lt;xsl:value-of select=&quot;tns:Currency&quot;/>&#xa;                        &lt;/tns14:Currency>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;tns:InvoiceConfirmedDate&quot;>&#xa;                        &lt;tns14:InvoiceConfirmedDate>&#xa;                            &lt;xsl:copy-of select=&quot;tns:InvoiceConfirmedDate/@xsi:nil&quot;/>&#xa;                            &lt;xsl:value-of select=&quot;tns:InvoiceConfirmedDate&quot;/>&#xa;                        &lt;/tns14:InvoiceConfirmedDate>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;tns:VATFlag&quot;>&#xa;                        &lt;tns14:VATFlag>&#xa;                            &lt;xsl:copy-of select=&quot;tns:VATFlag/@xsi:nil&quot;/>&#xa;                            &lt;xsl:value-of select=&quot;tns:VATFlag&quot;/>&#xa;                        &lt;/tns14:VATFlag>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;tns:InvoiceQty&quot;>&#xa;                        &lt;tns14:InvoiceQty>&#xa;                            &lt;xsl:copy-of select=&quot;tns:InvoiceQty/@xsi:nil&quot;/>&#xa;                            &lt;xsl:value-of select=&quot;tns:InvoiceQty&quot;/>&#xa;                        &lt;/tns14:InvoiceQty>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;tns14:InvoicedSellInPrice>&#xa;                        &lt;xsl:value-of select=&quot;xsd:decimal($Accumulate/tns9:resultSet[$var]/outputSet/RETURN_VALUE)&quot;/>&#xa;                    &lt;/tns14:InvoicedSellInPrice>&#xa;                &lt;/tns14:FNFItemPrice>&#xa;            &lt;/xsl:for-each>&#xa;        &lt;/tns14:FNFItemPriceList>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1800,6 +1850,25 @@
                         </bwext:BWActivity>
                     </tibex:config>
                 </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="LOG_Parse-input"
+                    name="LOG_Parse"
+                    tibex:xpdlId="1367b591-ae96-4732-a122-f642c411325d"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="ParseJSONToLOG_Parse"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="LOG_ParseToForEach"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://www.example.com/namespaces/tns/1610583409932&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; xmlns:tns4=&quot;http://www.example.org/OMS_MERP_ONL_0001_Request&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JobInfo&quot;/>&lt;xsl:param name=&quot;loglevel&quot;/>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;LOG_Parse-input&quot; match=&quot;/&quot;>&lt;tns5:JobTotal>&lt;xsl:copy-of select=&quot;$JobInfo&quot;/>&lt;tns5:TxInfo>&lt;PROC_TM>&lt;xsl:value-of select=&quot;current-dateTime()&quot;/>&lt;/PROC_TM>&lt;PROC_CNT>&lt;xsl:value-of select=&quot;1&quot;/>&lt;/PROC_CNT>&lt;STEP>&lt;xsl:value-of select=&quot;'PARSER'&quot;/>&lt;/STEP>&lt;DEBUG>&lt;xsl:value-of select=&quot;$loglevel&quot;/>&lt;/DEBUG>&lt;DEBUG_DATA>&lt;xsl:value-of select=&quot;tib:render-xml($ParseJSON)&quot;/>&lt;/DEBUG_DATA>&lt;DATA_CNT>&lt;xsl:value-of select=&quot;0&quot;/>&lt;/DATA_CNT>&lt;/tns5:TxInfo>&lt;/tns5:JobTotal>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>
