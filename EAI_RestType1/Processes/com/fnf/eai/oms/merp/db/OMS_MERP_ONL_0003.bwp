@@ -1423,6 +1423,7 @@
         <bpws:variable name="index" type="xsd:int"/>
         <bpws:variable element="ns7:JobInfo" name="JobInfo1"/>
         <bpws:variable element="ns7:JobTotal" name="LOG_Parse-input" sca-bpel:internal="true"/>
+        <bpws:variable name="index1" type="xsd:int"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1591,7 +1592,9 @@
                         subProcessName="com.fnf.eai.common.log.EAI_LOG" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
                 </tibex:extActivity>
             </bpws:extensionActivity>
-            <bpws:scope name="ForEach" tibex:group="foreach" tibex:xpdlId="d872e2da-9d8e-49b6-bcb9-209b43016bda">
+            <bpws:scope name="ForEach" tibex:group="foreach"
+                tibex:indexOriginalName="index"
+                tibex:indexToGlobal="true" tibex:xpdlId="d872e2da-9d8e-49b6-bcb9-209b43016bda">
                 <bpws:targets>
                     <bpws:target linkName="LOG_ParseToForEach"/>
                 </bpws:targets>
@@ -1606,7 +1609,7 @@
                             <bpws:to variable="Accumulate"/>
                         </bpws:copy>
                     </bpws:assign>
-                    <bpws:forEach counterName="index" name="forEach"
+                    <bpws:forEach counterName="index1" name="forEach"
                         parallel="no" tibex:group="foreach">
                         <tibex:DesignExpression name="final">
                             <tibex:expression
