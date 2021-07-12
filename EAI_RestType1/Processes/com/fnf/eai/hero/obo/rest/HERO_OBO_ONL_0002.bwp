@@ -2230,6 +2230,8 @@
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+6d82934f-1d26-40e5-a9af-589bde31e83a+input" prefix="tns11"/>
+        <tibex:namespaceItem
+            namespace="http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions" prefix="tns9"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1610583409932"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/ErrSchema"/>
@@ -2408,7 +2410,7 @@
                                 </bpws:sources>
                                 <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://www.example.org/ErrSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;RenderJSON_catch-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns9:element>&#xa;            &lt;tns9:RESPONSE_CD>&#xa;                &lt;xsl:value-of select=&quot;'500'&quot;/>&#xa;            &lt;/tns9:RESPONSE_CD>&#xa;            &lt;tns9:RESPONSE_MSG>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/tns9:RESPONSE_MSG>&#xa;            &lt;tns9:RESPONSE_DATA xsi:nil=&quot;true&quot;/>&#xa;        &lt;/tns9:element>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;http://www.example.org/ErrSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;RenderJSON_catch-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns10:element>&#xa;            &lt;tns10:RESPONSE_CD>&#xa;                &lt;xsl:value-of select=&quot;'500'&quot;/>&#xa;            &lt;/tns10:RESPONSE_CD>&#xa;            &lt;tns10:RESPONSE_MSG>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/tns10:RESPONSE_MSG>&#xa;            &lt;tns10:RESPONSE_DATA xsi:nil=&quot;true&quot;/>&#xa;        &lt;/tns10:element>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:config>
                                     <bwext:BWActivity
@@ -2891,7 +2893,7 @@
                                 name="InvokeRESTAPI_Throw" tibex:xpdlId="58949e55-69d8-47b8-a943-f6d93f13e045">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ErrorMaperProc&quot;/>&#xa;    &lt;xsl:template name=&quot;Throw-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns9:DefaultFault>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$ErrorMaperProc&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns9:DefaultFault>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns9=&quot;http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ErrorMaperProc&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;InvokeRESTAPI_Throw-input&quot; match=&quot;/&quot;>&lt;tns9:DefaultFault>&lt;message>&lt;xsl:value-of select=&quot;$ErrorMaperProc&quot;/>&lt;/message>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;msgCode>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/msgCode>&lt;/xsl:if>&lt;/tns9:DefaultFault>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <bpws:targets>
                                     <bpws:target linkName="ErrorMaperProcToThrow"/>

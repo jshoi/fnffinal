@@ -2240,6 +2240,8 @@
             namespace="http://www.tibco.com/bw/xslt/custom-functions" prefix="tib"/>
         <tibex:namespaceItem
             namespace="http://www.tibco.com/namespaces/tnt/plugins/jdbc+8681c421-0125-454f-a97b-a8ca54d264f3+input" prefix="tns12"/>
+        <tibex:namespaceItem
+            namespace="http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions" prefix="tns11"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.com/namespaces/tns/1610583409932"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
@@ -2797,7 +2799,7 @@
                                 name="InvokeRESTAPI_Throw" tibex:xpdlId="7975d104-9354-424e-a5d6-ccc1bf85ab75">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ErrorMaperProc&quot;/>&#xa;    &lt;xsl:template name=&quot;Throw-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:DefaultFault>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$ErrorMaperProc&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns11:DefaultFault>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ErrorMaperProc&quot;/>&lt;xsl:param name=&quot;_error&quot;/>&lt;xsl:template name=&quot;InvokeRESTAPI_Throw-input&quot; match=&quot;/&quot;>&lt;tns11:DefaultFault>&lt;message>&lt;xsl:value-of select=&quot;$ErrorMaperProc&quot;/>&lt;/message>&lt;xsl:if test=&quot;$_error/MsgCode&quot;>&lt;msgCode>&lt;xsl:value-of select=&quot;$_error/MsgCode&quot;/>&lt;/msgCode>&lt;/xsl:if>&lt;/tns11:DefaultFault>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <bpws:targets>
                                     <bpws:target linkName="ErrorMaperProcToThrow"/>
