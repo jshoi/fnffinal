@@ -1372,6 +1372,13 @@
             name="SQLDirect" sca-bpel:internal="true"/>
         <bpws:variable element="ns19:ActivityErrorData"
             name="_error_SQLDirect" sca-bpel:internal="true"/>
+        <bpws:variable name="SharedModule-ACTIVE_TIMEOUT"
+            sca-bpel:hotUpdate="false" sca-bpel:privateProperty="true"
+            sca-bpel:property="yes"
+            tibex:propertySource="//SharedModule///EAI_INFO/HTTP/ACTIVE_TIMEOUT" type="xsd:int"/>
+        <bpws:variable name="SUBSET_SIZE" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            tibex:propertySource="/DB_INFO/SUBSET_SIZE" type="xsd:int"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1747,7 +1754,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+b7ad25f2-ecc2-4e29-b45d-f36eb39fc760+input&quot; xmlns:tns=&quot;http://www.example.org/POSP_HERO_ONL_0030_Request&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;SQLDirect-input&quot; match=&quot;/&quot;>&lt;tns3:ActivityInputType>&lt;statement>&lt;xsl:value-of select=&quot;concat(&amp;quot;select cid__c as CID,name as NAME,fnf.fn_decode(phone_mobile__c) AS PHONE_MOBILE,recv_sms__c as RECV_SMS from salesforceprod.account where cid__c in ('&amp;quot;,tib:concat-sequence-format($ParseJSON/tns:REQUEST/tns:V_CID,&amp;quot;','&amp;quot;,true()),&amp;quot;') limit 100&amp;quot;)&quot;/>&lt;/statement>&lt;/tns3:ActivityInputType>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+b7ad25f2-ecc2-4e29-b45d-f36eb39fc760+input&quot; xmlns:tns=&quot;http://www.example.org/POSP_HERO_ONL_0030_Request&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ParseJSON&quot;/>&lt;xsl:template name=&quot;SQLDirect-input&quot; match=&quot;/&quot;>&lt;tns3:ActivityInputType>&lt;statement>&lt;xsl:value-of select=&quot;concat(&amp;quot;select cid__c as CID,name as NAME,fnf.fn_decode(phone_mobile__c) AS PHONE_MOBILE,recv_sms__c as RECV_SMS from salesforceprod.account where cid__c in ('&amp;quot;,tib:concat-sequence-format($ParseJSON/tns:REQUEST/tns:V_CID,&amp;quot;','&amp;quot;,true()),&amp;quot;') limit 500&amp;quot;)&quot;/>&lt;/statement>&lt;/tns3:ActivityInputType>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1755,12 +1762,17 @@
                             xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
                             xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
                             xmlns:jdbcPalette="http://ns.tibco.com/bw/palette/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                            <attributeBindings
+                                bindingType="moduleProperty"
+                                eAttributeName="timeout" processProperty="SharedModule-DB_TIME_OUT"/>
+                            <attributeBindings
+                                bindingType="moduleProperty"
+                                eAttributeName="maxRows" processProperty="SharedModule-MAX_ROW"/>
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//SQLDirectActivity"/>
-                                    <value maxRows="100"
-                                    sharedResourceProperty="jdbcProperty"
-                                    timeout="10" xsi:type="jdbcPalette:SQLDirectActivity"/>
+                                    <value
+                                    sharedResourceProperty="jdbcProperty" xsi:type="jdbcPalette:SQLDirectActivity"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>
